@@ -5,8 +5,8 @@ import  AppBar from '@material-ui/core/AppBar';
 import  Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import  IconButton from '@material-ui/core/IconButton';
-import  MenuIcon from '@material-ui/core/MenuIcon';
-import  Typography from '@material-ui/core/Typography';
+// import  MenuIcon from '@material-ui/icons/MenuIcon';
+// import  Typography from '@material-ui/core/Typography';
 
 
 function App() {
@@ -21,11 +21,11 @@ function App() {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
-          <Typography variant="h6" >
+          {/* <Typography variant="h6" >
             News
-          </Typography>
+          </Typography> */}
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
