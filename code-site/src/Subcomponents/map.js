@@ -15,14 +15,14 @@ class MapboxApp extends React.Component {
 
     }
 
-    componentDidMount( {
+    componentDidMount() {
         const map = new mapboxgl.map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [this.state.lng, this.state.lat],
             zoom: this.state.zoom
         });
-    })
+    }
 
 }
 
