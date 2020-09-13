@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { userRef } from 'react';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -15,8 +16,14 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-import MapboxApp from '../Subcomponents/map';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import Container from '@material-ui/core/Container';
+import MapboxComp from '../Landing/map2';
+import residentspage from '../Residents/residentspage';
+import Portal from '@material-ui/core/Portal';
+import Album from '../Residents/album';
+
+const theme = createMuiTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,8 +41,57 @@ const useStyles = makeStyles((theme) => ({
   tabBar: {
     float: 'left',
     flexGrow: 1,
+  },
+  mapContainer: {
+    position: 'absolute',
+    top: 0, 
+    right: 0,
+    left: 0,
+    bottom: 0,
+  },
+  sidebarStyle: {
+    display: 'inline-block',
+    position: 'absolute',
+    top:0,
+    left: 0,
+    margin: '12px',
+    padding: '6px',
   }
 }));
+
+const styles = {
+  root:{
+      icon: {
+      marginRight: theme.spacing(2),
+      },
+      heroContent: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(8, 0, 6),
+      },
+      heroButtons: {
+      marginTop: theme.spacing(4),
+      },
+      cardGrid: {
+      paddingTop: theme.spacing(8),
+      paddingBottom: theme.spacing(8),
+      },
+      card: {
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      },
+      cardMedia: {
+      paddingTop: '56.25%', // 16:9
+      },
+      cardContent: {
+      flexGrow: 1,
+      },
+      footer: {
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(6),
+      },
+  }
+};
 
 function TabPanel(props) {
   const { children, value, index, ...other} = props;
@@ -50,11 +106,24 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <Container>{children}</Container>
         </Box>
       )}
     </div>
   );
+}
+
+function MapComponent(props){
+  const { children, zoom, lat, lng, ...other} = props;
+
+  return(
+    <div
+      role = "MapComponent"
+      id = "Where we are"
+    >
+      {}
+    </div>
+  )
 }
 
 TabPanel.propTypes = {
@@ -73,9 +142,12 @@ function a11yprops(index) {
 export default function MenuAppBar() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const [show, setShow] = React.useState(false);
+  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    setShow(!show);
   };
 
   return (
@@ -102,11 +174,17 @@ export default function MenuAppBar() {
           
         </Toolbar>
       </AppBar>
+      <React.Fragment>
       <TabPanel value={value} index={0}>
-             Home
+            
+              <Container>
+                <MapboxComp></MapboxComp>
+              </Container>
               </TabPanel>
             <TabPanel value={value} index={1}>
-              Residents
+              <Box>
+                <Album/>
+              </Box>
             </TabPanel>
             <TabPanel value={value} index={2}>
               Sponsors and Partners
@@ -117,6 +195,7 @@ export default function MenuAppBar() {
             <TabPanel value={value} index={4}>
               Contact Us
             </TabPanel>
+      </React.Fragment>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import  Button from '@material-ui/core/Button';
 import  IconButton from '@material-ui/core/IconButton';
 import  MenuIcon from '@material-ui/icons/Menu';
 import  Typography from '@material-ui/core/Typography';
-import  MenuAppBar from './Components/navbar.js';
+import  MenuAppBar from './Components/Navigation/navbar.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <MenuAppBar position="sticky">
+        <MenuAppBar>
           Try #1
         </MenuAppBar>
       </ThemeProvider>
