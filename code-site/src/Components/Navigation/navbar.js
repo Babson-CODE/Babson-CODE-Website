@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(1),
+    height: '100vh',
 
   },
   container: {
@@ -103,24 +104,30 @@ const useStyles = makeStyles((theme) => ({
   contactUsFooter: {
       position: 'relative',
   },
-  img: {
-    margin: 'auto',
-    display: 'block',
+  image: {
+    backgroundRepeat: 'no-repeat',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     maxWidth: '100%',
     maxHeight: '100%',
   },
   paper: {
-    padding: theme.spacing(1),
-    height: "100%",
-    margin: 'auto',
-  },
-  image: {
-    maxWidth: '100%',
-    maxHeight: '100%',
-
+    margin: theme.spacing(8, 4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   footer: {
     backgroundcolor: 'text.secondary',
+  },
+  centerstyle: {
+    padding: theme.spacing(3, 2),
+    height: 200,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
   }
 
 }));
@@ -294,10 +301,8 @@ export default function MenuAppBar() {
       </AppBar>
       <React.Fragment>
       <TabPanel value={value} direction={direction} index={0}>
-        <Container className={classes.container}>
-                  <LandingPage post={mainFeaturedPost} classes={classes} width={1}/>
+            <LandingPage post={mainFeaturedPost} classes={classes} width={1}/>
                 
-              </Container>
               </TabPanel>
             <TabPanel value={value} direction={direction} index={1}>
               <Box>

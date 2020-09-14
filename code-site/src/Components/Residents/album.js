@@ -92,7 +92,7 @@ export default function Album(props) {
                 helping change the world through technology-based entrepreneurship.
             </Typography>
             <div className={classes.heroButtons}>
-                <Grid container spacings={3} justify="center">
+                <Grid container spacing={3} justify="center">
                     <Grid item>
                         <Button variant="contained" color="primary">
                             Subscribe to Newsletter
@@ -107,11 +107,13 @@ export default function Album(props) {
             </div>
         </Container>
         </div>
+        <div className={classes.heroContent}>
         <Container maxWidth="sm">
                 <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
                     Current Residents
                 </Typography>
         </Container>
+        </div>
         <Container className={classes.cardGrid} maxWidth="md">
             
           {/* End hero unit */}

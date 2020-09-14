@@ -54,62 +54,32 @@ const useStyles = makeStyles((theme) => ({
       },
   }));
 
-export default function LandingPage(props){
+export default function LandingHero(props){
     const { classes, post } = props;  
 
     return(
-            <Grid container component="main" className={classes.root}>
+            <Grid container className={classes.root}>
             <CssBaseline />
+            <main>
                 {/* Hero unit */}
                 <Grid item xs={12} sm={12} md={12} width={1}>
                     <Grid container component={Paper} className={classes.root} width={1}>
                         <Grid item xs={false} sm={4} md={7} style={{backgroundImage: `url(${post.image})`}} className={classes.image}>
                         </Grid>
                         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} align="center" square>
-                            <div className={classes.heroContent}>
-                            <Container maxWidth="sm">
-                                <Typography component="h1" variant="h3" color="inherit" align="center" gutterBottom>
-                                    {post.title}
-                                </Typography>
-                                <Typography compnent="h5" color="inherit" align="center" paragraph>
-                                {post.description}
-                                </Typography>
-                                <Link variant="subtitle1" href="#">
-                                    {post.linkText}
-                                </Link>
-                            </Container>
-                            </div>
+                            <Typography component="h1" variant="h3" color="inherit" align="center" gutterBottom>
+                                {post.title}
+                            </Typography>
+                            <Typography compnent="h5" color="inherit" align="center" paragraph>
+                            {post.description}
+                            </Typography>
+                            <Link variant="subtitle1" href="#">
+                                {post.linkText}
+                            </Link>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={12} md={12}>
-                        
-                </Grid>
-                <Grid item xs={false} sm={4} md={7} component={Paper}>
-                    <MapboxComp></MapboxComp>
-                </Grid>
-                <Grid item xs={12} sm={8} md={5} component={Paper}>
-                    <Box>
-                        <NewsletterSignupForm classes={classes}></NewsletterSignupForm> 
-                    </Box>
-                </Grid>  
-            {/* Footer */}
-            <Grid item xs={12}>
-            <footer className={classes.footer}>
-                <Typography variant="h6" align="center" gutterBottom>
-                Footer
-                </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                Something here to give the footer a purpose!
-                </Typography>
-            </footer>
+            </main>
             </Grid>
-            {/* End footer */}
-        </Grid>
-
     );
 }
-LandingPage.propTypes = {
-    post: PropTypes.object,
-    classes: PropTypes.object,
-  };
