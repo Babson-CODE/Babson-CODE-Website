@@ -26,6 +26,7 @@ import LandingPage from '../Landing/landingpage';
 import { mainFeaturedPost} from '../Landing/landinginfo';
 import { Hidden } from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
+import ContactUsPage from '../Contact Us/contactuspage';
 
 const theme = createMuiTheme();
 
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(1),
-    
+
   },
   container: {
     maxWidth: false,
@@ -310,7 +311,7 @@ export default function MenuAppBar() {
               Resources
             </TabPanel>
             <TabPanel value={value} direction={direction} index={4}>
-              Contact Us
+              <ContactUsPage></ContactUsPage>
             </TabPanel>
       </React.Fragment>
     </div>
