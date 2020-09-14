@@ -18,6 +18,10 @@ import membercard from './Member/membercard';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import IconButton from '@material-ui/core/IconButton';
+import Divider from '@material-ui/core/Divider';
+import Collapse from '@material-ui/core/Collapse';
+import Paper from '@material-ui/core/Paper';
+import Zoom from '@material-ui/core/Zoom';
 
 function Copyright() {
   return (
@@ -66,8 +70,9 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function Album() {
+export default function Album(props) {
   const classes = useStyles();
+  const checked = props;
 
   return (
     <React.Fragment>
@@ -86,7 +91,7 @@ export default function Album() {
                 Come take a look at what our current and former residents are up to. CODE hosts 21 students in residence, all of whom have are busy
                 helping change the world through technology-based entrepreneurship.
             </Typography>
-            <div class={classes.heroButtons}>
+            <div className={classes.heroButtons}>
                 <Grid container spacings={3} justify="center">
                     <Grid item>
                         <Button variant="contained" color="primary">
@@ -102,46 +107,58 @@ export default function Album() {
             </div>
         </Container>
         </div>
+        <Container maxWidth="sm">
+                <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
+                    Current Residents
+                </Typography>
+        </Container>
         <Container className={classes.cardGrid} maxWidth="md">
+            
           {/* End hero unit */}
           <Grid container spacing={4}>
           {memberData.map((data, card) => (
                     <Grid item key={data.id} xs={12} sm={6} md={4}>
-                    <Card className={classes.card}>
-                        <CardMedia
-                        className={classes.cardMedia}
-                        image={data.media.photo}
-                        title={data.full_name}>
-                        </CardMedia>
-                        <CardContent className={classes.cardContent}>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                About {data.first_name}
-                                </Typography>
-                                <Typography>
-                                About me section 
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button variant="contained" color="secondary" className={classes.button} startIcon={<LinkedInIcon />} size="small">
-                            <Link 
-                            component="button"
-                            onClick={() => {
-                                window.open(data.linkedIn, "__blank" );
-                            }} >
-                            LinkedIn
-                            </Link>
-                            </Button>
-                            <Button variant="contained" color="secondary" className={classes.button} startIcon={<EmailIcon />} size="small">
-                            <Link
-                            component="button"
-                            onClick={() => {
-                            window.open(data.email, "__blank");
-                            }}> 
-                            Email 
-                            </Link>
-                            </Button>
-                        </CardActions>
-                    </Card>
+                    <Zoom in={props.checked} style={{transitionDelay: checked ? '500ms' : '0ms'}}>
+                      <Paper elevation={4} className={classes.paper}>
+           
+          
+                        <Card className={classes.card}>
+                          <CardMedia
+                          className={classes.cardMedia}
+                          image={data.media.photo}
+                          title={data.full_name}>
+                          </CardMedia>
+                          <CardContent className={classes.cardContent}>
+                              <Typography gutterBottom variant="h5" component="h2">
+                                  {data.full_name}
+                                  </Typography>
+                                  <Typography>
+                                  About {data.first_name} 
+                              </Typography>
+                          </CardContent>
+                          <CardActions>
+                              <Button variant="contained" color="secondary" className={classes.button} startIcon={<LinkedInIcon />} size="small">
+                              <Link 
+                              component="button"
+                              onClick={() => {
+                                  window.open(data.linkedIn, "__blank" );
+                              }} >
+                              LinkedIn
+                              </Link>
+                              </Button>
+                              <Button variant="contained" color="secondary" className={classes.button} startIcon={<EmailIcon />} size="small">
+                              <Link
+                              component="button"
+                              onClick={() => {
+                              window.open(data.email, "__blank");
+                              }}> 
+                              Email 
+                              </Link>
+                              </Button>
+                          </CardActions>
+                      </Card>
+                    </Paper>
+                    </Zoom>
                     </Grid>
                 ))
                 }

@@ -22,12 +22,28 @@ import MapboxComp from '../Landing/map2';
 import residentspage from '../Residents/residentspage';
 import Portal from '@material-ui/core/Portal';
 import Album from '../Residents/album';
+import LandingPage from '../Landing/landingpage';
+import { mainFeaturedPost} from '../Landing/landinginfo';
+import { Hidden } from '@material-ui/core';
+import Slide from '@material-ui/core/Slide';
 
 const theme = createMuiTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    padding: theme.spacing(1),
+    
+  },
+  container: {
+    maxWidth: false,
+    disableGutters: true,
+  },
+  heroHead: {
+    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(4),
+    height: '90vh',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -56,7 +72,56 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     margin: '12px',
     padding: '6px',
+  },
+  mainFeaturedPost: {
+    position: 'relative',
+    backgroundColor: theme.palette.grey[800],
+    color: theme.palette.common.white,
+    marginBottom: theme.spacing(4),
+    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.3)',
+  },
+  mainFeaturedPostContent: {
+    position: 'relative',
+    padding: theme.spacing(1),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(1),
+      paddingRight: 0,
+    },
+  },
+  contactUsFooter: {
+      position: 'relative',
+  },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  paper: {
+    padding: theme.spacing(1),
+    height: "100%",
+    margin: 'auto',
+  },
+  image: {
+    maxWidth: '100%',
+    maxHeight: '100%',
+
+  },
+  footer: {
+    backgroundcolor: 'text.secondary',
   }
+
 }));
 
 const styles = {
@@ -90,27 +155,73 @@ const styles = {
       backgroundColor: theme.palette.background.paper,
       padding: theme.spacing(6),
       },
+      contactUsFooter: {
+        position: 'relative',
+      },
+      img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+      },
+      paper: {
+        padding: theme.spacing(2),
+        height: theme.spacing(18),
+        margin: 'auto',
+        maxWidth: 500,
+      },
+      image: {
+        maxWidth: '100%',
+        maxHeight: '100%',
+
+      }
   }
 };
 
 function TabPanel(props) {
-  const { children, value, index, ...other} = props;
+  const { children, classes, value, index, direction, checked, ...other} = props;
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`wrapped-tabpanel-${index}`}
-      aria-labelledby={`wrapped-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Container>{children}</Container>
-        </Box>
-      )}
-    </div>
-  );
+  if(direction == true){
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        direction_right={value < index}
+        id={`wrapped-tabpanel-${index}`}
+        aria-labelledby={`wrapped-tab-${index}`}
+        checked={value == index}
+        {...other}
+      >
+        {value === index &&  (
+          <Slide direction="left" in={value == index} mountOnEnter unmountOnExit>
+          <Box p={3}>
+            <Container>{children}</Container>
+          </Box>
+          </Slide>
+        )}
+      </div>
+    );
+  } else {
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        direction_right={value < index}
+        id={`wrapped-tabpanel-${index}`}
+        aria-labelledby={`wrapped-tab-${index}`}
+        checked={value == index}
+        {...other}
+      >
+        {value === index &&  (
+          <Slide direction="right" in={value == index} mountOnEnter unmountOnExit>
+          <Box p={3}>
+            <Container maxWidth="false" disableGutters='true'>{children}</Container>
+          </Box>
+          </Slide>
+        )}
+      </div>
+    );
+  }
 }
 
 function MapComponent(props){
@@ -141,13 +252,18 @@ function a11yprops(index) {
 
 export default function MenuAppBar() {
   const classes = useStyles();
+  const [direction, setDirection] = React.useState(false);
+  const [prevPage, setPrevPage] = React.useState(0);
   const [value, setValue] = React.useState(0);
   const [show, setShow] = React.useState(false);
-  
+  const [checked, setChecked] = React.useState(false);  
 
   const handleChange = (event, newValue) => {
+    setPrevPage(value);
+    setDirection((newValue > value));
     setValue(newValue);
     setShow(!show);
+    setChecked(!checked);
   };
 
   return (
@@ -160,6 +276,7 @@ export default function MenuAppBar() {
           </IconButton>
           <Tabs 
             value={value} 
+            checked={checked}
             onChange={handleChange} 
             aria-label="navigation-links"
             className={classes.tabBar}
@@ -175,24 +292,24 @@ export default function MenuAppBar() {
         </Toolbar>
       </AppBar>
       <React.Fragment>
-      <TabPanel value={value} index={0}>
-            
-              <Container>
-                <MapboxComp></MapboxComp>
+      <TabPanel value={value} direction={direction} index={0}>
+        <Container className={classes.container}>
+                  <LandingPage post={mainFeaturedPost} classes={classes} width={1}/>
+                
               </Container>
               </TabPanel>
-            <TabPanel value={value} index={1}>
+            <TabPanel value={value} direction={direction} index={1}>
               <Box>
-                <Album/>
+                <Album checked={true}/>
               </Box>
             </TabPanel>
-            <TabPanel value={value} index={2}>
+            <TabPanel value={value} direction={direction} index={2}>
               Sponsors and Partners
             </TabPanel>
-            <TabPanel value={value} index={3}>
+            <TabPanel value={value} direction={direction} index={3}>
               Resources
             </TabPanel>
-            <TabPanel value={value} index={4}>
+            <TabPanel value={value} direction={direction} index={4}>
               Contact Us
             </TabPanel>
       </React.Fragment>
