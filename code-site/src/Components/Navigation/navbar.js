@@ -1,6 +1,6 @@
 import React from 'react';
 import { userRef } from 'react';
-import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -27,15 +27,21 @@ import { mainFeaturedPost} from '../Landing/landinginfo';
 import { Hidden } from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
 import ContactUsPage from '../Contact Us/contactuspage';
+import MiniDrawer from '../Resources/resourcedrawer';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import codecover from '../Landing/code-cover.jpg';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
+import Fab from '@material-ui/core/Fab';
 
 const theme = createMuiTheme();
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing(1),
+    padding: theme.spacing(0),
     height: '100vh',
-
   },
   container: {
     maxWidth: false,
@@ -57,11 +63,67 @@ const useStyles = makeStyles((theme) => ({
     primary: '#388e3c',
   },
   tabBar: {
-    float: 'left',
+    float: 'right',
     flexGrow: 1,
   },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: 36,
+  },
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+    whiteSpace: 'nowrap',
+  },
+  drawerOpen: {
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerClose: {
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    overflowX: 'hidden',
+    width: theme.spacing(7) + 1,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing(9) + 1,
+    },
+  },
+  toolbar: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
   mapContainer: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0, 
     right: 0,
     left: 0,
@@ -92,6 +154,7 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     left: 0,
     backgroundColor: 'rgba(0,0,0,.3)',
+    alignItems: 'center',
   },
   mainFeaturedPostContent: {
     position: 'relative',
@@ -110,14 +173,17 @@ const useStyles = makeStyles((theme) => ({
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    maxWidth: '100%',
-    maxHeight: '100%',
+//    backgroundImage: {codecover},
+//    maxWidth: '100%',
+ //   maxHeight: '100%',
+    width: '100vw'
   },
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(3, 2),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    padding: 20
   },
   footer: {
     backgroundcolor: 'text.secondary',
@@ -127,9 +193,19 @@ const useStyles = makeStyles((theme) => ({
     height: 200,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+  },
+  toTop:{
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
+  menuAppBar:{
+    flexGrow: 1,
+  },
+  tabPanelBox:{
+    flexGrow: 1,
   }
-
 }));
 
 const styles = {
@@ -198,12 +274,13 @@ function TabPanel(props) {
         id={`wrapped-tabpanel-${index}`}
         aria-labelledby={`wrapped-tab-${index}`}
         checked={value == index}
+        style={{flexGrow: 1}}
         {...other}
       >
         {value === index &&  (
           <Slide direction="left" in={value == index} mountOnEnter unmountOnExit>
-          <Box p={3}>
-            <Container>{children}</Container>
+          <Box display="flex">         
+            <Container maxWidth={false}>{children}</Container>
           </Box>
           </Slide>
         )}
@@ -218,12 +295,13 @@ function TabPanel(props) {
         id={`wrapped-tabpanel-${index}`}
         aria-labelledby={`wrapped-tab-${index}`}
         checked={value == index}
+        style={{flexGrow: 1}}
         {...other}
       >
         {value === index &&  (
           <Slide direction="right" in={value == index} mountOnEnter unmountOnExit>
-          <Box p={3}>
-            <Container maxWidth="false" disableGutters='true'>{children}</Container>
+          <Box display="flex">          
+            <Container maxWidth={false}>{children}</Container>
           </Box>
           </Slide>
         )}
@@ -251,6 +329,30 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
+
+ElevationScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
 function a11yprops(index) {
   return {
     id: `wrapped-tab-${index}`,
@@ -258,13 +360,54 @@ function a11yprops(index) {
   };
 }
 
-export default function MenuAppBar() {
+function ScrollTop(props) {
+  const { children, window } = props;
+  const classes = useStyles();
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+//    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  return (
+    <Zoom in={trigger}>
+      <div onClick={handleClick} role="presentation" className={classes.toTop}>
+        {children}
+      </div>
+    </Zoom>
+  );
+}
+
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+
+export default function MenuAppBar(props) {
   const classes = useStyles();
   const [direction, setDirection] = React.useState(false);
   const [prevPage, setPrevPage] = React.useState(0);
   const [value, setValue] = React.useState(0);
   const [show, setShow] = React.useState(false);
   const [checked, setChecked] = React.useState(false);  
+  const [auth, setAuth] = React.useState(true);
+  const theme = useTheme();
 
   const handleChange = (event, newValue) => {
     setPrevPage(value);
@@ -275,13 +418,14 @@ export default function MenuAppBar() {
   };
 
   return (
+    <React.Fragment>
     <div className={classes.root}>
-
-      <AppBar position="static">
+      <header>
+        <ElevationScroll {...props}>
+        <AppBar
+        position="fixed"
+        className={classes.menuAppBar}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Tabs 
             value={value} 
             checked={checked}
@@ -299,26 +443,46 @@ export default function MenuAppBar() {
           
         </Toolbar>
       </AppBar>
-      <React.Fragment>
+      </ElevationScroll>
+      </header>
+      <main>
+      <div id="back-to-top-anchor" />
       <TabPanel value={value} direction={direction} index={0}>
-            <LandingPage post={mainFeaturedPost} classes={classes} width={1}/>
-                
+
+            <LandingPage post={mainFeaturedPost} classes={classes} width={1} {...props}/>
+    
+            <ScrollTop {...props}>
+              <Fab color="secondary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </ScrollTop>
               </TabPanel>
             <TabPanel value={value} direction={direction} index={1}>
               <Box>
                 <Album checked={true}/>
+                <ScrollTop {...props}>
+                  <Fab color="secondary" size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUpIcon />
+                  </Fab>
+                </ScrollTop>
               </Box>
             </TabPanel>
             <TabPanel value={value} direction={direction} index={2}>
               Sponsors and Partners
             </TabPanel>
             <TabPanel value={value} direction={direction} index={3}>
-              Resources
+              
             </TabPanel>
             <TabPanel value={value} direction={direction} index={4}>
               <ContactUsPage></ContactUsPage>
+              <ScrollTop {...props}>
+              <Fab color="secondary" size="small" aria-label="scroll back to top">
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </ScrollTop>
             </TabPanel>
-      </React.Fragment>
+           </main>
     </div>
+    </React.Fragment>
   );
 }

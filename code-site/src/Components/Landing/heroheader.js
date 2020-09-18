@@ -63,10 +63,11 @@ export default function LandingHero(props){
             <main>
                 {/* Hero unit */}
                 <Grid item xs={12} sm={12} md={12} width={1}>
-                    <Grid container component={Paper} className={classes.root} width={1}>
+                    <Grid container component={Paper} className={classes.root} width={1} className={classes.paper}>
                         <Grid item xs={false} sm={4} md={7} style={{backgroundImage: `url(${post.image})`}} className={classes.image}>
                         </Grid>
-                        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} align="center" square>
+                        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} alignItems="center" square>
+                            
                             <Typography component="h1" variant="h3" color="inherit" align="center" gutterBottom>
                                 {post.title}
                             </Typography>

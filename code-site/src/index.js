@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import residentspage from './Components/Residents/residentspage';
 import * as serviceWorker from './serviceWorker';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+// import "./Assets/scss/mdb-free.scss";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <residentspage/>
-  </React.StrictMode>,
+
+    <App />,
   document.getElementById('root')
 );
 

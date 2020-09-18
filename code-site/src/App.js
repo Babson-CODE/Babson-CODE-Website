@@ -19,12 +19,15 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#388e3c',
+      main: '#1b5e20',
     },
     secondary: {
-      main: '#388e3c',
+      main: '#2e7d32',
 
     },
+  },
+  typography: {
+    fontFamily: ['Times New Roman'],
   },
 });
 
