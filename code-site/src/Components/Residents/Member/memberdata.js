@@ -12,7 +12,7 @@ export const memberData = [
             name: "Oneye"
         },
         media: {
-            photo: "../../../../public/download1.png",
+            photo: "./download1.png",
             facebook: "https://www.facebook.com/"
         }
     },

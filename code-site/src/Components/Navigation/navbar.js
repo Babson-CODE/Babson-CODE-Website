@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import EmailIcon from '@material-ui/icons/Email';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -20,7 +20,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 import Container from '@material-ui/core/Container';
 import MapboxComp from '../Landing/map2';
 import residentspage from '../Residents/residentspage';
-import Portal from '@material-ui/core/Portal';
+import Button from '@material-ui/core/Button';
 import Album from '../Residents/album';
 import LandingPage from '../Landing/landingpage';
 import { mainFeaturedPost} from '../Landing/landinginfo';
@@ -33,7 +33,17 @@ import codecover from '../Landing/code-cover.jpg';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import Fab from '@material-ui/core/Fab';
-
+import Codeicon from '../../Codefavicon';
+import SVGIcon from '@material-ui/core/SvgIcon';
+import Footer from '../Navigation/footer';
+import TextField from '@material-ui/core/TextField'
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import NewsletterSignUpForm from '../Contact Us/newslettersignup';
+import Grid from '@material-ui/core/Grid';
 const theme = createMuiTheme();
 const drawerWidth = 240;
 
@@ -64,6 +74,9 @@ const useStyles = makeStyles((theme) => ({
   },
   tabBar: {
     float: 'right',
+//    flexGrow: 1,
+  },
+  iconButton:{
     flexGrow: 1,
   },
   appBar: {
@@ -185,6 +198,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: 20
   },
+  imgPaper: {
+ //   margin: theme.spacing(3, 2),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+//    padding: 20
+  },
   footer: {
     backgroundcolor: 'text.secondary',
   },
@@ -201,11 +221,18 @@ const useStyles = makeStyles((theme) => ({
     right: theme.spacing(2),
   },
   menuAppBar:{
-    flexGrow: 1,
+    flexGrow: 0,
+    elevation: 10,
   },
   tabPanelBox:{
     flexGrow: 1,
-  }
+  },
+  subscribeFab: {
+    margin: theme.spacing(1),
+  },
+  toTopFab: {
+    margin: theme.spacing(1),
+  },
 }));
 
 const styles = {
@@ -263,7 +290,15 @@ const styles = {
 };
 
 function TabPanel(props) {
-  const { children, classes, value, index, direction, checked, ...other} = props;
+  const { children, classes, value, setValue, index, direction, checked, ...other} = props;
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
 
   if(direction == true){
     return (
@@ -300,11 +335,13 @@ function TabPanel(props) {
       >
         {value === index &&  (
           <Slide direction="right" in={value == index} mountOnEnter unmountOnExit>
+
           <Box display="flex">          
             <Container maxWidth={false}>{children}</Container>
           </Box>
           </Slide>
         )}
+        
       </div>
     );
   }
@@ -361,7 +398,7 @@ function a11yprops(index) {
 }
 
 function ScrollTop(props) {
-  const { children, window } = props;
+  const { children, window, value, index } = props;
   const classes = useStyles();
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -371,8 +408,11 @@ function ScrollTop(props) {
     disableHysteresis: true,
     threshold: 100,
   });
-
-  const handleClick = (event) => {
+  const transitionDuration = {
+    enter: theme.transitions.duration.enteringScreen,
+    exit: theme.transitions.duration.leavingScreen,
+  };
+  const handleClickTop = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor');
 
     if (anchor) {
@@ -381,8 +421,10 @@ function ScrollTop(props) {
   };
 
   return (
-    <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.toTop}>
+    <Zoom in={trigger} timeout={transitionDuration}
+    style={{transitionDelay: `${value === index ? transitionDuration.exit : 0}ms`,
+    }}>
+      <div onClick={handleClickTop} role="presentation" className={classes.toTop}>
         {children}
       </div>
     </Zoom>
@@ -398,6 +440,50 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
+function FormDialog(props) {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Open form dialog
+      </Button>
+      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            To subscribe to this website, please enter your email address here. We will send updates
+            occasionally.
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email Address"
+            type="email"
+            fullWidth
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Subscribe
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+}
 
 export default function MenuAppBar(props) {
   const classes = useStyles();
@@ -407,7 +493,17 @@ export default function MenuAppBar(props) {
   const [show, setShow] = React.useState(false);
   const [checked, setChecked] = React.useState(false);  
   const [auth, setAuth] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
+
   const theme = useTheme();
+  
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleChange = (event, newValue) => {
     setPrevPage(value);
@@ -425,14 +521,19 @@ export default function MenuAppBar(props) {
         <AppBar
         position="fixed"
         className={classes.menuAppBar}>
-        <Toolbar>
+        <Toolbar className={classes.tabBar}>
+          <IconButton edge="start" color="inherit" aria-label="code-icon" className={classes.menuButton}>
+            <SVGIcon fontSize="large" viewBox="0 0 50 50">
+            <Codeicon />
+            </SVGIcon>
+          </IconButton>
           <Tabs 
             value={value} 
             checked={checked}
             onChange={handleChange} 
             aria-label="navigation-links"
             className={classes.tabBar}
-            centered>
+            variant="scrollable">
               <Tab label="About Code" {...a11yprops(0)}/>
               <Tab label="Residents" {...a11yprops(1)}/>
               <Tab label= "Sponsors and Partners" {...a11yprops(2)}/>
@@ -447,18 +548,81 @@ export default function MenuAppBar(props) {
       </header>
       <main>
       <div id="back-to-top-anchor" />
+
       <TabPanel value={value} direction={direction} index={0}>
 
-            <LandingPage post={mainFeaturedPost} classes={classes} width={1} {...props}/>
+              <LandingPage post={mainFeaturedPost} classes={classes} width={1} {...props}/>
     
-            <ScrollTop {...props}>
-              <Fab color="secondary" size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
-            </ScrollTop>
+               <ScrollTop value={value} index={0} {...props}>
+
+                <Fab variant="extended" size="medium" aria-label="subscribe" color='primary' className={classes.toTopFab}
+                onClick={handleClickOpen}>
+                  <EmailIcon />
+                      Subscribe
+                 </Fab>
+                 <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            To subscribe to this website, please enter your email address here. We will send updates
+            occasionally.
+          </DialogContentText>
+          <form className={classes.form} noValidate>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                    <TextField
+                        autoComplete="fname"
+                        name="firstName"
+                        variant="outlined"
+                        required
+                        fullWidth
+                        id="firstName"
+                        label="First Name"
+                    />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        id="lastName"
+                        label="Last Name"
+                        name="lastName"
+                        autoComplete="lname"
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        id="email"
+                        label="Email Address"
+                        name="email"
+                        autoComplete="email"
+                    />
+                    </Grid>
+                </Grid>
+                </form>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleClose} color="primary">
+            Subscribe
+          </Button>
+        </DialogActions>
+      </Dialog>
+                  <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.subscribeFab}>
+                  <KeyboardArrowUpIcon />
+                </Fab>
+               </ScrollTop>
+               
               </TabPanel>
+
             <TabPanel value={value} direction={direction} index={1}>
-              <Box>
+              <Box p={3}>
                 <Album checked={true}/>
                 <ScrollTop {...props}>
                   <Fab color="secondary" size="small" aria-label="scroll back to top">
@@ -479,9 +643,14 @@ export default function MenuAppBar(props) {
               <Fab color="secondary" size="small" aria-label="scroll back to top">
                 <KeyboardArrowUpIcon />
               </Fab>
+              <div><FormDialog /></div>
             </ScrollTop>
             </TabPanel>
+
            </main>
+           <footer className={classes.footer}>
+            <Footer classes={classes}/>
+          </footer>
     </div>
     </React.Fragment>
   );

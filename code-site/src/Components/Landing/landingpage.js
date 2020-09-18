@@ -64,12 +64,12 @@ export default function LandingPage(props){
     const { classes, post } = props;  
 
     return( 
-        <React.Fragment>
+    <React.Fragment>
             
-        <div>
-            <main>
+        <div className={classes.root}>
+    
         <Jumbotron fluid as="section">
-            <Container className={classes.paper}>
+            <Container className={classes.imgPaper} overflow="hidden">
                 <Image src={codecover} fluid className={classes.image}/>
                 <h1 className={classes.title} >
                     Welcome to Babson CODE!
@@ -78,7 +78,6 @@ export default function LandingPage(props){
         </Jumbotron>
         <MapboxComp></MapboxComp>
         <NewsletterSignupForm classes={classes}></NewsletterSignupForm> 
-            </main>
            
     </div>        
     </React.Fragment>

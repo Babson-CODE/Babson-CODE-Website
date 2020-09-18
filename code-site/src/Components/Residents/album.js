@@ -23,18 +23,6 @@ import Collapse from '@material-ui/core/Collapse';
 import Paper from '@material-ui/core/Paper';
 import Zoom from '@material-ui/core/Zoom';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -80,7 +68,7 @@ export default function Album(props) {
 
 
 
-      <main>
+      
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth='sm'>
@@ -127,7 +115,7 @@ export default function Album(props) {
                         <Card className={classes.card}>
                           <CardMedia
                           className={classes.cardMedia}
-                          image={data.media.photo}
+                          image={process.env.PUBLIC_URL + data.media.photo}
                           title={data.full_name}>
                           </CardMedia>
                           <CardContent className={classes.cardContent}>
@@ -140,22 +128,22 @@ export default function Album(props) {
                           </CardContent>
                           <CardActions>
                               <Button variant="contained" color="secondary" className={classes.button} startIcon={<LinkedInIcon />} size="small">
-                              <Link 
-                              component="button"
-                              onClick={() => {
-                                  window.open(data.linkedIn, "__blank" );
-                              }} >
-                              LinkedIn
-                              </Link>
+                                <Link 
+                                component="button"
+                                onClick={() => {
+                                    window.open(data.linkedIn, "__blank" );
+                                }} >
+                                  LinkedIn
+                                </Link>
                               </Button>
                               <Button variant="contained" color="secondary" className={classes.button} startIcon={<EmailIcon />} size="small">
-                              <Link
-                              component="button"
-                              onClick={() => {
-                              window.open(data.email, "__blank");
-                              }}> 
-                              Email 
-                              </Link>
+                                <Link
+                                component="button"
+                                onClick={() => {
+                                window.open(data.email, "__blank");
+                                }}> 
+                                  Email 
+                                </Link>
                               </Button>
                           </CardActions>
                       </Card>
@@ -166,18 +154,7 @@ export default function Album(props) {
                 }
           </Grid>
         </Container>
-      </main>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+
     </React.Fragment>
   );
 }
