@@ -190,6 +190,7 @@ export default function Album(props) {
                         size="small"
                       >
                         <Link
+                          color="#ffffff"
                           onClick={() => {
                             window.open(data.linkedIn, "__blank");
                           }}
@@ -205,6 +206,7 @@ export default function Album(props) {
                         size="small"
                       >
                         <Link
+                          color="#ffffff"
                           onClick={() => {
                             window.open(data.email, "__blank");
                           }}
