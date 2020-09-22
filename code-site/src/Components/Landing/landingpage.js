@@ -16,6 +16,7 @@ import Image from "react-bootstrap/Image";
 import codecover from "./code-cover.jpg";
 import Zoom from "@material-ui/core/Zoom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -59,17 +60,55 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/* 
+          <Container className={classes.imgPaper} overflow="hidden">
+            <Image src={codecover} fluid className={classes.image} />
+            <h1 className={classes.title}>Welcome to Babson CODE!</h1>
+          </Container>
+*/
+
 export default function LandingPage(props) {
   const { classes, post } = props;
 
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <Jumbotron fluid as="section">
-          <Container className={classes.imgPaper} overflow="hidden">
-            <Image src={codecover} fluid className={classes.image} />
-            <h1 className={classes.title}>Welcome to Babson CODE!</h1>
-          </Container>
+        <Jumbotron fluid as="section" className={classes.landingJumbotron}>
+        <Box className={classes.heroContent} mx="auto">
+            <Container maxWidth="sm" className={classes.contain}>
+              <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="textPrimary"
+                gutterBottom
+              >
+                Welcome to CODE!
+              </Typography>
+              <Typography
+                variant="h5"
+                align="center"
+                color="textSecondary"
+                paragraph
+              >
+                  
+              </Typography>
+              <div className={classes.heroButtons}>
+                <Grid container spacing={3} justify="center">
+                  <Grid item>
+                    <Button variant="contained" color="primary">
+                      Subscribe to Newsletter
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="contained" color="primary">
+                      Check Event Calendar
+                    </Button>
+                  </Grid>
+                </Grid>
+              </div>
+            </Container>
+          </Box>
         </Jumbotron>
         <Container>
           <div>

@@ -24,17 +24,20 @@ import Paper from "@material-ui/core/Paper";
 import Zoom from "@material-ui/core/Zoom";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Image from "react-bootstrap/Image";
-import albumphoto from "../../Assets/img/thisisengineering.jpg";
-import ResponsiveEmbed from "react-bootstrap/ResponsiveEmbed";
 import Box from "@material-ui/core/Box";
+import albumphoto from "../../Assets/img/thisisengineering.jpg";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
   },
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
+    //    backgroundColor: theme.palette.background.paper,
+   padding: '20%',
+//   height: '100%',
+   flexDirection: "column",
+//   justifyContent: "center",
+   alignItems: 'center',
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -58,6 +61,35 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  albumJumbotron:{
+    backgroundImage: `url(${albumphoto})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width:'100vw',
+    height: '100vh',
+  },
+  mainDiv: {
+    padding: theme.spacing(0),
+    height: '100vh',
+  },
+  root: {
+    padding: theme.spacing(0),
+  },
+  contain:{
+      maxWidth: false,
+      disableGutters: true,
+      padding: 0,
+ //     justifyContent: "center",
+      alignItems: 'center',
+  },
+  residentContentDivider: {
+    //    backgroundColor: theme.palette.background.paper,
+//   padding: '20%',
+//   height: '100%',
+   flexDirection: "column",
+//   justifyContent: "center",
+   alignItems: 'center',
+  },
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -72,10 +104,10 @@ export default function Album(props) {
 
       {/* Hero unit */}
 
-      <div>
-        <Jumbotron as="section">
-          <div className={classes.heroContent}>
-            <Container maxWidth="sm">
+      <div clasName={classes.mainDiv}>
+        <Jumbotron as="section" className={classes.albumJumbotron} fluid>
+          <Box className={classes.heroContent}>
+            <Container maxWidth="sm" className={classes.contain}>
               <Typography
                 component="h1"
                 variant="h2"
@@ -111,10 +143,10 @@ export default function Album(props) {
                 </Grid>
               </div>
             </Container>
-          </div>
+          </Box>
         </Jumbotron>
       </div>
-      <div className={classes.heroContent}>
+      <div className={classes.residentContentDivider}>
         <Container maxWidth="sm">
           <Typography
             component="h2"
@@ -188,7 +220,7 @@ export default function Album(props) {
           ))}
         </Grid>
       </Container>
-      <div className={classes.heroContent}>
+      <div className={classes.residentContentDivider}>
         <Container maxWidth="sm">
           <Typography
             component="h2"

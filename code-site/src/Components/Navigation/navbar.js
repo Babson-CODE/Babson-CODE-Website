@@ -45,6 +45,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import NewsletterSignUpForm from "../Contact Us/newslettersignup";
 import Grid from "@material-ui/core/Grid";
 import NewsletterDialogue from "../Contact Us/newsletterdialogue";
+import albumphoto from "../../Assets/img/thisisengineering.jpg";
 
 const theme = createMuiTheme();
 const drawerWidth = 240;
@@ -213,11 +214,19 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     maxHeight: "100%",
   },
-  albumDiv: {
+  albumTabPanel: {
     width: "100%",
     height: "100%",
     //    overflow: 'hidden',
     backgroundSize: "cover",
+  //  marginTop: theme.spacing(8),
+  },
+  album:{
+//    display: 'flex',
+    flexGrow: 1,
+    width: '100%', 
+    height: '100%',
+    padding: theme.spacing(0),
   },
   paper: {
     margin: theme.spacing(3, 2),
@@ -257,10 +266,52 @@ const useStyles = makeStyles((theme) => ({
   },
   subscribeFab: {
     margin: theme.spacing(1),
-    paddint: theme.spacing(1),
+    padding: theme.spacing(1),
   },
   toTopFab: {
     margin: theme.spacing(1),
+  },
+  iconTab:{
+    marginLeft: 'auto',
+    display: 'flex',
+  },
+  albumJumbotron:{
+    backgroundImage: `url(${albumphoto})`,
+  },
+  tabPanelContainer:{
+    padding: 0,
+    flexGrow: 1,
+  },
+  landingJumbotron:{
+    backgroundImage: `url(${codecover})`,
+    backgroundRepeat: "no-repeat",
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[50]
+        : theme.palette.grey[900],
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: '100vw',
+    height: '100vh',
+    justifyContent: "center",
+    alignItems: 'center',
+    marginBottom: theme.spacing(8)
+  },
+  heroContent: {
+    //    backgroundColor: theme.palette.background.paper,
+   padding: '25%',
+//   height: '100%',
+   flexDirection: "column",
+//   justifyContent: "center",
+   alignItems: 'center',
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  contain:{
+    alignContent: 'center',
+    alignItems: 'center',
+  
   },
 }));
 
@@ -347,6 +398,7 @@ function TabPanel(props) {
         aria-labelledby={`wrapped-tab-${index}`}
         checked={value == index}
         style={{ flexGrow: 1 }}
+        classes={classes}
         {...other}
       >
         {value === index && (
@@ -357,7 +409,7 @@ function TabPanel(props) {
             unmountOnExit
           >
             <Box display="flex">
-              <Container maxWidth={false}>{children}</Container>
+              <Container maxWidth={false} className={classes.tabPanelContainer}>{children}</Container>
             </Box>
           </Slide>
         )}
@@ -373,6 +425,7 @@ function TabPanel(props) {
         aria-labelledby={`wrapped-tab-${index}`}
         checked={value == index}
         style={{ flexGrow: 1 }}
+        classes={classes}
         {...other}
       >
         {value === index && (
@@ -383,7 +436,7 @@ function TabPanel(props) {
             unmountOnExit
           >
             <Box display="flex">
-              <Container maxWidth={false}>{children}</Container>
+              <Container maxWidth={false} className={classes.tabPanelContainer}>{children}</Container>
             </Box>
           </Slide>
         )}
@@ -527,19 +580,8 @@ export default function MenuAppBar(props) {
           <ElevationScroll {...props}>
             <AppBar position="fixed" className={classes.menuAppBar}>
               <Toolbar className={classes.tabBar}>
-                <IconButton
-                  edge="start"
-                  color="inherit"
-                  aria-label="code-icon"
-                  className={classes.menuButton}
-                >
-                  <SVGIcon fontSize="large" viewBox="0 0 50 50">
-                    <Codeicon />
-                  </SVGIcon>
-                </IconButton>
-                <Typography variant="h6" className={classes.title}>
-                  Babson CODE
-                </Typography>
+
+
                 <Tabs
                   value={value}
                   checked={checked}
@@ -548,11 +590,12 @@ export default function MenuAppBar(props) {
                   className={classes.tabBar}
                   variant="scrollable"
                 >
-                  <Tab label="About Code" {...a11yprops(0)} />
-                  <Tab label="Residents" {...a11yprops(1)} />
-                  <Tab label="Sponsors and Partners" {...a11yprops(2)} />
-                  <Tab label="Resources" {...a11yprops(3)} />
-                  <Tab label="Contact Us" {...a11yprops(4)} />
+                  <Tab icon={<TabIcon />} aria-label="home" {...a11yprops(0)} ml="auto" className={classes.iconTab} />
+                  <Tab label="About Code" {...a11yprops(1)} />
+                  <Tab label="Residents" {...a11yprops(2)} />
+                  <Tab label="Sponsors and Partners" {...a11yprops(3)} />
+                  <Tab label="Resources" {...a11yprops(4)} />
+                  <Tab label="Contact Us" {...a11yprops(5)} />
                 </Tabs>
               </Toolbar>
             </AppBar>
@@ -561,7 +604,7 @@ export default function MenuAppBar(props) {
         <main>
           <div id="back-to-top-anchor" />
 
-          <TabPanel value={value} direction={direction} index={0}>
+          <TabPanel value={value} direction={direction} index={0} classes={classes}>
             <LandingPage
               post={mainFeaturedPost}
               classes={classes}
@@ -592,17 +635,23 @@ export default function MenuAppBar(props) {
               </Fab>
             </ScrollTop>
           </TabPanel>
-
+          <TabPanel 
+            value={value}
+            direction={direction}
+            indxe={1}
+            className={classes.aboutUsTab}>
+            classes={classes}
+            </TabPanel>
           <TabPanel
             value={value}
             direction={direction}
-            index={1}
-            className={classes.albumDiv}
+            index={2}
+            className={classes.albumTabPanel}
+            classes={classes}
           >
-            <Box p={3} display="inline">
-              <Container className={classes.albumContainer}>
-                <Album checked={true} />
-              </Container>
+
+                <Album checked={true} className={classes.album}/>
+
               <ScrollTop value={value} index={0} {...props}>
                 <Fab
                   variant="extended"
@@ -625,9 +674,8 @@ export default function MenuAppBar(props) {
                   <KeyboardArrowUpIcon />
                 </Fab>
               </ScrollTop>
-            </Box>
           </TabPanel>
-          <TabPanel value={value} direction={direction} index={2}>
+          <TabPanel value={value} direction={direction} index={3} classes={classes}>
             Sponsors and Partners
             <ScrollTop {...props}>
               <Fab
@@ -652,8 +700,8 @@ export default function MenuAppBar(props) {
               </Fab>
             </ScrollTop>
           </TabPanel>
-          <TabPanel value={value} direction={direction} index={3}></TabPanel>
-          <TabPanel value={value} direction={direction} index={4}>
+          <TabPanel value={value} direction={direction} index={4} classes={classes}></TabPanel>
+          <TabPanel value={value} direction={direction} index={5} classes={classes}>
             <div>
               <Container>
                 <ContactUsPage />
@@ -726,5 +774,13 @@ export default function MenuAppBar(props) {
         </footer>
       </div>
     </React.Fragment>
+  );
+}
+
+function TabIcon(){
+  return(
+    <SVGIcon fontSize="large" viewBox="0 0 50 50">
+    <Codeicon />
+  </SVGIcon>
   );
 }
