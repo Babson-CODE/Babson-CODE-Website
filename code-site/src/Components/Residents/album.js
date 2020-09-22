@@ -74,9 +74,7 @@ export default function Album(props) {
 
           <div >
           <Jumbotron as="section">
-            <div className={classes.albumDiv} style={{ width: '100vw', height: 'auto' }}>
-            <Image src={albumphoto}/>
-            </div>
+
         <div className={classes.heroContent}>
           
           <Container maxWidth='sm'>
