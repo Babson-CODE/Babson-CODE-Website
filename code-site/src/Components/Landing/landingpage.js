@@ -76,9 +76,18 @@ export default function LandingPage(props){
                 </h1>
             </Container>
         </Jumbotron>
-        <MapboxComp></MapboxComp>
-        <NewsletterSignupForm classes={classes}></NewsletterSignupForm> 
-           
+        <Container>
+            <div>
+                <Grid container>
+                    <Grid item xs={false} sm={4} md={7}>
+                        <MapboxComp></MapboxComp>
+                    </Grid>
+                    <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+                        <NewsletterSignupForm classes={classes}></NewsletterSignupForm> 
+                    </Grid>
+                </Grid>
+            </div>
+        </Container>
     </div>        
     </React.Fragment>
     );

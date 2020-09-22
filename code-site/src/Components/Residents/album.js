@@ -22,7 +22,11 @@ import Divider from '@material-ui/core/Divider';
 import Collapse from '@material-ui/core/Collapse';
 import Paper from '@material-ui/core/Paper';
 import Zoom from '@material-ui/core/Zoom';
-
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Image from 'react-bootstrap/Image';
+import albumphoto from '../../Assets/img/thisisengineering.jpg';
+import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -65,13 +69,18 @@ export default function Album(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-
-
-
       
         {/* Hero unit */}
+
+          <div >
+          <Jumbotron as="section">
+            <div className={classes.albumDiv} style={{ width: '100vw', height: 'auto' }}>
+            <Image src={albumphoto}/>
+            </div>
         <div className={classes.heroContent}>
+          
           <Container maxWidth='sm'>
+            
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
                 Our Residents
             </Typography>
@@ -94,6 +103,8 @@ export default function Album(props) {
                 </Grid>
             </div>
         </Container>
+        </div>
+        </Jumbotron>
         </div>
         <div className={classes.heroContent}>
         <Container maxWidth="sm">
@@ -129,7 +140,6 @@ export default function Album(props) {
                           <CardActions>
                               <Button variant="contained" color="secondary" className={classes.button} startIcon={<LinkedInIcon />} size="small">
                                 <Link 
-                                component="button"
                                 onClick={() => {
                                     window.open(data.linkedIn, "__blank" );
                                 }} >
@@ -138,7 +148,6 @@ export default function Album(props) {
                               </Button>
                               <Button variant="contained" color="secondary" className={classes.button} startIcon={<EmailIcon />} size="small">
                                 <Link
-                                component="button"
                                 onClick={() => {
                                 window.open(data.email, "__blank");
                                 }}> 
@@ -154,6 +163,13 @@ export default function Album(props) {
                 }
           </Grid>
         </Container>
+        <div className={classes.heroContent}>
+        <Container maxWidth="sm">
+                <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
+                    Former Residents
+                </Typography>
+        </Container>
+        </div>
 
     </React.Fragment>
   );

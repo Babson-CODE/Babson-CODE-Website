@@ -9,8 +9,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // import "./Assets/scss/mdb-free.scss";
 
 ReactDOM.render(
-
-    <App />,
+  <React.StrictMode><App />
+  </React.StrictMode>,
+    
   document.getElementById('root')
 );
 

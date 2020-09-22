@@ -44,6 +44,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import NewsletterSignUpForm from '../Contact Us/newslettersignup';
 import Grid from '@material-ui/core/Grid';
+import NewsletterDialogue from '../Contact Us/newsletterdialogue';
+
 const theme = createMuiTheme();
 const drawerWidth = 240;
 
@@ -191,6 +193,28 @@ const useStyles = makeStyles((theme) => ({
  //   maxHeight: '100%',
     width: '100vw'
   },
+  albumImg:{
+    backgroundRepeat: 'no-repeat',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+//    backgroundImage: {codecover},
+    maxWidth: '100%',
+    maxHeight: '100%',
+//    width: '100vw',
+//   height: '100vh',
+  },
+  albumContainer:{
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  albumDiv:{
+    width:'100%',
+    height: '100%',
+//    overflow: 'hidden',
+    backgroundSize: 'cover',
+  },
   paper: {
     margin: theme.spacing(3, 2),
     display: 'flex',
@@ -223,12 +247,13 @@ const useStyles = makeStyles((theme) => ({
   menuAppBar:{
     flexGrow: 0,
     elevation: 10,
-  },
+  }, 
   tabPanelBox:{
     flexGrow: 1,
   },
   subscribeFab: {
     margin: theme.spacing(1),
+    paddint: theme.spacing(1)
   },
   toTopFab: {
     margin: theme.spacing(1),
@@ -440,50 +465,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-function FormDialog(props) {
-  const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open form dialog
-      </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
-  );
-}
 
 export default function MenuAppBar(props) {
   const classes = useStyles();
@@ -527,6 +509,9 @@ export default function MenuAppBar(props) {
             <Codeicon />
             </SVGIcon>
           </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Babson CODE
+          </Typography>
           <Tabs 
             value={value} 
             checked={checked}
@@ -555,41 +540,93 @@ export default function MenuAppBar(props) {
     
                <ScrollTop value={value} index={0} {...props}>
 
+                <Fab variant="extended" size="medium" aria-label="subscribe" color='primary' className={classes.subscribeFab}
+                onClick={handleClickOpen}>
+                  <EmailIcon />
+                       Subscribe
+                 </Fab>
+                 
+                  <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.toTopFab}>
+                  <KeyboardArrowUpIcon />
+                </Fab>
+               </ScrollTop>
+               
+              </TabPanel>
+
+            <TabPanel value={value} direction={direction} index={1} className={classes.albumDiv}>
+              <Box p={3} display="inline">
+                <Container className={classes.albumContainer}>
+                <Album checked={true}/>
+                </Container>
+                <ScrollTop value={value} index={0} {...props}>
+
                 <Fab variant="extended" size="medium" aria-label="subscribe" color='primary' className={classes.toTopFab}
                 onClick={handleClickOpen}>
                   <EmailIcon />
                       Subscribe
                  </Fab>
-                 <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
-          </DialogContentText>
-          <form className={classes.form} noValidate>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                    <TextField
-                        autoComplete="fname"
-                        name="firstName"
-                        variant="outlined"
-                        required
-                        fullWidth
-                        id="firstName"
-                        label="First Name"
-                    />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                    <TextField
-                        variant="outlined"
-                        required
-                        fullWidth
-                        id="lastName"
-                        label="Last Name"
-                        name="lastName"
-                        autoComplete="lname"
-                    />
+                 
+                  <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.subscribeFab}>
+                  <KeyboardArrowUpIcon />
+                </Fab>
+               </ScrollTop>
+              </Box>
+            </TabPanel>
+            <TabPanel value={value} direction={direction} index={2}>
+              Sponsors and Partners
+              <ScrollTop {...props}>
+                <Fab variant="extended" size="medium" aria-label="subscribe" color='primary' className={classes.toTopFab}
+                onClick={handleClickOpen}>
+                  <EmailIcon />
+                      Subscribe
+                 </Fab>
+                 
+                  <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.subscribeFab}>
+                  <KeyboardArrowUpIcon />
+                </Fab>
+                </ScrollTop>
+            </TabPanel>
+            <TabPanel value={value} direction={direction} index={3}>
+              
+            </TabPanel>
+            <TabPanel value={value} direction={direction} index={4}>
+              <div>
+                <Container>
+                <ContactUsPage/>
+                </Container>
+
+              </div>
+            </TabPanel>
+            <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              To subscribe to this website, please enter your email address here. We will send updates
+              occasionally.
+            </DialogContentText>
+            <form className={classes.form} noValidate>
+                  <Grid container spacing={2}>
+                      <Grid item xs={12} sm={6}>
+                      <TextField
+                          autoComplete="fname"
+                          name="firstName"
+                          variant="outlined"
+                          required
+                          fullWidth
+                          id="firstName"
+                          label="First Name"
+                      />
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                      <TextField
+                          variant="outlined"
+                          required
+                          fullWidth
+                          id="lastName"
+                          label="Last Name"
+                          name="lastName"
+                          autoComplete="lname"
+                      />
                     </Grid>
                     <Grid item xs={12}>
                     <TextField
@@ -604,52 +641,21 @@ export default function MenuAppBar(props) {
                     </Grid>
                 </Grid>
                 </form>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
-      </Dialog>
-                  <Fab color="secondary" size="small" aria-label="scroll back to top" className={classes.subscribeFab}>
-                  <KeyboardArrowUpIcon />
-                </Fab>
-               </ScrollTop>
-               
-              </TabPanel>
-
-            <TabPanel value={value} direction={direction} index={1}>
-              <Box p={3}>
-                <Album checked={true}/>
-                <ScrollTop {...props}>
-                  <Fab color="secondary" size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                  </Fab>
-                </ScrollTop>
-              </Box>
-            </TabPanel>
-            <TabPanel value={value} direction={direction} index={2}>
-              Sponsors and Partners
-            </TabPanel>
-            <TabPanel value={value} direction={direction} index={3}>
-              
-            </TabPanel>
-            <TabPanel value={value} direction={direction} index={4}>
-              <ContactUsPage></ContactUsPage>
-              <ScrollTop {...props}>
-              <Fab color="secondary" size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-              </Fab>
-              <div><FormDialog /></div>
-            </ScrollTop>
-            </TabPanel>
-
+                </DialogContent>
+                <DialogActions>
+                  <Button onClick={handleClose} color="primary">
+                    Cancel
+                  </Button>
+                  <Button onClick={handleClose} color="primary">
+                    Subscribe
+                  </Button>
+                </DialogActions>
+              </Dialog>
            </main>
            <footer className={classes.footer}>
+            <div>
             <Footer classes={classes}/>
+            </div>
           </footer>
     </div>
     </React.Fragment>

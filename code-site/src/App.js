@@ -27,7 +27,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: ['Times New Roman'],
+    fontFamily: ['Arial'],
   },
 });
 
