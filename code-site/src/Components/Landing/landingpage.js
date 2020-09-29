@@ -17,6 +17,8 @@ import codecover from "./code-cover.jpg";
 import Zoom from "@material-ui/core/Zoom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from '@material-ui/core/Button';
+import {MemberCarousel} from '../Residents/album';
+import Footer from "../Navigation/footer";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -58,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     maxWidth: 500,
   },
+  
 }));
 
 /* 
@@ -80,7 +83,7 @@ export default function LandingPage(props) {
                 component="h1"
                 variant="h2"
                 align="center"
-                color="textPrimary"
+                color="inherit"
                 gutterBottom
               >
                 Welcome to CODE!
@@ -110,6 +113,21 @@ export default function LandingPage(props) {
             </Container>
           </Box>
         </Jumbotron>
+        <Box className={classes.memberCarouselBox} mt={9} mb={9} height="100%">
+          <Container>
+          <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="textPrimary"
+                gutterBottom
+              >
+                Our Residents
+              </Typography>
+            <MemberCarousel />
+          </Container>
+        </Box>
+        <Box>
         <Container>
           <div>
             <Grid container>
@@ -130,7 +148,9 @@ export default function LandingPage(props) {
             </Grid>
           </div>
         </Container>
+        </Box>
       </div>
+
     </React.Fragment>
   );
 }

@@ -15,21 +15,7 @@ import {
   Link,
 } from "react-router-dom";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#1b5e20',
-    },
-    secondary: {
-      main: '#2e7d32',
-
-    },
-  },
-  typography: {
-    fontFamily: ['Arial'],
-  },
-});
+import { theme } from './Subcomponents/theme';
 
 function App() {
   return (

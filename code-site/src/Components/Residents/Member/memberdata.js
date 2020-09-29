@@ -12,7 +12,7 @@ export const memberData = [
             name: "Oneye"
         },
         media: {
-            photo: "./download1.png",
+            photo: "/download1.png",
             facebook: "https://www.facebook.com/"
         }
     },
@@ -29,7 +29,7 @@ export const memberData = [
             name: "X-Highlight"
         }, 
         media: {
-            photo: "https://www.facebook.com/photo/?fbid=1660236200946076&set=a.1375207022782330&__tn__=%3C"
+            photo: "/stockPortrait1.jpg"
         }
 
     },
@@ -46,7 +46,7 @@ export const memberData = [
             name: ""
         },
         media: {
-            photo: ""
+            photo: "/stockPortrait2.jpg"
         }
     },
     {
@@ -62,7 +62,7 @@ export const memberData = [
             name: ""
         },
         media: {
-            photo: ""
+            photo: "/stockPortrait3.jpg"
         }
     },
     {
@@ -78,7 +78,7 @@ export const memberData = [
             name: ""
         },
         media: {
-            photo: ""
+            photo: "/stockPortrait4.jpg"
         }
     },
     {
@@ -94,7 +94,7 @@ export const memberData = [
             name: ""
         },
         media: {
-            photo: ""
+            photo: "/stockPortrait5.jpg"
         }
     },
     {
@@ -110,7 +110,7 @@ export const memberData = [
             name: ""
         },
         media: {
-            photo: ""
+            photo: "/stockPortrait6.jpg"
         }
     },
 ];

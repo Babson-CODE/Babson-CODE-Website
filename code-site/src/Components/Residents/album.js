@@ -26,6 +26,9 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Image from "react-bootstrap/Image";
 import Box from "@material-ui/core/Box";
 import albumphoto from "../../Assets/img/thisisengineering.jpg";
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -50,9 +53,13 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   },
   cardMedia: {
-    paddingTop: "56.25%", // 16:9
+//    paddingTop: "56.25%", // 16:9
+    height: '100%',
+    width: '100%',
   },
   cardContent: {
     flexGrow: 1,
@@ -68,12 +75,35 @@ const useStyles = makeStyles((theme) => ({
     width:'100vw',
     height: '100vh',
   },
+  albumCarousel:{
+
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexGrow: 1,
+  },
   mainDiv: {
     padding: theme.spacing(0),
     height: '100vh',
   },
   root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(0),
+  },
+  gridList: {
+    flexWrap: 'nowrap',
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    transform: 'translateZ(0)',
+  },
+  title: {
+    color: theme.palette.primary.contrastText,
+  },
+  titleBar: {
+    background:
+      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
   contain:{
       maxWidth: false,
@@ -104,7 +134,7 @@ export default function Album(props) {
 
       {/* Hero unit */}
 
-      <div clasName={classes.mainDiv}>
+      <div className={classes.mainDiv}>
         <Jumbotron as="section" className={classes.albumJumbotron} fluid>
           <Box className={classes.heroContent}>
             <Container maxWidth="sm" className={classes.contain}>
@@ -161,7 +191,7 @@ export default function Album(props) {
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
         {/* End hero unit */}
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {memberData.map((data, card) => (
             <Grid item key={data.id} xs={12} sm={6} md={4}>
               <Zoom
@@ -171,6 +201,7 @@ export default function Album(props) {
                 <Paper elevation={4} className={classes.paper}>
                   <Card className={classes.card}>
                     <CardMedia
+                      component="img"
                       className={classes.cardMedia}
                       image={process.env.PUBLIC_URL + data.media.photo}
                       title={data.full_name}
@@ -179,41 +210,41 @@ export default function Album(props) {
                       <Typography gutterBottom variant="h5" component="h2">
                         {data.full_name}
                       </Typography>
-                      <Typography>About {data.first_name}</Typography>
+                      <Typography gutterBottom component="h3" variant="caption">
+                        About {data.first_name}
+                      </Typography>
                     </CardContent>
                     <CardActions>
-                      <Button
+                      <IconButton
                         variant="contained"
-                        color="secondary"
+                        color=""
                         className={classes.button}
-                        startIcon={<LinkedInIcon />}
                         size="small"
                       >
                         <Link
-                          color="#ffffff"
+                          color="contrastText"
                           onClick={() => {
                             window.open(data.linkedIn, "__blank");
                           }}
                         >
-                          LinkedIn
+                         <LinkedInIcon /> 
                         </Link>
-                      </Button>
-                      <Button
+                      </IconButton>
+                      <IconButton
                         variant="contained"
                         color="secondary"
                         className={classes.button}
-                        startIcon={<EmailIcon />}
                         size="small"
                       >
                         <Link
-                          color="#ffffff"
+                          color="contrastText"
                           onClick={() => {
                             window.open(data.email, "__blank");
                           }}
                         >
-                          Email
+                          <EmailIcon />
                         </Link>
-                      </Button>
+                      </IconButton>
                     </CardActions>
                   </Card>
                 </Paper>
@@ -238,3 +269,33 @@ export default function Album(props) {
     </React.Fragment>
   );
 }
+
+function MemberCarousel() {
+  const classes = useStyles();
+
+  return(
+    <div className={classes.albumCarousel}>
+      <GridList className={classes.gridList} cols={3.5} cellHeight={500}>
+        {memberData.map((tile) => 
+          <GridListTile key={tile.media.photo}>
+            <img src={process.env.PUBLIC_URL + tile.media.photo} />
+            <GridListTileBar key={tile.media.photo}
+              title={tile.full_name}
+              classes={{
+                root: classes.titleBar,
+                title: classes.title,
+              }}
+              actionIcon={
+                <IconButton aria-label={`linked ${tile.full_name}`}>
+                  <LinkedInIcon className={classes.title}/>
+                </IconButton>
+              }
+            />
+          </GridListTile> 
+          )}
+      </GridList>
+    </div>
+  );
+}
+
+export { MemberCarousel };

@@ -19,7 +19,7 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  footerRoot: {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
@@ -31,10 +31,11 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: "auto",
-    backgroundColor:
-      theme.palette.type === "light"
-        ? theme.palette.grey[200]
-        : theme.palette.grey[800],
+    backgroundColor: theme.palette.type === "light" ? theme.palette.grey[200] : theme.palette.grey[800],
+  },
+  footerContainer:{
+    bottom: 0,
+    left: 0,
   },
 }));
 
@@ -42,17 +43,17 @@ export default function StickyFooter() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <div className={classes.footerRoot}>
+      
 
-      <footer className={classes.footer}>
-        <Container maxWidth="sm">
+
+        <Container maxWidth="sm" className={classes.footerContainer}>
           <Typography variant="body1">
-            My sticky footer can be found here.
+            Footer
           </Typography>
           <Copyright />
         </Container>
-      </footer>
+
     </div>
   );
 }
