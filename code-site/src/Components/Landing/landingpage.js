@@ -19,7 +19,14 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from '@material-ui/core/Button';
 import {MemberCarousel} from '../Residents/album';
 import Footer from "../Navigation/footer";
+import { compose } from 'recompose';
+import { MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { withAuthorization, withEmailVerification } from '../Session';
+import Messages from '../Messages';
+import { render } from "react-dom";
+import Navigation from '../Navigation';
 
+/*
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
     position: "relative",
@@ -37,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 0,
     left: 0,
-    backgroundColor: "rgba(0,0,0,.3)",
+    backgroundColor: ",
   },
   mainFeaturedPostContent: {
     position: "relative",
@@ -63,14 +70,14 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-/* 
+
           <Container className={classes.imgPaper} overflow="hidden">
             <Image src={codecover} fluid className={classes.image} />
             <h1 className={classes.title}>Welcome to Babson CODE!</h1>
           </Container>
 */
-
-export default function LandingPage(props) {
+/*
+function LandingPage(props) {
   const { classes, post } = props;
 
   return (
@@ -158,6 +165,7 @@ LandingPage.propTypes = {
   post: PropTypes.object,
   classes: PropTypes.object,
 };
+*/
 
 /* 
  <Grid container component="main" className={classes.root}>
@@ -214,3 +222,39 @@ LandingPage.propTypes = {
             </footer>
 
 */
+function Landed() {
+
+  return(
+    <div id="landingContainer">
+      <header>
+        <MDBView src={codecover} fixed>
+            <MDBMask className="rgba-black-light"/>
+            <MDBContainer
+            className='d-flex justify-content-center align-items-center'
+            style={{ height: '100%', width: '100%', paddingTop: '17rem' }}
+          >
+            <MDBRow>
+              <MDBCol md='12' className='mb-4 white-text text-center'>
+                <h1 className='h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 '>
+                  Welcome to Babson CODE!
+                </h1>
+                <hr className='hr-light my-4' />
+                <h5 className='text-uppercase mb-4 white-text '>
+                  <strong>Photography & design</strong>
+                </h5>
+                <MDBBtn outline color='white'>
+                  Connect
+                </MDBBtn>
+                <MDBBtn outline color='white'>
+                  About us
+                </MDBBtn>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </MDBView>
+      </header>
+    </div>
+  );
+}
+
+export default Landed;

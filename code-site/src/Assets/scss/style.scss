@@ -1,1 +1,41 @@
 // Your custom styles
+
+@import '../../../node_modules/bootstrap/scss/Bootstrap';
+
+// Custom SCSS
+
+
+
+
+
+
+
+// Landing page styles
+
+.landingHeader{
+    background-image: url("../../Components/Landing/code-cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#landingContainer .view {
+    min-height: 100vh !important;
+    height: unset !important;
+}
+
+
+
+// Sign In Page Styles
+.signInDiv {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+.signInCol {
+
+}
+.paper {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.columnPadder {
+    
+}

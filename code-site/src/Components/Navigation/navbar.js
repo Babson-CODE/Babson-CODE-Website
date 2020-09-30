@@ -266,7 +266,7 @@ function MenuAppBar(props) {
       <div className={classes.root}>
         <header>
           <ElevationScroll {...props}>
-            <AppBar position="fixed" className={classes.menuAppBar}>
+            <AppBar position="fixed" className={classes.menuAppBar} hidden>
               <Toolbar className={classes.tabBar}>
 
 
