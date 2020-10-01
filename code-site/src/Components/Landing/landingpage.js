@@ -236,11 +236,11 @@ function Landed() {
             <MDBRow>
               <MDBCol md='12' className='mb-4 white-text text-center'>
                 <h1 className='h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 '>
-                  Welcome to Babson CODE!
+                  Welcome to CODE!
                 </h1>
                 <hr className='hr-light my-4' />
                 <h5 className='text-uppercase mb-4 white-text '>
-                  <strong>Photography & design</strong>
+                  <strong>Come explore Babson's Community of Developers & Entrepreneurs</strong>
                 </h5>
                 <MDBBtn outline color='white'>
                   Connect

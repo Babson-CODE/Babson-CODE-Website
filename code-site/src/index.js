@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'react-app-polyfill/ie11'; // For IE 11 support
-import 'react-app-polyfill/stable';
-import './polyfill'
+import ReactDOM from 'react-dom'
 import './index.css';
 import App from './App';
 import residentspage from './Components/Residents/residentspage';
@@ -13,19 +10,12 @@ import Firebase, { FirebaseContext } from './Components/Firebase';
 import "./Assets/scss/mdb-free.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Assets/scss/style.scss";
-
-import { icons } from './assets/icons';
-import { Provider } from 'react-redux';
-import store from './store';
-
-React.icons = icons;
-
+import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
-  <Provider store={store}>
-    <FirebaseContext.Provider value={new Firebase()}>
-    <App />
-  </FirebaseContext.Provider>
-  </Provider>,  
+
+  <FirebaseContext.Provider value={new Firebase()}>
+    <Router><App /></Router>
+  </FirebaseContext.Provider>,  
     
   document.getElementById('root')
 );

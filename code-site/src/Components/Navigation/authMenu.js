@@ -202,12 +202,12 @@ const classes = useStyles();
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/services" activeStyle={{color: 'blue'}} activeClassName="activeLink">Services</Link>
+                                            <Link to="/residents" activeStyle={{color: 'blue'}} activeClassName="activeLink">Residents</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/gallery" activeStyle={{color: 'blue'}} activeClassName="activeLink">Gallery</Link>
+                                            <Link to="/resources" activeStyle={{color: 'blue'}} activeClassName="activeLink">Resources</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>

@@ -31,15 +31,15 @@ export default function NavigationNonAuthBar( ){
 
     return(
         <>
-        <Navbar collapseOnSelect expand="lg" className="fixed-top scrolling transparent">
-        <Navbar.Brand><Link to={ROUTES.LANDING}>Babson CODE</Link></Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" className="fixed-top mr-auto scrolling transparent text-white">
+        <Navbar.Brand><Link to={ROUTES.LANDING} className="text-white">Babson CODE</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-            <Nav.Link><Link to={ROUTES.HOME}>Home</Link></Nav.Link>
-            <Nav.Link><Link to={ROUTES.ABOUT}>About us</Link></Nav.Link>
-            <Nav.Link><Link to={ROUTES.RESIDENTS}>Residents</Link></Nav.Link>
-            <NavDropdown title="Resources" id="collasible-nav-dropdown">
+            <Nav.Link ><Link to={ROUTES.HOME} className="text-white">Home</Link></Nav.Link>
+            <Nav.Link ><Link to={ROUTES.ABOUT} className="text-white">About us</Link></Nav.Link>
+            <Nav.Link ><Link to={ROUTES.RESIDENTS} className="text-white">Residents</Link></Nav.Link>
+            <NavDropdown title="Resources" id="collasible-nav-dropdown" className="text-white">
                 <NavDropdown.Item href="#action/3.1">Events</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Coding</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">PM</NavDropdown.Item>
@@ -47,7 +47,7 @@ export default function NavigationNonAuthBar( ){
             </NavDropdown>
             </Nav>
             <Nav>
-            <Nav.Link ><Link to={ROUTES.SIGN_IN} >Login</Link></Nav.Link>
+            <Nav.Link ><Link to={ROUTES.SIGN_IN} className="text-white">Login</Link></Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>

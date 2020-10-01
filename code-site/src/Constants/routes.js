@@ -9,4 +9,4 @@ export const ADMIN_DETAILS = '/admin/:id';
 export const ABOUT = '/about';
 export const RESIDENTS = '/residents';
 export const CONTACT = '/contact';
-export const DASHBOARD = '/dashboard'
+export const DASHBOARD = '/dashboard';

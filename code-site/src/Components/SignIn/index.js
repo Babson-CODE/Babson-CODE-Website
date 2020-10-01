@@ -52,8 +52,8 @@ const styles = {
 
 const SignInPage = () => (
   <div className="signindiv" style={{height: '100vh'}}>
-      <MDBView>
-          <img src={process.env.PUBLIC_URL + '/signinBack.jpg'} alt='loginJumbo' className="img-fluid"/>
+      <MDBView src="../../Assets/img/signInBack.jpg" fixed>
+          
             <MDBMask className="flex-center">
             <Container className="signinCol">
                 <Row className="justify-content-md-center">

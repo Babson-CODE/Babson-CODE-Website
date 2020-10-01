@@ -2,6 +2,7 @@
 
 @import '../../../node_modules/bootstrap/scss/Bootstrap';
 
+
 // Custom SCSS
 
 
@@ -37,5 +38,27 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .columnPadder {
-    
+
+}
+
+// Sign Up Page Styles
+.signupSection{
+    background-image: url("../img/signUpImg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh !important;
+    height: 100vh !important;
+}
+.paperOne {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.avatar{
+    margin: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
