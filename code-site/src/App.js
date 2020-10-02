@@ -30,14 +30,12 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-          <Navigation />
+          
           <main id="cont">
             <Routes />
             <FloatingButtons />
           </main>
-          <div >
-            <Footer />
-          </div>
+
       </ThemeProvider>
     </div>
 

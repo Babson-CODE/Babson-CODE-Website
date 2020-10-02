@@ -18,6 +18,9 @@ import AccountDash from './Account/accountDash';
 import ContactPage from '../Pages/contact';
 import Dash from './Dashboard';
 import * as ROUTES from '../Constants/routes';
+import withSiderLayout from './Home/antLayout';
+import SiderDemo from './Home/SiderDemo';
+import Footer from './Footer';
 
 class Routes extends React.Component {
   render() {
@@ -26,19 +29,54 @@ class Routes extends React.Component {
   
         <Route path='/dashboard' component={AccountDash} />
 
-        <Route exact path={ROUTES.LANDING} component={Landed} />
-          <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-          <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route exact path={ROUTES.LANDING}>
+          <Navigation />
+          <Landed />
+          <Footer />
+
+        </Route>
+          <Route path={ROUTES.SIGN_UP} >
+            <Navigation />
+            <SignUpPage />
+            <Footer />
+          </Route>
+          <Route path={ROUTES.SIGN_IN} >
+            <Navigation />
+            <SignInPage />
+            <Footer />
+          </Route>
           <Route
             path={ROUTES.PASSWORD_FORGET}
-            component={PasswordForgetPage}
-          />
-          <Route path={ROUTES.HOME} component={HomePage} />
-          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-          <Route path={ROUTES.ADMIN} component={AdminPage} />
-          <Route path={ROUTES.RESIDENTS} component={ResidentsPage} />
-          <Route path={ROUTES.DASHBOARD} component={AccountDash} />
-          <Route path={ROUTES.CONTACT} component={ContactPage} />
+            
+          >
+            <Navigation />
+            <PasswordForgetPage />
+            <Footer />
+          </Route>
+      
+          <Route path={ROUTES.ACCOUNT}>
+            <Navigation />
+            <AccountPage />
+            <Footer />
+          </Route>
+          <Route path={ROUTES.ADMIN} >
+            <Navigation />
+            <AdminPage />
+            <Footer />
+          </Route>
+          <Route path={ROUTES.RESIDENTS} >
+            <Navigation />
+            <ResidentsPage />
+            <Footer />
+          </Route>
+          <Route path={ROUTES.DASHBOARD} component={AccountDash}/>
+          
+          <Route path={ROUTES.CONTACT} >
+            <Navigation />
+            <ContactPage />
+            <Footer />
+          </Route>
+          <Route path={ROUTES.HOME} component={SiderDemo} />
       </Switch>
     );
   }

@@ -10,7 +10,11 @@ import "./Assets/scss/mdb-free.scss";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./Assets/scss/style.scss";
 import "antd/dist/antd.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import * as ROUTES from './Constants/routes';
+import withSiderLayout from './Components/Home/antLayout';
+import SiderDemo from './Components/Home/SiderDemo';
+
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <Router>

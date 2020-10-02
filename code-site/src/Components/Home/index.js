@@ -4,14 +4,15 @@ import { compose } from 'recompose';
 import { withAuthorization, withEmailVerification } from '../Session';
 import Messages from '../Messages';
 import { MDBView, MDBMask } from 'mdbreact';
+import withSiderLayout from './antLayout';
+import AccountDash from '../Account/accountDash';
+import SiderDemo from './SiderDemo';
 
 const HomePage = () => (
-  <div className="homeDiv">
-    <h1>Home Page</h1>
-    <p>The Home Page is accessible by every signed in user.</p>
-
+  <>
+    <SiderDemo />
     <Messages />
-  </div>
+  </>
 );
 
 const condition = authUser => !!authUser;
@@ -19,4 +20,5 @@ const condition = authUser => !!authUser;
 export default compose(
   withEmailVerification,
   withAuthorization(condition),
+  
 )(HomePage);
