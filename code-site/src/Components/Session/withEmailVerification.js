@@ -2,6 +2,7 @@ import React from 'react';
 
 import AuthUserContext from './context';
 import { withFirebase } from '../Firebase';
+import { message } from 'antd';
 
 const needsEmailVerification = authUser =>
   authUser &&
@@ -29,7 +30,7 @@ const withEmailVerification = Component => {
         <AuthUserContext.Consumer>
           {authUser =>
             needsEmailVerification(authUser) ? (
-              <div>
+              <div className="emailVerificationDiv">
                 {this.state.isSent ? (
                   <p>
                     E-Mail confirmation sent: Check your E-Mails (Spam

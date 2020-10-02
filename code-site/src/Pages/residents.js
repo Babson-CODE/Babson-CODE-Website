@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import Container from "react-bootstrap/Container";
 import Link from "@material-ui/core/Link";
 import { memberData } from "../Components/Residents/Member/memberdata";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -38,7 +38,7 @@ export default function ResidentsPage(){
                     <MDBMask className="rgba-dark-light" />
                     <MDBContainer
                         className='d-flex justify-content-center align-items-center'
-                        style={{ height: '100%', width: '100%', paddingTop: '17rem' }}
+                        style={{ height: '100%', width: '100%' }}
                     >
                         <MDBRow>
                         <MDBCol md='12' className='mb-4 white-text text-center'>
@@ -46,9 +46,6 @@ export default function ResidentsPage(){
                             Come see what our residents are up to!
                             </h1>
                             <hr className='hr-light my-4' />
-                            <h5 className='text-uppercase mb-4 white-text '>
-                            <strong>Photography & design</strong>
-                            </h5>
                             <MDBBtn outline color='white'>
                             Subscribe to our newsletter
                             </MDBBtn>
@@ -73,6 +70,8 @@ export default function ResidentsPage(){
                     Current Residents
                 </Typography>
                 </Container>
+
+                <hr className="hr-dark my-4 mr-4 ml-4" />
             </div>
             <Container className="cardColumns" maxWidth="md">
                 <CardColumns>
@@ -127,6 +126,7 @@ export default function ResidentsPage(){
                 Former Residents
             </Typography>
             </Container>
+            <hr className="hr-dark my-4 mr-4 ml-4" />
             </div>
             </main>
         </div>

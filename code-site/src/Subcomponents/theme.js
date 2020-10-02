@@ -14,6 +14,9 @@ export const theme = createMuiTheme({
         dark: '#005005',
         contrastText: '#fff',
       },
+      text: {
+        primary: '#fff',
+      },
     },
     typography: {
       fontFamily: ['Verdana'],

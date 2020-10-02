@@ -19,7 +19,6 @@ import Box from "@material-ui/core/Box";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Container from "@material-ui/core/Container";
 import MapboxComp from "../Landing/map2";
-import residentspage from "../Residents/residentspage";
 import Button from "@material-ui/core/Button";
 import Album from "../Residents/album";
 import LandingPage from "../Landing/landingpage";

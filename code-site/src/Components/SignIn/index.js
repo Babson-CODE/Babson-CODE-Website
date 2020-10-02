@@ -24,8 +24,12 @@ import Paper from '@material-ui/core/Paper';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MDBView, MDBMask } from 'mdbreact';
+import signInBack from '../../Assets/img/signInBack.jpg';
+import GoogleButton from 'react-google-button';
 
-const theme = createMuiTheme({});
+const theme = createMuiTheme({
+
+});
 
 const styles = {
     paper: {
@@ -47,20 +51,22 @@ const styles = {
     submit: {
       margin: theme.spacing(3, 0, 2),
     },
+    typography:{
+      color: theme.palette.common.white,
+    },
+    textField:{
+      borderColor: theme.palette.common.white,
+    },
   };
 
 
 const SignInPage = () => (
   <div className="signindiv" style={{height: '100vh'}}>
-      <MDBView src="../../Assets/img/signInBack.jpg" fixed>
+      <MDBView src={signInBack} fixed>
           
             <MDBMask className="flex-center">
-            <Container className="signinCol">
-                <Row className="justify-content-md-center">
-                    <Col xs lg="2" className="columnPadder">
+            
 
-                    </Col>
-                    <Col md="auto">
                         <div component={Paper} className="paper" styles={{marginTop: theme.spacing(8),display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                             <SignInForm />
                             <SignInGoogle />
@@ -68,13 +74,7 @@ const SignInPage = () => (
                             <PasswordForgetLink />
                             <SignUpLink />
                         </div>
-                    
-                    </Col>
-                    <Col xs lg="2" className="columnPadder">
-                   
-                    </Col>
-                </Row>
-            </Container>
+
             </MDBMask>
         </MDBView>
   </div>
@@ -127,14 +127,14 @@ class SignInFormBase extends Component {
     const { email, password, error } = this.state;
     const { classes } = this.props;
     const isInvalid = password === '' || email === '';
-
     return (
-        <div className={classes.backdropImg}>
+        <div className="text-white">
+          <Container className="signinCol" component="div" maxWidth="xs" style={{backgroundColor: '#d3d3d3'}}>
         <div className={classes.paper}>
         <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h1" variant="h5" className="text-white">
             Sign in
         </Typography>
         <form className={classes.form} onSubmit={this.onSubmit}>
@@ -150,6 +150,7 @@ class SignInFormBase extends Component {
             onChange={this.onChange}
             value={email}
             autoFocus
+            className="formInput"
             />
             <TextField
             variant="outlined"
@@ -178,14 +179,14 @@ class SignInFormBase extends Component {
             >
             Sign In
             </Button>
-            <Grid container>
+            <Grid container style={{backgroundColor: '#d3d3d3'}}>
             <Grid item xs>
                 <Link href="#" variant="body2">
                 Forgot password?
                 </Link>
             </Grid>
             <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" style={{backgroundColor: '#d3d3d3'}}>
                 {"Don't have an account? Sign Up"}
                 </Link>
             </Grid>
@@ -193,7 +194,9 @@ class SignInFormBase extends Component {
             {error && <p>{error.message}</p>}
         </form>
         </div>
+      </Container>  
     </div>
+    
     );
   }
 }
@@ -235,8 +238,8 @@ class SignInGoogleBase extends Component {
     const { error } = this.state;
 
     return (
-      <form onSubmit={this.onSubmit}>
-        <button type="submit">Sign In with Google</button>
+      <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
+        <GoogleButton type="submit"></GoogleButton>
 
         {error && <p>{error.message}</p>}
       </form>
@@ -281,7 +284,7 @@ class SignInFacebookBase extends Component {
     const { error } = this.state;
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
         <button type="submit">Sign In with Facebook</button>
 
         {error && <p>{error.message}</p>}
@@ -327,7 +330,7 @@ class SignInTwitterBase extends Component {
     const { error } = this.state;
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
         <button type="submit">Sign In with Twitter</button>
 
         {error && <p>{error.message}</p>}

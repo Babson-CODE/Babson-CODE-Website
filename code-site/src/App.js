@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./logo.svg";
-import './App.css';
 import  AppBar from '@material-ui/core/AppBar';
 import  Toolbar from '@material-ui/core/Toolbar';
 import  Button from '@material-ui/core/Button';
@@ -21,6 +20,8 @@ import { withAuthentication } from './Components/Session';
 import { mainFeaturedPost } from "./Components/Landing/landinginfo";
 import Routes from './Components/Routes';
 import Navigation from './Components/Navigation';
+import FloatingButtons from './Subcomponents/floatingButtons';
+
 /*        <MenuAppBar>
           Try #1
         </MenuAppBar> */
@@ -32,8 +33,9 @@ function App() {
           <Navigation />
           <main id="cont">
             <Routes />
+            <FloatingButtons />
           </main>
-          <div style={{position: 'fixed', float: 'left'}}>
+          <div >
             <Footer />
           </div>
       </ThemeProvider>

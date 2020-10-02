@@ -185,34 +185,45 @@ const classes = useStyles();
     return(
         <>
         <Navbar expand="md" className="fixed-top scrolling transparent">
-                            <Navbar.Brand href="/" className="navbarBrand text-white"><Link to={ROUTES.LANDING}>Babson CODE</Link></Navbar.Brand>
+                            <Navbar.Brand href="/" className="navbarBrand">
+                              <Link to={ROUTES.LANDING} className="text-white">
+                                <img
+                                  src="/codefavicon.svg"
+                                  width="30"
+                                  height="30"
+                                  className="d-inline-block align-top"
+                                  alt="Babson Code logo"
+                                  />                              
+                                Babson CODE
+                              </Link>
+                              </Navbar.Brand>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
-                                <Nav fill className="justify-content-start" style={{width: '100%', marginRight: 'auto'}} variant="tabs">
+                                <Nav className="justify-content-start mr-auto" >
                                 
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/" activeStyle={{color: 'blue'}} activeClassName="activeLink">Home</Link>
+                                            <Link to="/" activeStyle={{color: 'white'}} active className="text-white activeLink">Home</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/about" activeStyle={{color: 'blue'}} activeClassName="activeLink">About Us</Link>
+                                            <Link to="/about" activeStyle={{color: 'blue'}} active className="text-white activeLink">About Us</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/residents" activeStyle={{color: 'blue'}} activeClassName="activeLink">Residents</Link>
+                                            <Link to="/residents" activeStyle={{color: 'blue'}} active className="text-white activeLink">Residents</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/resources" activeStyle={{color: 'blue'}} activeClassName="activeLink">Resources</Link>
+                                            <Link to="/resources" activeStyle={{color: 'blue'}} active className="text-white activeLink">Resources</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link as="div">
-                                            <Link to="/contact" activeStyle={{color: 'blue'}} activeClassName="activeLink">Contact Us</Link>
+                                            <Link to="/contact" activeStyle={{color: 'blue'}} active className="text-white activeLink">Contact Us</Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                 </Nav>

@@ -17,6 +17,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import signInBack from '../../Assets/img/signInBack.jpg';
+import Paper from '@material-ui/core/Paper';
+import { MDBView, MDBMask, MDBContainer } from 'mdbreact';
 
 const theme = createMuiTheme({});
 
@@ -41,18 +44,15 @@ const styles = {
 };
 
 const SignUpPage = () => (
-<section className="signupSection img-fluid">
-  <Container component="main" maxWidth="xs">
-  <CssBaseline />
-  <div className="paperOne">
-    <Avatar className="avatar">
-      <LockOutlinedIcon />
-    </Avatar>
-      <h1>SignUp</h1>
-      <SignUpForm />
+  <div className="signUpDiv" style={{height: '100vh'}}>
+      <MDBView src={signInBack} fixed>
+      <div component={Paper} className="paper" styles={{marginTop: theme.spacing(8),display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <MDBMask className="flex-center">
+                <SignUpForm />
+            </MDBMask>
+      </div>
+      </MDBView>
   </div>
-  </Container>
-  </section>
 );
 
 const INITIAL_STATE = {
@@ -148,7 +148,15 @@ class SignUpFormBase extends Component {
       username === '';
 
     return (
-      <>
+      <div className="text-white">
+        <Container className="signUpContainer" component="div" maxWidth="xs" style={{backgroundColor: '#d3d3d3'}}>
+      <div className={classes.paper} >
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign up
+        </Typography>
         <form className={classes.form} onSubmit={this.onSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
@@ -258,7 +266,10 @@ class SignUpFormBase extends Component {
           </Grid>
           {error && <p>{error.message}</p>}
         </form>
-      </>
+        </div>
+        </Container>
+        
+      </div>
     );
   }
 }

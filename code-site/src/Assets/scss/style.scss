@@ -1,16 +1,110 @@
 // Your custom styles
 
-@import '../../../node_modules/bootstrap/scss/Bootstrap';
-
+// @import '../../../node_modules/bootstrap/scss/Bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // Custom SCSS
 
+// Globals
+.a {
+    color: #a5a6a6;
+}
 
+// App 
 
+.App {
+    text-align: center;
+    background-color: #959595;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.main{
+    background-color: #828282;
+}
 
+.floatingButtonsGroup {
+    padding: 8px;
+}
+.iconSocialFloat {
+    height: 20;
+    width: 20;
+}
 
-
-
+.page-footer {
+    margin-left: 0px;
+  }
+  
+  @media (max-width: 1199.98px) {
+    .sidebar-fixed {
+      display: none;
+    }
+    .flexible-content {
+      padding-left: 0;
+    }
+    .flexible-navbar {
+      padding-left: 10px;
+    }
+  
+    #content{
+      margin-left: 0px;
+    }
+  
+    .page-footer{
+      margin-left: 0px;
+    }
+    
+    .card.cascading-admin-card {
+      margin-top: 2.5rem;
+    } 
+  }
+  
+  @media (max-width: 576px) { 
+    .card.cascading-admin-card {
+      margin-top: 2.5rem;
+    }
+  
+    #breadcrumb{
+      flex-direction: column;
+    }
+  }
+.socialIcon {
+    height: 35;
+    width: 35;
+}
 // Landing page styles
 
 .landingHeader{
@@ -24,7 +118,22 @@
     height: unset !important;
 }
 
+// About us page styles
 
+// Residents Page Styls
+.residentsDiv {
+    background-color: inherit;
+}
+.residentsDivider {
+    padding-top: 25px;
+    padding-bottom:25px;
+}
+
+// Contact Us Page styles
+.contactSection {
+    padding-top: 56px;
+    background-color: #828282;
+}
 
 // Sign In Page Styles
 .signInDiv {
@@ -32,12 +141,13 @@
     padding-right: 20vw;
 }
 .signInCol {
-
+    background: none;
 }
 .paper {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(245, 244, 244, 0.5);
 }
-.columnPadder {
+
+.input {
 
 }
 
@@ -61,4 +171,10 @@
 .avatar{
     margin: 8px;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+// Account Home Styles
+.emailVerificationDiv{
+    margin-top: 64px;
 }

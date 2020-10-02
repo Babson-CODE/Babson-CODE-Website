@@ -15,8 +15,8 @@ import AccountPage from './Account';
 import AdminPage from './Admin';
 import ResidentsPage from '../Pages/residents';
 import AccountDash from './Account/accountDash';
-
-
+import ContactPage from '../Pages/contact';
+import Dash from './Dashboard';
 import * as ROUTES from '../Constants/routes';
 
 class Routes extends React.Component {
@@ -24,11 +24,8 @@ class Routes extends React.Component {
     return (
       <Switch>
   
-        <Route path='/dashboard' component={DashboardPage} />
-        <Route path='/profile' component={ProfilePage} />
-        <Route path='/tables' component={TablesPage} />
-        <Route path='/maps' component={MapsPage} />
-        <Route path='/404' component={NotFoundPage} />
+        <Route path='/dashboard' component={AccountDash} />
+
         <Route exact path={ROUTES.LANDING} component={Landed} />
           <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -41,6 +38,7 @@ class Routes extends React.Component {
           <Route path={ROUTES.ADMIN} component={AdminPage} />
           <Route path={ROUTES.RESIDENTS} component={ResidentsPage} />
           <Route path={ROUTES.DASHBOARD} component={AccountDash} />
+          <Route path={ROUTES.CONTACT} component={ContactPage} />
       </Switch>
     );
   }

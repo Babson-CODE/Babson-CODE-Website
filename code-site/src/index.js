@@ -1,23 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom'
-import './index.css';
-import App from './App';
-import residentspage from './Components/Residents/residentspage';
-import * as serviceWorker from './serviceWorker';
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
-import Firebase, { FirebaseContext } from './Components/Firebase';
-// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Firebase, { FirebaseContext } from "./Components/Firebase";
+// import 'bootstrap-css-only/css/bootstrap.min.css';
 import "./Assets/scss/mdb-free.scss";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./Assets/scss/style.scss";
-import { BrowserRouter as Router } from 'react-router-dom';
+import "antd/dist/antd.css";
+import { BrowserRouter as Router } from "react-router-dom";
 ReactDOM.render(
-
   <FirebaseContext.Provider value={new Firebase()}>
-    <Router><App /></Router>
-  </FirebaseContext.Provider>,  
-    
-  document.getElementById('root')
+    <Router>
+      <App />
+    </Router>
+  </FirebaseContext.Provider>,
+
+  document.getElementById("root")
 );
 
 serviceWorker.unregister();
