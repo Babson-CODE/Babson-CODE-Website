@@ -21,6 +21,7 @@ import * as ROUTES from '../Constants/routes';
 import withSiderLayout from './Home/antLayout';
 import SiderDemo from './Home/SiderDemo';
 import Footer from './Footer';
+import FileUploader from '../Pages/about';
 
 class Routes extends React.Component {
   render() {
@@ -34,6 +35,11 @@ class Routes extends React.Component {
           <Landed />
           <Footer />
 
+        </Route>
+        <Route path={ROUTES.ABOUT}>
+          <Navigation />
+          <FileUploader />
+          <Footer />
         </Route>
           <Route path={ROUTES.SIGN_UP} >
             <Navigation />

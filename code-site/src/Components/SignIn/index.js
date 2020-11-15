@@ -26,7 +26,12 @@ import Col from 'react-bootstrap/Col';
 import { MDBView, MDBMask } from 'mdbreact';
 import signInBack from '../../Assets/img/signInBack.jpg';
 import GoogleButton from 'react-google-button';
+import GButton from './btn_google_signin_dark_normal_web@2x.png';
+import { Alert } from 'antd';
 
+const onClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  console.log(e, 'I was closed.');
+};
 const theme = createMuiTheme({
 
 });
@@ -61,7 +66,7 @@ const styles = {
 
 
 const SignInPage = () => (
-  <div className="signindiv" style={{height: '100vh'}}>
+  <div className="signindiv" style={{height: '100vh', alignContent: 'center'}}>
       <MDBView src={signInBack} fixed>
           
             <MDBMask className="flex-center">
@@ -191,7 +196,14 @@ class SignInFormBase extends Component {
                 </Link>
             </Grid>
             </Grid>
-            {error && <p>{error.message}</p>}
+            
+            {error && <Alert
+              message={error.message}
+              type="warning"
+              closable
+              onClose={onClose}
+              banner
+            />}
         </form>
         </div>
       </Container>  
@@ -206,6 +218,13 @@ class SignInGoogleBase extends Component {
     super(props);
 
     this.state = { error: null };
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    const formData={};
+    this.onSubmit(e);
   }
 
   onSubmit = event => {
@@ -238,10 +257,18 @@ class SignInGoogleBase extends Component {
     const { error } = this.state;
 
     return (
-      <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
-        <GoogleButton type="submit"></GoogleButton>
-
-        {error && <p>{error.message}</p>}
+      <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3', alignContent: 'center'}} className="d-flex justify-content-center">
+          <button type="submit" className="gbutton">
+            <GoogleButton type="dark"></GoogleButton>
+            </button>
+        
+            {error && <Alert
+              message={error.message}
+              type="warning"
+              closable
+              onClose={onClose}
+              banner
+            />}
       </form>
     );
   }
@@ -287,7 +314,13 @@ class SignInFacebookBase extends Component {
       <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
         <button type="submit">Sign In with Facebook</button>
 
-        {error && <p>{error.message}</p>}
+        {error && <Alert
+              message={error.message}
+              type="warning"
+              closable
+              onClose={onClose}
+              banner
+            />}
       </form>
     );
   }
@@ -333,7 +366,13 @@ class SignInTwitterBase extends Component {
       <form onSubmit={this.onSubmit} style={{backgroundColor: '#d3d3d3'}}>
         <button type="submit">Sign In with Twitter</button>
 
-        {error && <p>{error.message}</p>}
+        {error && <Alert
+              message={error.message}
+              type="warning"
+              closable
+              onClose={onClose}
+              banner
+            />}
       </form>
     );
   }

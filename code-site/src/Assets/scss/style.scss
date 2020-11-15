@@ -2,6 +2,7 @@
 
 // @import '../../../node_modules/bootstrap/scss/Bootstrap';
 @import "~bootstrap/scss/bootstrap";
+@import '../../../node_modules/@fluentui/react/dist/sass/References';
 
 // Custom SCSS
 
@@ -54,6 +55,7 @@
   
 .main{
     background-color: #828282;
+    font-family: 'ms-fontWeight-regular';
 }
 
 .floatingButtonsGroup {
@@ -107,6 +109,7 @@
 }
 // Landing page styles
 
+
 .landingHeader{
     background-image: url("../../Components/Landing/code-cover.jpg");
     background-size: cover;
@@ -118,6 +121,53 @@
     height: unset !important;
 }
 
+.card-container p {
+  margin: 0;
+}
+.card-container > .ant-tabs-card .ant-tabs-content {
+  height: 120px;
+  margin-top: -16px;
+}
+.card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  background: #fff;
+  padding: 16px;
+}
+.card-container > .ant-tabs-card > .ant-tabs-nav::before {
+  display: none;
+}
+.card-container > .ant-tabs-card .ant-tabs-tab,
+[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab {
+  border-color: transparent;
+  background: transparent;
+}
+.card-container > .ant-tabs-card .ant-tabs-tab-active,
+[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+  border-color: #fff;
+  background: #fff;
+}
+#components-tabs-demo-card-top .code-box-demo {
+  background: #f5f5f5;
+  overflow: hidden;
+  padding: 24px;
+}
+[data-theme='compact'] .card-container > .ant-tabs-card .ant-tabs-content {
+  height: 120px;
+  margin-top: -8px;
+}
+[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab {
+  border-color: transparent;
+  background: transparent;
+}
+[data-theme='dark'] #components-tabs-demo-card-top .code-box-demo {
+  background: #000;
+}
+[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+  background: #141414;
+}
+[data-theme='dark'] .card-container > .ant-tabs-card .ant-tabs-tab-active {
+  border-color: #141414;
+  background: #141414;
+}
 // About us page styles
 
 // Residents Page Styls
@@ -177,4 +227,35 @@
 // Account Home Styles
 .emailVerificationDiv{
     margin-top: 64px;
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+/* tile uploaded pictures */
+.avatar-item {
+  margin-right: 0px;
+}
+
+[class*='-col-rtl'] .avatar-item {
+  margin-right: 0;
+  margin-left: 24px;
+}
+
+.gbutton {
+//  background-image: url("../img/btn_google_signin_dark_normal_web@2x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
 }

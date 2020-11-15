@@ -20,6 +20,8 @@ import Container from '@material-ui/core/Container';
 import signInBack from '../../Assets/img/signInBack.jpg';
 import Paper from '@material-ui/core/Paper';
 import { MDBView, MDBMask, MDBContainer } from 'mdbreact';
+import {SignInGoogle, SignInFacebook } from '../SignIn';
+import { Divider } from 'antd';
 
 const theme = createMuiTheme({});
 
