@@ -19,11 +19,10 @@ const Footer = () => {
         <MDBRow>
           <MDBCol md="6">
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
-              Footer Content
+              Babson CODE Site Map 
             </h5>
             <p>
-              Here you can use rows and columns here to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />

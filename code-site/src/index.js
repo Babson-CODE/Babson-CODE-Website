@@ -14,6 +14,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import * as ROUTES from './Constants/routes';
 import withSiderLayout from './Components/Home/antLayout';
 import SiderDemo from './Components/Home/SiderDemo';
+import { MsalProvider, Providers } from '@microsoft/mgt';
+Providers.globalProvider = new MsalProvider({
+  clientId: 'REPLACE_WITH_CLIENTID'
+});
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>

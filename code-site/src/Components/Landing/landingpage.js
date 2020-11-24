@@ -54,8 +54,10 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import ReactCardCarousel from 'react-card-carousel';
+import EventCard from '../../Pages/Events/eventCard';
+import {ResidentBlob} from '../../Pages/residents';
 
-
+import {ProgramBlob} from '../../Pages/Programs';
 const { Meta } = Card;
 
 const { TabPane } = Tabs;
@@ -133,7 +135,7 @@ function Landed() {
               who share a goal: to leverage tech to change the world
             </h5>
             <br />
-            What do we do
+            <h5>What do we do</h5>
             <ul>
               <li>
                 Support each other as we pursue our various individual
@@ -157,61 +159,22 @@ function Landed() {
         </div>
         {/* End */}
         {/* Current Residents Carousel */}
-
+        <section id="residentsCarousel" className="my-4">
+          <h1>Our Current Residents</h1>
+          <ResidentBlob />
+        </section>
         {/*Section on ways to connect with us*/}
-
+        {/* Programs Section */}
         <h1 className="text-center">Our Programs</h1>
-        <CardGroup className="justify-content-around">
-          <Card
-            title="Subscribe to Newsletter"
-            style={{ width: 300 }}
-            actions={[
-              <SettingOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
- 
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
 
-          <Card
-            title="CODE Connect"
-            style={{ width: 300 }}
-
-            actions={[
-              <SettingOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-
-          <Card
-            title="Become a Resident"
-            style={{ width: 300 }}
-
-            actions={[
-              <SettingOutlined key="setting" />,
-              <EditOutlined key="edit" />,
-              <EllipsisOutlined key="ellipsis" />,
-            ]}
-          >
-            <Meta
-              title="Card title"
-              description="This is the description"
-            />
-          </Card>
-        </CardGroup>
-
+        <ProgramBlob />
+        {/* End*/}
+        {/* Events Section */}
+        <div>
+          <h1>Events</h1>
+          <EventCard />
+        </div>
+        {/* End Events section */}
         <div className="d-flex justify-content-center">
           <ControlledTabs />
         </div>

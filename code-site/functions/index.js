@@ -2,6 +2,7 @@ const functions = require('firebase-functions');
 const path = require('path');
 const express = require('express');
 const app = express();
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
@@ -17,5 +18,13 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "..", "build", "index.html"));
   });
+
+// Here is where some of the code for the directory API will go
+// Modifying some example code right here; Not finished
+exports.directory = functions.https.onRequest((request, response) => {
+   functions.logger.info("Hello logs!", {structuredData: true});
+   response.send("Hello from Firebase!");
+ });
+
 
 exports.app = functions.https.onRequest(app);

@@ -7,6 +7,8 @@ import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { memberData } from './Member/memberdata';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
 const theme = createMuiTheme();
 
@@ -73,4 +75,43 @@ memberGrid.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
+function memberGridList(props) { 
+
+    const { classes } = props;
+    
+        return(
+            <React.Fragment>
+            <Container className={classes.cardGrid} maxWidth="md">
+                <GridList cellHeight={160} className={classes.gridList} cols={3}>
+                    {memberData.map((data, card) => (
+                        <GridListTile key={card} cols={1}>
+
+                            <img src={data.image} alt={data.full_name} />
+                        </GridListTile>
+                    ))
+                    };
+                </GridList>
+            </Container>
+            </React.Fragment>
+        );
+    }
+    
+    memberGrid.propTypes = {
+        classes: PropTypes.object.isRequired,
+    };
+
+    memberGridList.propTypes = {
+        classes: PropTypes.object.isRequired,
+    };
+
+/*                             <membercard email={data.email} 
+                            linkedin={data.linkedIn} 
+                            first_name={data.first_name} 
+                            last_name={data.last_name} 
+                            full_name={data.full_name}
+                            image={data.image}> </membercard>
+                            */
+
+const ResidentBlob = withStyles(styles)(memberGridList);
+export {ResidentBlob};
 export default withStyles(styles)(memberGrid);

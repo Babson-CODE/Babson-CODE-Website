@@ -129,4 +129,14 @@ class FileUploader extends React.Component{
     }
 }
 
-export default FileUploader;
+
+
+const About = () => {
+  return(
+    <>
+
+    </>
+  )
+}  
+
+export default About;

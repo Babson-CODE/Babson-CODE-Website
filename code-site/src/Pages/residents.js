@@ -26,8 +26,45 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Card from 'react-bootstrap/Card';
-
+import { withStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 import {MDBView, MDBMask, MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+
+const theme = createMuiTheme();
+
+const styles = {
+    root:{
+        icon: {
+        marginRight: theme.spacing(2),
+        },
+        heroContent: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(8, 0, 6),
+        },
+        heroButtons: {
+        marginTop: theme.spacing(4),
+        },
+        cardGrid: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+        },
+        card: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        },
+        cardMedia: {
+        paddingTop: '56.25%', // 16:9
+        },
+        cardContent: {
+        flexGrow: 1,
+        },
+        footer: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(6),
+        },
+    }
+  };
 
 export default function ResidentsPage(){
 
@@ -132,3 +169,26 @@ export default function ResidentsPage(){
         </div>
     );
 }
+
+function ResidentSection(props) {
+    const { classes } = props;
+
+    return(
+        <>
+        <Container>
+            <GridList cellHeight={160} className={classes.gridList} cols={3}>
+            {memberData.map((data, card) => (
+                <GridListTile key={card} cols={1}>
+
+                    <img src={process.env.PUBLIC_URL + data.media.photo} alt={data.full_name} />
+                </GridListTile>
+            ))};
+            </GridList>
+        </Container>
+        
+        </>
+    )
+}
+
+const ResidentBlob = withStyles(styles)(ResidentSection);
+export {ResidentBlob};

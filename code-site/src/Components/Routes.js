@@ -21,8 +21,9 @@ import * as ROUTES from '../Constants/routes';
 import withSiderLayout from './Home/antLayout';
 import SiderDemo from './Home/SiderDemo';
 import Footer from './Footer';
-import FileUploader from '../Pages/about';
-
+import About from '../Pages/about';
+import MiniDrawer from '../Pages/Resources';
+import Pricing from '../Pages/Programs';
 class Routes extends React.Component {
   render() {
     return (
@@ -38,7 +39,7 @@ class Routes extends React.Component {
         </Route>
         <Route path={ROUTES.ABOUT}>
           <Navigation />
-          <FileUploader />
+          <About />
           <Footer />
         </Route>
           <Route path={ROUTES.SIGN_UP} >
@@ -83,6 +84,8 @@ class Routes extends React.Component {
             <Footer />
           </Route>
           <Route path={ROUTES.HOME} component={SiderDemo} />
+          <Route path={ROUTES.RESOURCES} component={MiniDrawer} />
+          <Route path={ROUTES.PROGRAMS} component={Pricing} />
       </Switch>
     );
   }

@@ -10,3 +10,6 @@ export const ABOUT = '/about';
 export const RESIDENTS = '/residents';
 export const CONTACT = '/contact';
 export const DASHBOARD = '/dashboard';
+export const RESOURCES = '/resources';
+export const PROGRAMS = '/programs';
+export const PARTNERS = '/partners';
