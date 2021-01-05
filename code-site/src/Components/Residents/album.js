@@ -26,9 +26,9 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Image from "react-bootstrap/Image";
 import Box from "@material-ui/core/Box";
 import albumphoto from "../../Assets/img/thisisengineering.jpg";
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
+import GridList from "@material-ui/core/GridList";
+import GridListTile from "@material-ui/core/GridListTile";
+import GridListTileBar from "@material-ui/core/GridListTileBar";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -36,11 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     //    backgroundColor: theme.palette.background.paper,
-   padding: '20%',
-//   height: '100%',
-   flexDirection: "column",
-//   justifyContent: "center",
-   alignItems: 'center',
+    padding: "20%",
+    //   height: '100%',
+    flexDirection: "column",
+    //   justifyContent: "center",
+    alignItems: "center",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -57,9 +57,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
   },
   cardMedia: {
-//    paddingTop: "56.25%", // 16:9
-    height: '100%',
-    width: '100%',
+    //    paddingTop: "56.25%", // 16:9
+    height: "100%",
+    width: "100%",
   },
   cardContent: {
     flexGrow: 1,
@@ -68,57 +68,56 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
-  albumJumbotron:{
+  albumJumbotron: {
     backgroundImage: `url(${albumphoto})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    width:'100vw',
-    height: '100vh',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "100vw",
+    height: "100vh",
   },
-  albumCarousel:{
-
-    justifyContent: 'center',
-    alignItems: 'center',
+  albumCarousel: {
+    justifyContent: "center",
+    alignItems: "center",
     flexGrow: 1,
   },
   mainDiv: {
     padding: theme.spacing(0),
-    height: '100vh',
+    height: "100vh",
   },
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(0),
   },
   gridList: {
-    flexWrap: 'nowrap',
+    flexWrap: "nowrap",
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)',
+    transform: "translateZ(0)",
   },
   title: {
     color: theme.palette.primary.contrastText,
   },
   titleBar: {
     background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+      "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
   },
-  contain:{
-      maxWidth: false,
-      disableGutters: true,
-      padding: 0,
- //     justifyContent: "center",
-      alignItems: 'center',
+  contain: {
+    maxWidth: false,
+    disableGutters: true,
+    padding: 0,
+    //     justifyContent: "center",
+    alignItems: "center",
   },
   residentContentDivider: {
     //    backgroundColor: theme.palette.background.paper,
-//   padding: '20%',
-//   height: '100%',
-   flexDirection: "column",
-//   justifyContent: "center",
-   alignItems: 'center',
+    //   padding: '20%',
+    //   height: '100%',
+    flexDirection: "column",
+    //   justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
@@ -227,7 +226,7 @@ export default function Album(props) {
                             window.open(data.linkedIn, "__blank");
                           }}
                         >
-                         <LinkedInIcon /> 
+                          <LinkedInIcon />
                         </Link>
                       </IconButton>
                       <IconButton
@@ -273,13 +272,14 @@ export default function Album(props) {
 function MemberCarousel() {
   const classes = useStyles();
 
-  return(
+  return (
     <div className={classes.albumCarousel}>
       <GridList className={classes.gridList} cols={3.5} cellHeight={500}>
-        {memberData.map((tile) => 
+        {memberData.map((tile) => (
           <GridListTile key={tile.media.photo}>
             <img src={process.env.PUBLIC_URL + tile.media.photo} />
-            <GridListTileBar key={tile.media.photo}
+            <GridListTileBar
+              key={tile.media.photo}
               title={tile.full_name}
               classes={{
                 root: classes.titleBar,
@@ -287,12 +287,12 @@ function MemberCarousel() {
               }}
               actionIcon={
                 <IconButton aria-label={`linked ${tile.full_name}`}>
-                  <LinkedInIcon className={classes.title}/>
+                  <LinkedInIcon className={classes.title} />
                 </IconButton>
               }
             />
-          </GridListTile> 
-          )}
+          </GridListTile>
+        ))}
       </GridList>
     </div>
   );

@@ -26,7 +26,7 @@ export const memberData = [
         phone: "",
         website: "alvie.org",
         company: {
-            name: "X-Highlight"
+            name: "XHighlight"
         }, 
         media: {
             photo: "/stockPortrait1.jpg"
