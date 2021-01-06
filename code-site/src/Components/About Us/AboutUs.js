@@ -182,8 +182,12 @@ export default function AboutUsPage(props) {
             </div>
           </div>
         </div>
-        <CODEStartups />
       </Container>
+      <Jumbotron>
+        <Container>
+          <CODEStartups />
+        </Container>
+      </Jumbotron>
     </React.Fragment>
   );
 }
