@@ -48,7 +48,7 @@ export default function AboutUsPage(props) {
             >
               Babson  CODE (Community Of Developers and Entrepreneurs) is the heart of technology and entrepreneurship at Babson.
             </Typography>
-            <div className={classes.aboutColText}>
+            {/* <div className={classes.aboutColText}> */}
               <Grid container spacing={6} justify="center">
                 <Grid item>
                   <Typography component="h3" variant="h4" color="textPrimary">
@@ -75,7 +75,7 @@ export default function AboutUsPage(props) {
                   </Typography>
                 </Grid>
               </Grid>
-            </div>
+            {/* </div> */}
           </Container>
         </Box>
       </Jumbotron>
@@ -83,7 +83,7 @@ export default function AboutUsPage(props) {
         <Box>
           <Grid container spacing={3} direction="row" justify="space-between">
             <Box
-              className={classes.aboutTextContainers}
+              // className={classes.aboutTextContainers}
               justify="space-between"
               component={Paper}
             >
@@ -116,7 +116,7 @@ export default function AboutUsPage(props) {
               </Grid>
             </Box>
             <Box
-              className={classes.aboutTextContainers}
+              // className={classes.aboutTextContainers}
               justify="space-between"
               component={Paper}
             >
@@ -140,7 +140,7 @@ export default function AboutUsPage(props) {
               </Grid>
             </Box>
             <Box
-              className={classes.aboutTextContainers}
+              // className={classes.aboutTextContainers}
               justify="space-between"
               component={Paper}
             >

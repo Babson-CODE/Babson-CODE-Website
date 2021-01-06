@@ -277,7 +277,7 @@ function MemberCarousel() {
       <GridList className={classes.gridList} cols={3.5} cellHeight={500}>
         {memberData.map((tile) => (
           <GridListTile key={tile.media.photo}>
-            <img src={process.env.PUBLIC_URL + tile.media.photo} />
+            <img src={require("../../Assets/img" + tile.media.photo)} />
             <GridListTileBar
               key={tile.media.photo}
               title={tile.full_name}

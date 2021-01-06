@@ -1,10 +1,13 @@
 import React from "react";
 import memberGrid from "./memberalbum";
-import hero from "./hero";
+import Members from "./Members";
+import Hero from "./hero";
 import { makeStyle, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
+import { Container } from "react-bootstrap";
+
 
 const theme = createMuiTheme();
 
@@ -42,19 +45,12 @@ const styles = {
   },
 };
 
-export default function residentspage(props) {
-  const { classes } = props;
-
+export default function residentspage() {
   return (
-    <React.Fragment>
-      <main>
-        {/* <CssBaseline /> */}
-        {/* Hero Bar */}
-        <hero></hero>
-        {/*End of Hero Bar */}
-        <memberGrid></memberGrid>
-      </main>
-    </React.Fragment>
+    <Container>
+        <Hero></Hero>
+        <Members></Members>
+    </Container>
   );
 }
 

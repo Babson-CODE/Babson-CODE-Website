@@ -11,7 +11,7 @@ function Copyright() {
       {"Copyright © "}
       <Link color="inherit" href="https://Babsoncode.com/">
         Babson CODE
-      </Link>{" "}
+      </Link>
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -31,9 +31,12 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: "auto",
-    backgroundColor: theme.palette.type === "light" ? theme.palette.grey[200] : theme.palette.grey[800],
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[200]
+        : theme.palette.grey[800],
   },
-  footerContainer:{
+  footerContainer: {
     bottom: 0,
     left: 0,
   },
@@ -44,14 +47,10 @@ export default function StickyFooter() {
 
   return (
     // <div className={classes.footerRoot}>
-    //     <Container maxWidth="sm" className={classes.footerContainer}>
-    //       <Typography variant="body1">
-    //         Footer
-    //       </Typography>
-    //       <Copyright />
-    //     </Container>
+    <Container maxWidth="sm">
+      <Typography variant="body1">Footer</Typography>
+      <Copyright />
+    </Container>
 
-    // </div>
-    <div></div>
   );
 }

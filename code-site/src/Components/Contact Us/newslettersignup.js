@@ -42,10 +42,10 @@ export default function NewsletterSignupForm(props) {
     <React.Fragment>
       <CssBaseline />
       <Container>
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
+        {/* <div className={classes.paper}> */}
+          {/* <Avatar className={classes.avatar}> */}
+            {/* <LockOutlinedIcon /> */}
+          {/* </Avatar> */}
           <Typography
             component="h2"
             variant="h3"
@@ -55,7 +55,8 @@ export default function NewsletterSignupForm(props) {
           >
             Newsletter Signup
           </Typography>
-          <form className={classes.form} noValidate>
+          {/* <form className={classes.form} noValidate> */}
+          <form>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -95,12 +96,12 @@ export default function NewsletterSignupForm(props) {
               type="submit"
               variant="contained"
               color="primary"
-              className={classes.submit}
+              // className={classes.submit}
             >
               Sign Up
             </Button>
           </form>
-        </div>
+        {/* </div> */}
       </Container>
     </React.Fragment>
   );

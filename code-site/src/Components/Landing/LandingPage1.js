@@ -18,7 +18,7 @@ import Zoom from "@material-ui/core/Zoom";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from "@material-ui/core/Button";
 import { MemberCarousel } from "../Residents/album";
-import Footer from "../Navigation/Footer";
+import Footer from "../Navigation/footer";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {

@@ -127,9 +127,12 @@ function MemberCarousel() {
   return (
     <div className={classes.albumCarousel}>
       <GridList className={classes.gridList} cols={3.5} cellHeight={500}>
+        {console.log(tile.media.photo)}
+        {/* {console.log(process.env.PUBLIC_URL)} */}
         {memberData.map((tile) => (
           <GridListTile key={tile.media.photo}>
-            <img src={process.env.PUBLIC_URL + tile.media.photo} />
+            <img src={require("../../../Assets/img" + tile.media.photo)} />
+            {console.log(title.media.photo)}
             <GridListTileBar
               key={tile.media.photo}
               title={tile.full_name}
