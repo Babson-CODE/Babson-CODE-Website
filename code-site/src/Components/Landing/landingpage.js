@@ -20,7 +20,9 @@ import Button from "@material-ui/core/Button";
 import { MemberCarousel } from "../Residents/album";
 import Footer from "../Navigation/Footer";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
-
+import Mission from "./../About Us/Mission";
+import Startups from "./Startups";
+import MailchimpSignup from "./MailchimpSignup";
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
     position: "relative",
@@ -79,8 +81,13 @@ export default function LandingPage(props) {
                 color="inherit"
                 gutterBottom
               >
+                <img
+                  alt="Babson CODE Logo"
+                  src={logo}
+                  height="100px"
+                  style={{ marginBottom: "20px" }}
+                />
                 Welcome to CODE!
-                <img alt="Babson CODE Logo" src={logo} height="100px" />
               </Typography>
               <Typography
                 variant="h5"
@@ -89,10 +96,16 @@ export default function LandingPage(props) {
                 paragraph
               ></Typography>
             </Container>
-            <Container>
+            <Container
+              height="100vh"
+              width="100vw"
+              mb="auto"
+              mt="auto"
+              fontWeight="fontWeightMedium"
+            >
               <Typography
                 component="h3"
-                variant="h5"
+                variant="h4"
                 align="center"
                 color="textPrimary"
                 paragraph
@@ -134,7 +147,7 @@ export default function LandingPage(props) {
                     variant="h6"
                     color="textPrimary"
                   >
-                    Startups worth
+                    Startups Worth
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -174,7 +187,7 @@ export default function LandingPage(props) {
                   </Typography>
                 </Grid>
               </Grid>
-              <div>
+              <div style={{ marginTop: "20px" }}>
                 <Grid container spacing={3} justify="center">
                   <Grid item>
                     <Button variant="contained" color="primary">
@@ -191,6 +204,9 @@ export default function LandingPage(props) {
             </Container>
           </Box>
         </Jumbotron>
+        <Container>
+          <Mission />
+        </Container>
         <Box mt={9} mb={9} height="100%">
           <Container>
             <Typography
@@ -205,89 +221,49 @@ export default function LandingPage(props) {
             <MemberCarousel />
           </Container>
         </Box>
+        <Box mt={9} mb={9} height="100%">
+          <Container>
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
+              CODE Startups
+            </Typography>
+            <Startups />
+          </Container>
+        </Box>
         <Box>
           <Container>
-            <div>
-              <Grid container>
-                <Grid item xs={false} sm={4} md={7}>
+            <Grid>
+              {/* <Grid item xs={false} sm={4} md={3} lg={5} xl={5}>
                   <MapboxComp></MapboxComp>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={8}
-                  md={5}
-                  component={Paper}
-                  elevation={6}
-                  square
+                </Grid> */}
+              <Grid
+                item
+                component={Paper}
+                elevation={6}
+                square
+                style={{ padding: "30px" }}
+              >
+                <Typography
+                  component="h2"
+                  variant="h3"
+                  align="center"
+                  color="textPrimary"
+                  gutterBottom
                 >
-                  <NewsletterSignupForm></NewsletterSignupForm>
-                </Grid>
+                  Newsletter Sign-Up
+                </Typography>
+                <MailchimpSignup></MailchimpSignup>
+                {/* <NewsletterSignupForm></NewsletterSignupForm> */}
               </Grid>
-            </div>
+            </Grid>
           </Container>
         </Box>
       </div>
     </React.Fragment>
   );
 }
-// LandingPage.propTypes = {
-//   post: PropTypes.object,
-//   classes: PropTypes.object,
-// };
-
-/* 
- <Grid container component="main" className={classes.root}>
-
-                <Grid item xs={12} sm={12} md={12} width={1} height={1}>
-                    <Grid container component={Paper} className={classes.root} width={1}>
-                        <Grid item xs={false} sm={4} md={7} style={{backgroundImage: `url(${post.image})`}} className={classes.image}>
-                        </Grid>
-                        <Grid item xs={12} sm={8} md={5} elevation={6} square component={Paper}>
-                            <div>
-                            <Container maxWidth="sm">
-                                <Typography component="h1" variant="h3" color="inherit" align="center" gutterBottom>
-                                    {post.title}
-                                </Typography>
-                                <Typography compnent="h5" color="inherit" align="center" paragraph>
-                                {post.description}
-                                </Typography>
-                                <Link variant="subtitle1" href="#">
-                                {post.linkText}
-                                </Link>
-                            </Container>
-                            </div>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item xs={12} sm={12} md={12}>
-                        
-                </Grid>
-                <Grid item xs component={Paper}>
-                   <Box>
-                    <MapboxComp></MapboxComp>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={8} md={5} component={Paper}>
-                    <Box>
-                        <NewsletterSignupForm classes={classes}></NewsletterSignupForm> 
-                    </Box>
-                </Grid>  
-            
-
-            </Grid>
-
-      
-
-            <footer className={classes.footer}>
-                
-                <Typography variant="h6" align="center" gutterBottom>
-                Footer
-                </Typography>
-                <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                Something here to give the footer a purpose!
-                </Typography>
-                
-            </footer>
-
-*/

@@ -40,69 +40,55 @@ export default function NewsletterSignupForm(props) {
 
   return (
     <React.Fragment>
-      {/* <CssBaseline /> */}
-      <Container>
-        {/* <div className={classes.paper}> */}
-          {/* <Avatar className={classes.avatar}> */}
-            {/* <LockOutlinedIcon /> */}
-          {/* </Avatar> */}
-          <Typography
-            component="h2"
-            variant="h3"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            Newsletter Signup
-          </Typography>
-          {/* <form className={classes.form} noValidate> */}
-          <form>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="fname"
-                  name="firstName"
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="lname"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                />
-              </Grid>
-            </Grid>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              // className={classes.submit}
-            >
-              Sign Up
-            </Button>
-          </form>
-        {/* </div> */}
-      </Container>
+      <Typography
+        component="h2"
+        variant="h3"
+        align="center"
+        color="textPrimary"
+        gutterBottom
+      >
+        Newsletter Signup
+      </Typography>
+      <form>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              autoComplete="fname"
+              name="firstName"
+              variant="outlined"
+              required
+              fullWidth
+              id="firstName"
+              label="First Name"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
+              id="lastName"
+              label="Last Name"
+              name="lastName"
+              autoComplete="lname"
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              variant="outlined"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
+          </Grid>
+        </Grid>
+        <Button type="submit" variant="contained" color="primary" style={{ marginTop: "10px"}}>
+          Sign Up
+        </Button>
+      </form>
     </React.Fragment>
   );
 }

@@ -9,9 +9,10 @@ import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
 import { Container as Cont } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
-import CODEStartups from "./CODEStartups";
+import CODEStartups from "./CODEStartupsCards";
 import CODEStartupsCourasel from "./CODEStartupsCarousel";
 import Mission from "./Mission";
+import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 
 export default function AboutUsPage(props) {
   return (
@@ -39,7 +40,8 @@ export default function AboutUsPage(props) {
               color="contrastText"
               gutterBottom
             >
-              Babson CODE
+              {/* Babson CODE */}
+              <img alt="Babson CODE Logo" src={logo} height="100px" />
             </Typography>
             <Typography
               component="h3"
@@ -86,7 +88,7 @@ export default function AboutUsPage(props) {
                   variant="h6"
                   color="textPrimary"
                 >
-                  Startups worth
+                  Startups Worth
                 </Typography>
               </Grid>
               <Grid item>
@@ -138,7 +140,9 @@ export default function AboutUsPage(props) {
       <Container>
         <div className="row">
           <div className="col-lg-4">
-            <h1>Tools should adapt to the user, not the other way around.</h1>
+            <Paper elevation={6} style={{ padding: "30px", margin: "15px" }}>
+              <h1>Tools should adapt to the user, not the other way around.</h1>
+            </Paper>
           </div>
           <div className="col-lg-8">
             <div className="container d-flex h-100" style={{ padding: "30px" }}>
@@ -157,7 +161,9 @@ export default function AboutUsPage(props) {
         </div>
         <div className="row">
           <div className="col-lg-4">
-            <h1>Learn. Develop. Launch.</h1>
+            <Paper elevation={6} style={{ padding: "30px", margin: "15px" }}>
+              <h1>Learn. Develop. Launch.</h1>
+            </Paper>
           </div>
           <div className="col-lg-8">
             <div className="container d-flex h-100" style={{ padding: "30px" }}>
@@ -172,7 +178,9 @@ export default function AboutUsPage(props) {
         </div>
         <div className="row">
           <div className="col-lg-4">
-            <h1>Opportunities to apply your knowledge.</h1>
+            <Paper elevation={6} style={{ padding: "30px", margin: "15px" }}>
+              <h1>Opportunities to apply your knowledge.</h1>
+            </Paper>
           </div>
           <div className="col-lg-8">
             <div className="container d-flex h-100" style={{ padding: "30px" }}>

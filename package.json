@@ -1,6 +1,7 @@
 {
   "lockfileVersion": 1,
   "dependencies": {
+    "mailchimp-react": "0.0.7",
     "react-multi-carousel": "^2.6.1",
     "react-whirligig": "^6.6.15"
   }
