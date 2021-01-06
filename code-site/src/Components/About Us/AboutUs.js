@@ -10,7 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import { Container as Cont } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import CODEStartups from "./CODEStartups";
-import { CODEStartupsCourasel } from "./CODEStartupsCarousel";
+import CODEStartupsCourasel from "./CODEStartupsCarousel";
 
 export default function AboutUsPage(props) {
   return (
