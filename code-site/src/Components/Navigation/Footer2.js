@@ -15,6 +15,7 @@ const FooterPage = () => {
                 Here you can use rows and columns here to organize your footer
                 content.
               </p>
+              <input type="text" name="fname" placeholder="Subscribe to Our Newsletter"></input>
             </MDBCol>
             <MDBCol md="6">
               <h5 className="title">Links</h5>

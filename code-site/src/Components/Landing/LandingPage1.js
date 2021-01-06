@@ -19,6 +19,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from "@material-ui/core/Button";
 import { MemberCarousel } from "../Residents/album";
 import Footer from "../Navigation/footer";
+import logo from "./../CODE 2018 Logo.png";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -78,7 +79,7 @@ export default function LandingPage(props) {
                 color="inherit"
                 gutterBottom
               >
-                Welcome to CODE!
+                Welcome to CODE! <img alt="asfasf" src={logo} height="65px" />
               </Typography>
               <Typography
                 variant="h5"

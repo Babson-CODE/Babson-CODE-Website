@@ -11,6 +11,7 @@ import { Container as Cont } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import CODEStartups from "./CODEStartups";
 import CODEStartupsCourasel from "./CODEStartupsCarousel";
+import Mission from "./Mission";
 
 export default function AboutUsPage(props) {
   return (
@@ -125,12 +126,14 @@ export default function AboutUsPage(props) {
                 </Typography>
               </Grid>
             </Grid>
-            {/* </div> */}
           </Container>
         </Box>
       </Jumbotron>
       <Container>
         <CODEStartupsCourasel />
+      </Container>
+      <Container>
+        <Mission />
       </Container>
       <Container>
         <div className="row">

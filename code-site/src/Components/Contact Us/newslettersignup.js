@@ -40,7 +40,7 @@ export default function NewsletterSignupForm(props) {
 
   return (
     <React.Fragment>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <Container>
         {/* <div className={classes.paper}> */}
           {/* <Avatar className={classes.avatar}> */}

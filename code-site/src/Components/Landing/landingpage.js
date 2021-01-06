@@ -19,6 +19,8 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Button from "@material-ui/core/Button";
 import { MemberCarousel } from "../Residents/album";
 import Footer from "../Navigation/Footer";
+import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
+
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -79,6 +81,7 @@ export default function LandingPage(props) {
                 gutterBottom
               >
                 Welcome to CODE!
+                <img alt="Babson CODE Logo" src={logo} height="100px" />
               </Typography>
               <Typography
                 variant="h5"
@@ -86,6 +89,18 @@ export default function LandingPage(props) {
                 color="textSecondary"
                 paragraph
               ></Typography>
+            </Container>
+            <Container>
+              <Typography
+                component="h3"
+                variant="h5"
+                align="center"
+                color="textPrimary"
+                paragraph
+              >
+                Babson CODE (Community Of Developers and Entrepreneurs) is the
+                heart of technology and entrepreneurship at Babson.
+              </Typography>
               <div>
                 <Grid container spacing={3} justify="center">
                   <Grid item>
