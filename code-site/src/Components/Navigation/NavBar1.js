@@ -33,6 +33,12 @@ const NavBar = () => (
             <NavLink to="/resources" exact activeClassName="active" className="nav-link">
               Resources
             </NavLink>
+            <NavLink to="/partners" exact activeClassName="active" className="nav-link">
+              Partners
+            </NavLink>
+            <NavLink to="/donate" exact activeClassName="active" className="nav-link">
+              Donate
+            </NavLink>
           </Nav>
           
         </Navbar.Collapse>

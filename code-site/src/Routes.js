@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Components/Landing/LandingPage";
 import AboutUs from "./Components/About Us/AboutUs";
 import ContactUs from "./Components/Contact Us/ContactUsPage";
-import Partners from "./Components/Partners/partnerspage";
+import Partners from "./Components/Partners/PartnersPage";
 import Residents from "./Components/Residents/residentspage";
 import Resources from "./Components/Resources/Resources";
 // import "../styles/Style.css"
@@ -17,11 +17,12 @@ const Routes = () => (
     <Route exact path="/partners" component={Partners} />
     <Route exact path="/residents" component={Residents} />
     <Route exact path="/resources" component={Resources} />
+    <Route exact path="/partners" component={Partners} />
     {/* <Route exact path="/donate" component={Donate} /> */}
     <Route
       path="/donate"
       component={() => {
-        window.location.href = "https://babson.edu/donate";
+        // window.location.href = "https://babson.edu/donate";
         return null;
       }}
     />

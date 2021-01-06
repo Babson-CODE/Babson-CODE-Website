@@ -21,7 +21,6 @@ import { MemberCarousel } from "../Residents/album";
 import Footer from "../Navigation/Footer";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 
-
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
     position: "relative",
@@ -101,6 +100,80 @@ export default function LandingPage(props) {
                 Babson CODE (Community Of Developers and Entrepreneurs) is the
                 heart of technology and entrepreneurship at Babson.
               </Typography>
+              <Grid container spacing={10} justify="center">
+                <Grid item>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h3"
+                    variant="h5"
+                    color="textPrimary"
+                  >
+                    2015
+                  </Typography>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h4"
+                    variant="h6"
+                    color="textPrimary"
+                  >
+                    Founded
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h3"
+                    variant="h5"
+                    color="textPrimary"
+                  >
+                    $50+ Million
+                  </Typography>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h4"
+                    variant="h6"
+                    color="textPrimary"
+                  >
+                    Startups worth
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h3"
+                    variant="h5"
+                    color="textPrimary"
+                  >
+                    21
+                  </Typography>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h4"
+                    variant="h6"
+                    color="textPrimary"
+                  >
+                    Residents
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h3"
+                    variant="h5"
+                    color="textPrimary"
+                  >
+                    200+
+                  </Typography>
+                  <Typography
+                    style={{ textAlign: "center" }}
+                    component="h4"
+                    variant="h6"
+                    color="textPrimary"
+                  >
+                    General Memebers
+                  </Typography>
+                </Grid>
+              </Grid>
               <div>
                 <Grid container spacing={3} justify="center">
                   <Grid item>
