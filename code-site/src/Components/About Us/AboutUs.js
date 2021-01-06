@@ -10,7 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import { Container as Cont } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import CODEStartups from "./CODEStartups";
-import CODEStartupsCourasel from "./CODEStartupsCourasel";
+import { CODEStartupsCourasel } from "./CODEStartupsCarousel";
 
 export default function AboutUsPage(props) {
   return (
@@ -129,7 +129,9 @@ export default function AboutUsPage(props) {
           </Container>
         </Box>
       </Jumbotron>
-      <CODEStartupsCourasel/>
+      <Container>
+        <CODEStartupsCourasel />
+      </Container>
       <Container>
         <div className="row">
           <div className="col-lg-4">

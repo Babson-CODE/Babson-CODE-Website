@@ -1,3 +1,7 @@
 {
-  "lockfileVersion": 1
+  "lockfileVersion": 1,
+  "dependencies": {
+    "react-multi-carousel": "^2.6.1",
+    "react-whirligig": "^6.6.15"
+  }
 }
