@@ -9,8 +9,8 @@ import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
 import { Container as Cont } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
-import CODEStartups from "./CODEStartupsCards";
-import CODEStartupsCourasel from "./CODEStartupsCarousel";
+import CODEStartups from "../Startups/CODEStartupsCards";
+import CODEStartupsCourasel from "../Startups/CODEStartupsCarousel";
 import Mission from "./Mission";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 

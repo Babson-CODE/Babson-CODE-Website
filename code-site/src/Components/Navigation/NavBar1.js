@@ -28,7 +28,7 @@ const NavBar = () => (
               Contact Us
             </NavLink>
             <NavLink to="/residents" exact activeClassName="active" className="nav-link">
-              Residents
+              Residents & Startups
             </NavLink>
             <NavLink to="/resources" exact activeClassName="active" className="nav-link">
               Resources

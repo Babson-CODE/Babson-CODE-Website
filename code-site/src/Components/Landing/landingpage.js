@@ -21,7 +21,8 @@ import { MemberCarousel } from "../Residents/album";
 import Footer from "../Navigation/Footer";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 import Mission from "./../About Us/Mission";
-import Startups from "./Startups";
+import MissionExtended from "./../About Us/MissionExtended";
+import Startups from "../Startups/StartupsCollage";
 import MailchimpSignup from "./MailchimpSignup";
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -206,6 +207,7 @@ export default function LandingPage(props) {
         </Jumbotron>
         <Container>
           <Mission />
+          <MissionExtended/>
         </Container>
         <Box mt={9} mb={9} height="100%">
           <Container>

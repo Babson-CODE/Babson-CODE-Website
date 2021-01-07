@@ -8,6 +8,11 @@ export const memberData = [
     linkedIn: "https://www.linkedin.com/in/julian-wiley-8377b5175/",
     phone: "(225) 819-7690",
     website: "www.julianwiley.com",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "Oneye",
       website: "xhighlight.com",
@@ -16,6 +21,7 @@ export const memberData = [
       photo: "/download1.png",
       facebook: "https://www.facebook.com/",
     },
+    about: "A paragraph about Julian",
   },
   {
     id: 2,
@@ -26,6 +32,14 @@ export const memberData = [
     linkedIn: "www.linkedin.com/in/alvst/",
     phone: "",
     website: "alvie.org",
+    concentration:
+      "Technology, Entrepreneurship, and Design, & Information Technology Management",
+    working_on:
+      "XHighlight - The fastest and easiest way to create your sports highlight videos.",
+    introduction:
+      "Alvie is an aspiring entrepreneur who is very interested in technology and programming. He is working on a startup, XHighlight, the fastest and easiest way to create sports and highlight videos. He is also CODE's most senior member, having lived in CODE since Sophomore year and being active in leadership decisions since the end of his freshman year.  Finally, he studied at Babson San Francisco in Spring 2018 and hopes to live out there upon graduation. Academics wise, he is a senior Graduating in May of 2021 and is concentrating in Technology, Entrepreneurship, and Design and Information Technology Management. ",
+    year_of_graduation: "Senior Graduating Spring 2021",
+    from: "Wellesley, MA",
     company: {
       name: "XHighlight",
       website: "xhighlight.com",
@@ -33,6 +47,7 @@ export const memberData = [
     media: {
       photo: "/alvie.jpg",
     },
+    about: "A paragraph about Alvie",
   },
   {
     id: 3,
@@ -43,6 +58,11 @@ export const memberData = [
     linkedIn: "",
     phone: "",
     website: "",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "",
       website: "xhighlight.com",
@@ -50,6 +70,7 @@ export const memberData = [
     media: {
       photo: "/stockPortrait2.jpg",
     },
+    about: "A paragraph about ",
   },
   {
     id: 4,
@@ -60,6 +81,11 @@ export const memberData = [
     linkedIn: "",
     phone: "",
     website: "",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "",
       website: "xhighlight.com",
@@ -67,6 +93,7 @@ export const memberData = [
     media: {
       photo: "/stockPortrait3.jpg",
     },
+    about: "A paragraph about ",
   },
   {
     id: 5,
@@ -77,10 +104,17 @@ export const memberData = [
     linkedIn: "",
     phone: "",
     website: "",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "",
       website: "xhighlight.com",
     },
+    about: "A paragraph about ",
+
     media: {
       photo: "/stockPortrait4.jpg",
     },
@@ -94,6 +128,11 @@ export const memberData = [
     linkedIn: "",
     phone: "",
     website: "",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "",
       website: "xhighlight.com",
@@ -101,6 +140,7 @@ export const memberData = [
     media: {
       photo: "/stockPortrait5.jpg",
     },
+    about: "A paragraph about ",
   },
   {
     id: 7,
@@ -111,6 +151,11 @@ export const memberData = [
     linkedIn: "",
     phone: "",
     website: "",
+    concentration: "",
+    working_on: "",
+    introduction: "",
+    year_of_graduation: "",
+    from: "",
     company: {
       name: "",
       website: "xhighlight.com",
@@ -118,5 +163,6 @@ export const memberData = [
     media: {
       photo: "/stockPortrait6.jpg",
     },
+    about: "A paragraph about ",
   },
 ];
