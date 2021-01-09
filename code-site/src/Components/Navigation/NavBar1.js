@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+// import "./NavBar.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "./CODE 2018 Logo.png";
 
@@ -21,26 +21,54 @@ const NavBar = () => (
             <NavLink to="/" exact activeClassName="active" className="nav-link">
               Home
             </NavLink>
-            <NavLink to="/about-us" exact activeClassName="active" className="nav-link">
+            <NavLink
+              to="/about-us"
+              exact
+              activeClassName="active"
+              className="nav-link"
+            >
               About Us
             </NavLink>
-            <NavLink to="/contact-us" exact activeClassName="active" className="nav-link">
+            <NavLink
+              to="/contact-us"
+              exact
+              activeClassName="active"
+              className="nav-link"
+            >
               Contact Us
             </NavLink>
-            <NavLink to="/residents" exact activeClassName="active" className="nav-link">
+            <NavLink
+              to="/residents"
+              exact
+              activeClassName="active"
+              className="nav-link"
+            >
               Residents & Startups
             </NavLink>
-            <NavLink to="/resources" exact activeClassName="active" className="nav-link">
+            <NavLink
+              to="/resources"
+              exact
+              activeClassName="active"
+              className="nav-link"
+            >
               Resources
             </NavLink>
-            <NavLink to="/partners" exact activeClassName="active" className="nav-link">
+            <NavLink
+              to="/partners"
+              exact
+              activeClassName="active"
+              className="nav-link"
+            >
               Partners
             </NavLink>
-            <NavLink to="/donate" exact activeClassName="active" className="nav-link">
+            {/* <NavLink to="/donate" exact activeClassName="active" className="nav-link">
               Donate
-            </NavLink>
+            </NavLink> */}
+            <a href="https://babson.edu" className="nav-link" target="_blank">
+              {/* <NavLink className="nav-link">Donate</NavLink> */}
+              Donate
+            </a>
           </Nav>
-          
         </Navbar.Collapse>
       </Container>
     </Navbar>
