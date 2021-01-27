@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import MailchimpSignup from "./../Landing/MailchimpSignup";
 import "./../../App.css";
 
 const FooterPage = () => {
@@ -10,15 +11,15 @@ const FooterPage = () => {
         <MDBContainer fluid className="text-center text-md-left">
           <MDBRow>
             <MDBCol md="6">
-              <h5 className="title">Footer Content</h5>
+              {/* <h5 className="title">Footer Content</h5>
               <p>
                 Here you can use rows and columns here to organize your footer
                 content.
-              </p>
-              <input type="text" name="fname" placeholder="Subscribe to Our Newsletter"></input>
+              </p> */}
+              <MailchimpSignup />
             </MDBCol>
             <MDBCol md="6">
-              <h5 className="title">Links</h5>
+              {/* <h5 className="title">Babson CODE</h5>
               <ul>
                 <li className="list-unstyled">
                   <a href="#!">Link 1</a>
@@ -32,7 +33,7 @@ const FooterPage = () => {
                 <li className="list-unstyled">
                   <a href="#!">Link 4</a>
                 </li>
-              </ul>
+              </ul> */}
             </MDBCol>
           </MDBRow>
         </MDBContainer>

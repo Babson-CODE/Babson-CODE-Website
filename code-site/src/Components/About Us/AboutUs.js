@@ -12,128 +12,17 @@ import { Row, Col } from "react-bootstrap";
 import CODEStartups from "../Startups/CODEStartupsCards";
 import CODEStartupsCourasel from "../Startups/CODEStartupsCarousel";
 import Mission from "./Mission";
+import CODE_Stats_Jumbo from "./CODE_Stats_Jumbo";
+import MailchimpReact from "../Landing/MailchimpSignup";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 
 export default function AboutUsPage(props) {
   return (
     <React.Fragment>
-      <Jumbotron as="section" fluid>
-        {/* className={classes.aboutJumbo} */}
-        <Box
-          width="100vw"
-          // height="100vh"
-          alignItems="center"
-          justifyContent="center"
-          display="flex"
-        >
-          <Container
-            height="100vh"
-            width="100vw"
-            mb="auto"
-            mt="auto"
-            fontWeight="fontWeightMedium"
-          >
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="contrastText"
-              gutterBottom
-            >
-              {/* Babson CODE */}
-              <img alt="Babson CODE Logo" src={logo} height="100px" />
-            </Typography>
-            <Typography
-              component="h3"
-              variant="h4"
-              align="center"
-              color="textPrimary"
-              paragraph
-            >
-              Babson CODE (Community Of Developers and Entrepreneurs) is the
-              heart of technology and entrepreneurship at Babson.
-            </Typography>
-            {/* <div className={classes.aboutColText}> */}
-            <Grid container spacing={10} justify="center">
-              <Grid item>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h3"
-                  variant="h5"
-                  color="textPrimary"
-                >
-                  2015
-                </Typography>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h4"
-                  variant="h6"
-                  color="textPrimary"
-                >
-                  Founded
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h3"
-                  variant="h5"
-                  color="textPrimary"
-                >
-                  $50+ Million
-                </Typography>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h4"
-                  variant="h6"
-                  color="textPrimary"
-                >
-                  Startups Worth
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h3"
-                  variant="h5"
-                  color="textPrimary"
-                >
-                  21
-                </Typography>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h4"
-                  variant="h6"
-                  color="textPrimary"
-                >
-                  Residents
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h3"
-                  variant="h5"
-                  color="textPrimary"
-                >
-                  200+
-                </Typography>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  component="h4"
-                  variant="h6"
-                  color="textPrimary"
-                >
-                  General Memebers
-                </Typography>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
-      </Jumbotron>
-      <Container>
+      <CODE_Stats_Jumbo welcome="Welcome to CODE!" />
+      {/* <Container>
         <CODEStartupsCourasel />
-      </Container>
+      </Container> */}
       <Container>
         <Mission />
       </Container>
@@ -176,14 +65,17 @@ export default function AboutUsPage(props) {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row" style={{ marginBottom: "30px" }}>
           <div className="col-lg-4">
             <Paper elevation={6} style={{ padding: "30px", margin: "15px" }}>
               <h1>Opportunities to apply your knowledge.</h1>
             </Paper>
           </div>
           <div className="col-lg-8">
-            <div className="container d-flex h-100" style={{ padding: "30px" }}>
+            <div
+              className="container d-flex h-100"
+              style={{ padding: "30px", marginBottom: "30px" }}
+            >
               <div className="justify-content-center align-self-center">
                 Apart from competingin Hackathons ourselves, CODE also hosts
                 learning hackathons where students compete to learn a new
@@ -199,6 +91,9 @@ export default function AboutUsPage(props) {
           <CODEStartups />
         </Container>
       </Jumbotron>
+      <Container>
+        <MailchimpReact />
+      </Container>
     </React.Fragment>
   );
 }

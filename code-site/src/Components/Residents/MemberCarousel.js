@@ -131,7 +131,7 @@ function MemberCarousel() {
         {/* {console.log(process.env.PUBLIC_URL)} */}
         {memberData.map((tile) => (
           <GridListTile key={tile.media.photo}>
-            <img src={require("../../../Assets/img" + tile.media.photo)} />
+            <img src={require("../../../Assets/img/Members Photos" + tile.media.photo)} />
             {console.log(title.media.photo)}
             <GridListTileBar
               key={tile.media.photo}

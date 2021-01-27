@@ -6,15 +6,14 @@ export default class CODEStartups extends Component {
     //   TODO: images are NOT centered for some reason.
     return (
       <div>
+        <h1>CODE Startups</h1>
+        <h4>
+          Since CODE was founded in 2015, CODE members have founded many
+          ventures of their own. Valuations have exceeded $50 Million.
+          Additionally, CODE members have assisted hundres of other startups as
+          well. Learn more about some specific CODE Startups.{" "}
+        </h4>
         <div className="row" style={{ margin: "40px" }}>
-          <div className="col-lg-6">
-            <SingleStartup
-              company_name="XHighlight"
-              website="https://www.xhighlight.com"
-              logo="XHighlight Logo.png"
-              about="XHighlight is the Fastest and Easiest way to create your sports highlight videos."
-            />
-          </div>
           <div className="col-lg-6">
             <SingleStartup
               company_name="Vini VR"
@@ -23,8 +22,15 @@ export default class CODEStartups extends Component {
               about="VINCI creates proprietary software and utilizes consumer hardware to lower the cost of creating and using VR."
             />
           </div>
+          <div className="col-lg-6">
+            <SingleStartup
+              company_name="XHighlight"
+              website="https://www.xhighlight.com"
+              logo="XHighlight Logo.png"
+              about="XHighlight is the Fastest and Easiest way to create your sports highlight videos."
+            />
+          </div>
         </div>
-
         <div className="row" style={{ margin: "40px" }}>
           <div className="col-lg-6">
             <SingleStartup
@@ -50,7 +56,7 @@ export default class CODEStartups extends Component {
               company_name="Esto"
               website="https://apps.apple.com/us/app/esto/id1425521172"
               logo="Esto.png"
-              about="XHighlight is the Fastest and Easiest way to create your sports highlight videos."
+              about="Esto uses Machine learning to translate objects from English to Spanish, helping the quickly growing Spanish speaking community"
             />
           </div>
           <div className="col-lg-6">
@@ -80,11 +86,13 @@ export class SingleStartup extends Component {
           >
             <h1 style={{ textAlign: "center" }}>{this.props.company_name}</h1>
             {/* <div style={{ display: "block", margin: "0 auto" }}> */}
-              <p style={{ textAlign: "center" }}><img
+            <p style={{ textAlign: "center" }}>
+              <img
                 src={require("../../Assets/img/CODE Startups/" +
                   this.props.logo)}
                 width={500}
-              ></img></p>
+              ></img>
+            </p>
             {/* </div> */}
           </a>
           <br></br>
