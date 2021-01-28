@@ -65,9 +65,7 @@ function membercard(props) {
       ></CardMedia> */}
       {/* <img src={require("../../../Assets/" + props.image)} style={{float: 'right', width: "45px"}}></img> */}
       {/* {console.log(props.image)} */}
-      {console.log("card")}
       {/* {console.log(props.first_name)} */}
-      {console.log(props)}
       <img
         src={require("../../../Assets/img/Members Photos" + props.image)} 
         style={{ float: "right", height: "150px" }}

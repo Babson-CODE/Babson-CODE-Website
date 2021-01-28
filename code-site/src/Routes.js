@@ -4,7 +4,7 @@ import Home from "./Components/Landing/Home";
 import AboutUs from "./Components/About Us/AboutUs";
 // import ContactUs from "./Components/ContactUs/ContactUsPage";
 // import Partners from "./Components/Partners/PartnersPage";
-import Residents from "./Components/Residents/residentspage";
+import Residents from "./Components/Residents/ResidentsPage";
 // import Resources from "./Components/Resources/Resources";
 // import "../styles/Style.css"
 import NoMatch from "./Components/Other/NoMatch";
