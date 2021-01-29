@@ -280,7 +280,6 @@ function MemberCarousel() {
             <img
               src={require("../../Assets/img/Members Photos" +
                 tile.media.photo)}
-              // style={{top: "50%", width: "100%", position: "relative", transform: "translateY(-50%)" }} />
               class="MuiGridListTile-imgFullHeight"
             />
             <GridListTileBar
