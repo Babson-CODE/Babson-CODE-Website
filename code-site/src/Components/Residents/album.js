@@ -277,7 +277,12 @@ function MemberCarousel() {
       <GridList className={classes.gridList} cols={3.5} cellHeight={500}>
         {memberData.map((tile) => (
           <GridListTile key={tile.media.photo}>
-            <img src={require("../../Assets/img/Members Photos" + tile.media.photo)} height="500px" style={{margin: "auto"}} />
+            <img
+              src={require("../../Assets/img/Members Photos" +
+                tile.media.photo)}
+              // style={{top: "50%", width: "100%", position: "relative", transform: "translateY(-50%)" }} />
+              class="MuiGridListTile-imgFullHeight"
+            />
             <GridListTileBar
               key={tile.media.photo}
               title={tile.full_name}
