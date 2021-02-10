@@ -74,7 +74,7 @@ export default function LandingPage(props) {
   return (
     <React.Fragment>
       <div>
-        <CODE_Stats_Jumbo />
+        <CODE_Stats_Jumbo welcome="Welcome to CODE!" />
         <Container>
           <Mission />
           <MissionExtended />

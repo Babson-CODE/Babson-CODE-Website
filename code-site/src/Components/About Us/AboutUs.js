@@ -19,7 +19,7 @@ import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 export default function AboutUsPage(props) {
   return (
     <React.Fragment>
-      <CODE_Stats_Jumbo welcome="Welcome to CODE!" />
+      <CODE_Stats_Jumbo />
       {/* <Container>
         <CODEStartupsCourasel />
       </Container> */}
