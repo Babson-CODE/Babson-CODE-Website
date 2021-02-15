@@ -71,7 +71,7 @@ function hero(props) {
             CODE hosts 21 students in residence, all of whom have are busy
             helping change the world through technology-based entrepreneurship.
           </Typography>
-          {/* <div class={classes.heroButtons}>
+          <div class={classes.heroButtons}>
             <Grid container spacings={2} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary">
@@ -84,7 +84,7 @@ function hero(props) {
                 </Button>
               </Grid>
             </Grid>
-          </div> */}
+          </div>
         </container>
       </div>
     </React.Fragment>

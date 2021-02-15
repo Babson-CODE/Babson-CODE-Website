@@ -1,28 +1,28 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-// import { withStyle } from "@material-ui/core/styles";
+import { withStyle } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-// import MapboxComp from "./map2";
-// import CssBaseline from "@material-ui/core/CssBaseline";
+import MapboxComp from "./map2";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-// import Link from "@material-ui/core/Link";
-// import PropTypes from "prop-types";
+import Link from "@material-ui/core/Link";
+import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
-// import NewsletterSignupForm from "../ContactUs/newslettersignup";
-// import Jumbotron from "react-bootstrap/Jumbotron";
-// import Image from "react-bootstrap/Image";
-// import codecover from "./code-cover.jpg";
-// import Zoom from "@material-ui/core/Zoom";
-// import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-// import Button from "@material-ui/core/Button";
+import NewsletterSignupForm from "../Contact Us/newslettersignup";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Image from "react-bootstrap/Image";
+import codecover from "./code-cover.jpg";
+import Zoom from "@material-ui/core/Zoom";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Button from "@material-ui/core/Button";
 import { MemberCarousel } from "../Residents/album";
-// import Footer from "../Navigation/Footer";
-// import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
+import Footer from "../Navigation/Footer";
+import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 import Mission from "../About Us/Mission";
 import MissionExtended from "../About Us/MissionExtended";
-// import Startups from "../Startups/StartupsCollage";
+import Startups from "../Startups/StartupsCollage";
 import MailchimpSignup from "./MailchimpSignup";
 import CODE_Stats_Jumbo from "./../About Us/CODE_Stats_Jumbo";
 
@@ -74,7 +74,7 @@ export default function LandingPage(props) {
   return (
     <React.Fragment>
       <div>
-        <CODE_Stats_Jumbo welcome="Welcome to CODE!" />
+        <CODE_Stats_Jumbo />
         <Container>
           <Mission />
           <MissionExtended />

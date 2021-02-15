@@ -25,10 +25,7 @@ export default ({
   LastNamePlaceHolder = "Last Name *",
   placeHolder = "Email Adress *",
   buttonClassName,
-  tagline,
   action,
-  test = "abc",
-  tag,
   messages = {
     sending: "Sending...",
     success: "Thank you for subscribing!",
@@ -70,12 +67,11 @@ export default ({
       }
     });
   };
-  console.log(action);
-  console.log(tagline);
-  console.log(tag);
+  console.log(status);
+  console.log("form");
   return (
     <Container>
-      <h3 style={{ marginBottom: "10px" }}>{test}</h3>
+      <h3 style={{ marginBottom: "10px" }}>Join our Newsletter!</h3>
       <form onSubmit={handleSubmit} className={className}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
