@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class CODEStartupsCarousel extends Component {
+class CODEStartupsCarousel extends Component {
     render() {
         return (
             <div>
-                Carousel for CODE Startups
+                Not done...
             </div>
-        )
+        );
     }
 }
 
+export default CODEStartupsCarousel;

@@ -1,6 +1,6 @@
 {
   "name": "code-site",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.3",
+    "browser": "^0.2.6",
     "dotenv": "^8.2.0",
     "extend-shallow": "^3.0.2",
     "formik": "^2.2.6",
@@ -19,10 +20,12 @@
     "mapbox-gl": "^1.12.0",
     "mdbreact": "^5.0.1",
     "node-sass": "^4.14.1",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-items-carousel": "^2.8.0",
     "react-mailchimp-form": "^1.0.2",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-mapbox-gl": "^4.8.6",
