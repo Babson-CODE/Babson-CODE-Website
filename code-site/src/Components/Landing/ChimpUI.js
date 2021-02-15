@@ -20,13 +20,15 @@ export default ({
       color: "#ED4C67",
     },
   },
-  props,
   className,
   FirstNamePlaceHolder = "First Name *",
   LastNamePlaceHolder = "Last Name *",
   placeHolder = "Email Adress *",
   buttonClassName,
+  tagline,
   action,
+  test = "abc",
+  tag,
   messages = {
     sending: "Sending...",
     success: "Thank you for subscribing!",
@@ -68,10 +70,12 @@ export default ({
       }
     });
   };
-  // console.log(this.props.tagline)
+  console.log(action);
+  console.log(tagline);
+  console.log(tag);
   return (
     <Container>
-      <h3 style={{ marginBottom: "10px" }}>THIS SHOULD BE A PROP NOT DIRECT PASSED IN AS TAGLINE</h3>
+      <h3 style={{ marginBottom: "10px" }}>{test}</h3>
       <form onSubmit={handleSubmit} className={className}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
