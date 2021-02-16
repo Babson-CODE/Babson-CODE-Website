@@ -5,8 +5,8 @@ class EachResident extends Component {
     const name = this.props.name;
     const photo = this.props.key;
     return (
-      <div>
-        <div class="col" style={{ padding: "30px" }}>
+      // <div className="row">
+        <div className="col-xl-4" style={{ padding: "30px" }}>
           <img
             src={require("../../Assets/img/Members Photos" + "/Alvie.jpg")}
             height="250px"
@@ -68,7 +68,7 @@ class EachResident extends Component {
             </div>
           </div>
         </div>
-      </div>
+      // </div>
     );
   }
 }
