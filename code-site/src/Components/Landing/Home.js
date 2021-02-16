@@ -17,7 +17,7 @@ import Box from "@material-ui/core/Box";
 // import Zoom from "@material-ui/core/Zoom";
 // import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 // import Button from "@material-ui/core/Button";
-import { MemberCarousel } from "../Residents/album";
+import { MemberCarousel } from "../Residents/Residents";
 // import Footer from "../Navigation/Footer";
 // import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 import Mission from "../About Us/Mission";
@@ -81,7 +81,7 @@ export default function LandingPage(props) {
           style={{
             backgroundColor: "rgb(174 240 193)",
             overflow: "hidden",
-            marginBottom: "100px",
+            marginBottom: "50px",
           }}
         >
           <Container>
@@ -89,7 +89,7 @@ export default function LandingPage(props) {
               src={HackathonImage}
               style={{
                 borderRadius: "40px",
-                width: "40%",
+                width: "60%",
                 float: "right",
                 margin: "80px 50px 50px 60px",
               }}
@@ -114,11 +114,13 @@ export default function LandingPage(props) {
                 padding: "40px",
                 position: "absolute",
                 top: "0",
-                marginTop: "100px",
+                marginTop: "200px",
                 marginRight: "42%",
               }}
             >
-              <h1>Welcome to the Heart of Technoloogy at Babson</h1>
+              <h1 style={{ fontSize: "1.75em", lineHeight: "1.5em" }}>
+                Welcome to the Heart of Technoloogy at Babson
+              </h1>
               <p style={{ fontWeight: "normal" }}>
                 <span style={{ fontWeight: "bold" }}>Babson CODE</span>{" "}
                 (Community Of Developers and Entrepreneurs) is the heart of
@@ -128,39 +130,131 @@ export default function LandingPage(props) {
             </div>
           </Container>
         </div>
+        <Container>
+          <h1
+            style={{
+              fontSize: "2.5em",
+              lineHeight: "1.5em",
+              textAlign: "center",
+            }}
+          >
+            About Us
+          </h1>
+          <hr
+            style={{
+              borderTop: "2.5px solid",
+              margin: "20px 200px 50px 200px",
+            }}
+          />
+          <Container
+            height="100vh"
+            width="100vw"
+            mb="auto"
+            mt="auto"
+            fontWeight="fontWeightMedium"
+          >
+            {/* <div className={classes.aboutColText}> */}
+            <Grid container spacing={10} justify="center">
+              <Grid item>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h3"
+                  variant="h5"
+                  color="textPrimary"
+                >
+                  2015
+                </Typography>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h4"
+                  variant="h6"
+                  color="textPrimary"
+                >
+                  Founded
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h3"
+                  variant="h5"
+                  color="textPrimary"
+                >
+                  $50+ Million
+                </Typography>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h4"
+                  variant="h6"
+                  color="textPrimary"
+                >
+                  Startups Worth
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h3"
+                  variant="h5"
+                  color="textPrimary"
+                >
+                  21
+                </Typography>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h4"
+                  variant="h6"
+                  color="textPrimary"
+                >
+                  Residents
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h3"
+                  variant="h5"
+                  color="textPrimary"
+                >
+                  200+
+                </Typography>
+                <Typography
+                  style={{ textAlign: "center" }}
+                  component="h4"
+                  variant="h6"
+                  color="textPrimary"
+                >
+                  General Memebers
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Container>
 
-        {/* <Container>
-          <Mission />
-          <MissionExtended />
-        </Container> */}
-        <Box mt={9} mb={9} height="100%">
+        <div
+          style={{
+            backgroundColor: "rgb(174 240 193)",
+            overflow: "hidden",
+            marginTop: "90px",
+            marginBottom: "50px",
+          }}
+        >
           <Container>
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
-              gutterBottom
+            <h1
+              style={{
+                fontSize: "2.5em",
+                lineHeight: "1.5em",
+                textAlign: "center",
+                padding: "30px"
+              }}
             >
-              Our Residents
-            </Typography>
-            <MemberCarousel />
+              Meet the Residents
+            </h1>
+            <div style={{paddingBottom: "30px"}}>
+            <MemberCarousel /></div>
           </Container>
-        </Box>
-        {/* <Box mt={9} mb={9} height="100%">
-          <Container>
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-            >
-              CODE Startups
-            </Typography>
-            <Startups />
-          </Container>
-        </Box> */}
+        </div>
+
         <Box>
           <Container>
             <Grid>
