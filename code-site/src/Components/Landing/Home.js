@@ -27,6 +27,7 @@ import MailchimpSignup from "./MailchimpSignup";
 import ChimpUI from "./ChimpUI";
 import CODE_Stats_Jumbo from "./../About Us/CODE_Stats_Jumbo";
 import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
+import StartupsCarousel2 from "../Startups/StartupsCarousel2";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -245,15 +246,18 @@ export default function LandingPage(props) {
                 fontSize: "2.5em",
                 lineHeight: "1.5em",
                 textAlign: "center",
-                padding: "30px"
+                padding: "30px",
               }}
             >
               Meet the Residents
             </h1>
-            <div style={{paddingBottom: "30px"}}>
-            <MemberCarousel /></div>
+            <div style={{ paddingBottom: "30px" }}>
+              <MemberCarousel />
+            </div>
           </Container>
         </div>
+
+        {/* <StartupsCarousel2 /> */}
 
         <Box>
           <Container>
