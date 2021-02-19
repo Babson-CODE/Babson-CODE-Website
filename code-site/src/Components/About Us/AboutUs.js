@@ -40,12 +40,15 @@ export default function AboutUsPage() {
               <div className="justify-content-center align-self-center">
                 We view technology as a tool to form disruptive companies that
                 change the world. CODE is a platform to find co-founders,
-                collaborate on ideas and learn more about technology and
-                entrepreneurship as a whole. CODE also consults to technology
-                startups through the Blank Center of entrepreneurship at Babson.
-                We are proud to say most of our residents are working on solving
-                tough problems around the world they are passionate about
-                through a startup.
+                collaborate on ideas and learn more about technology &
+                entrepreneurship as a whole. CODE does weekly technology
+                consulting with startups through the{" "}
+                <a href="https://www.babson.edu/academics/centers-and-institutes/the-arthur-m-blank-center-for-entrepreneurship/">
+                  Blank Center of Entrepreneurship
+                </a>{" "}
+                at Babson. We are proud to say most of our residents are working
+                on solving tough problems around the world they are passionate
+                about through a startup.
               </div>
             </div>
           </div>
@@ -59,10 +62,10 @@ export default function AboutUsPage() {
           <div className="col-lg-8">
             <div className="container d-flex h-100" style={{ padding: "30px" }}>
               <div className="justify-content-center align-self-center">
-                CODE hosts a variety of workshops with partner companies. It
-                allows students to learn on demand skills with real world
-                projects under their belt. It allows them to launch their
-                startup or find a job without a problem.
+                CODE hosts a variety of workshops with partner companies and
+                communities. It allows students to learn on-demand skills with
+                real world projects under their belt. It allows them to launch
+                their startup or find a job without a problem.
               </div>
             </div>
           </div>
@@ -79,9 +82,9 @@ export default function AboutUsPage() {
               style={{ padding: "30px", marginBottom: "30px" }}
             >
               <div className="justify-content-center align-self-center">
-                Apart from competingin Hackathons ourselves, CODE also hosts
+                Aside from competing in Hackathons ourselves, CODE also hosts
                 learning hackathons where students compete to learn a new
-                language or skill and build a notable project for an specific
+                language or skill and build a notable project for in a specific
                 amount of time.
               </div>
             </div>
