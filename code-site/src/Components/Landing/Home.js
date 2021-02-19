@@ -7,10 +7,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import { MemberCarousel } from "../Residents/Residents";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
-import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
 import StartupsCarousel2 from "../Startups/StartupsCarousel2";
 import Housing from "./../Housing/Housing"
 import Button from 'react-bootstrap/Button';
+import TopSignup from "./TopSignup"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,7 +61,8 @@ export default function LandingPage(props) {
   return (
     <React.Fragment>
       <div>
-        <div
+        <TopSignup />
+        {/* <div
           style={{
             backgroundColor: "rgb(174 240 193)",
             overflow: "hidden",
@@ -139,7 +140,7 @@ export default function LandingPage(props) {
               </div>
             </div>
           </Container>
-        </div>
+        </div> */}
         <Container>
           <h1
             style={{

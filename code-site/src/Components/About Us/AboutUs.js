@@ -15,11 +15,14 @@ import Mission from "./Mission";
 import CODE_Stats_Jumbo from "./CODE_Stats_Jumbo";
 import MailchimpReact from "./../Mailchimp/MailChimpUI";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
+import MailchimpSignup from "../Mailchimp/MailChimpUI";
+import TopSignup from "../Landing/TopSignup";
 
-export default function AboutUsPage(props) {
+export default function AboutUsPage() {
   return (
     <React.Fragment>
-      <CODE_Stats_Jumbo />
+      {/* <CODE_Stats_Jumbo /> */}
+      <TopSignup />
       {/* <Container>
         <CODEStartupsCourasel />
       </Container> */}
@@ -91,9 +94,29 @@ export default function AboutUsPage(props) {
           <CODEStartups />
         </Container>
       </Jumbotron>
-      <Container>
-        <MailchimpReact />
-      </Container>
+      <Box>
+        <Container>
+          <Grid>
+            <Grid
+              item
+              component={Paper}
+              elevation={6}
+              square
+              style={{ padding: "30px" }}
+            >
+              <h1>Newsletter Sign-Up</h1>
+              <MailchimpSignup />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <div style={{ backgroundColor: "rgb(174 240 193)" }}>
+        <Container>
+          <h1 style={{ marginTop: "40px" }}>Notable CODE Alumni</h1>
+          <h1>Eagle Wu - Vinci VR</h1>
+          <h1>Abe Storey - Kargo </h1>
+        </Container>
+      </div>
     </React.Fragment>
   );
 }

@@ -14,7 +14,7 @@ export default class CODEStartups extends Component {
           well. Learn more about some specific CODE Startups.{" "}
         </h4>
         <div className="row" style={{ margin: "40px" }}>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="Vini VR"
               website="https://www.vinci-vr.com"
@@ -22,7 +22,7 @@ export default class CODEStartups extends Component {
               about="VINCI creates proprietary software and utilizes consumer hardware to lower the cost of creating and using VR."
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="XHighlight"
               website="https://www.xhighlight.com"
@@ -32,7 +32,7 @@ export default class CODEStartups extends Component {
           </div>
         </div>
         <div className="row" style={{ margin: "40px" }}>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="Jinn, LLC"
               website="https://www.crunchbase.com/organization/jinn-llc"
@@ -40,7 +40,7 @@ export default class CODEStartups extends Component {
               about="Jinn was a full-service technology development company known for producing high-quality results at a lightning pace."
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="BaboBikes"
               website="https://www.babobikes.com/"
@@ -51,7 +51,7 @@ export default class CODEStartups extends Component {
         </div>
 
         <div className="row" style={{ margin: "40px" }}>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="Esto"
               website="https://apps.apple.com/us/app/esto/id1425521172"
@@ -59,7 +59,7 @@ export default class CODEStartups extends Component {
               about="Esto uses Machine learning to translate objects from English to Spanish, helping the quickly growing Spanish speaking community"
             />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="Bytes Coding"
               website="https://bytescoding.com/"
@@ -76,7 +76,7 @@ export default class CODEStartups extends Component {
 export class SingleStartup extends Component {
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "15px" }}>
         {console.log(this.props.logo)}
         <Paper elevation={3} square={true} style={{ padding: "30px" }}>
           <a
@@ -90,7 +90,7 @@ export class SingleStartup extends Component {
               <img
                 src={require("../../Assets/img/CODE Startups/" +
                   this.props.logo)}
-                width={500}
+                width={"100%"}
               ></img>
             </p>
             {/* </div> */}
