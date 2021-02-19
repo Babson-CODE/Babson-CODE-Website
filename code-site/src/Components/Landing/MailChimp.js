@@ -27,7 +27,8 @@ export default ({
   buttonClassName,
   tagline,
   action,
-  test = "abc",
+  // test = "abc",
+  // props,
   tag,
   messages = {
     sending: "Sending...",
@@ -75,7 +76,7 @@ export default ({
   console.log(tag);
   return (
     <Container>
-      <h3 style={{ marginBottom: "10px" }}>{test}</h3>
+      {/* <h3 style={{ marginBottom: "10px" }}></h3> */}
       <form onSubmit={handleSubmit} className={className}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -139,21 +140,6 @@ export default ({
         </Button>
         {status !== "empty" && <h3>{status}</h3>}
         {status === "empty" && <p style={styles.errorMsg}>{messages.empty}</p>}
-        {/* <div className="msg-alert">
-          {status === "sending" && (
-            <p style={styles.sendingMsg}>{messages.sending}</p>
-          )}
-          {status === "success" && <p style={styles.successMsg}>{status}</p>}
-          {status === "duplicate" && (
-            <p style={styles.duplicateMsg}>{messages.duplicate}</p>
-          )}
-          {status === "empty" && (
-            <p style={styles.errorMsg}>{messages.empty}</p>
-          )}
-          {status === "error" && (
-            <p style={styles.errorMsg}>{messages.error}</p>
-          )}
-        </div> */}
       </form>
     </Container>
   );

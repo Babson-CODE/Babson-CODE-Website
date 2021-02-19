@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MailchimpReact from "./ChimpUI";
+import MailchimpReact from "../Mailchimp/MailChimpForm";
 
 class MailchimpSignup extends Component {
   render() {

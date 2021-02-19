@@ -13,7 +13,7 @@ import CODEStartups from "../Startups/CODEStartupsCards";
 import CODEStartupsCourasel from "../Startups/CODEStartupsCarousel";
 import Mission from "./Mission";
 import CODE_Stats_Jumbo from "./CODE_Stats_Jumbo";
-import MailchimpReact from "../Landing/MailchimpSignup";
+import MailchimpReact from "./../Mailchimp/MailChimpUI";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 
 export default function AboutUsPage(props) {

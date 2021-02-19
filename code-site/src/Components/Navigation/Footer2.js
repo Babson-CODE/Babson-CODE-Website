@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import MailchimpSignup from "./../Landing/MailchimpSignup";
+import MailchimpSignup from "./../Mailchimp/MailChimpUI";
 import "./../../App.css";
 
 class Footer extends React.Component {
@@ -17,39 +17,30 @@ class Footer extends React.Component {
           <MDBContainer fluid className="text-center text-md-left">
             <MDBRow>
               <MDBCol md="6" style={{ paddingBottom: "30px" }}>
-                <MailchimpSignup />
+                <MailchimpSignup headline="Sign-Up for the CODE Newsletter" />
               </MDBCol>
-              <MDBCol md="2">
+              {/* <MDBCol md="2">
                 <h5 className="title">Babson CODE</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="/404" style={blackLink}>Link 1</a>
+                    <a href="/404" style={blackLink}>
+                      Link 1
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 2</a>
+                    <a href="#!" style={blackLink}>
+                      Link 2
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 3</a>
+                    <a href="#!" style={blackLink}>
+                      Link 3
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 4</a>
-                  </li>
-                </ul>
-              </MDBCol>
-              <MDBCol md="2">
-                <h5 className="title">Babson CODE</h5>
-                <ul>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 1</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 2</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 3</a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 4</a>
+                    <a href="#!" style={blackLink}>
+                      Link 4
+                    </a>
                   </li>
                 </ul>
               </MDBCol>
@@ -62,16 +53,47 @@ class Footer extends React.Component {
                     </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 2</a>
+                    <a href="#!" style={blackLink}>
+                      Link 2
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 3</a>
+                    <a href="#!" style={blackLink}>
+                      Link 3
+                    </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>Link 4</a>
+                    <a href="#!" style={blackLink}>
+                      Link 4
+                    </a>
                   </li>
                 </ul>
               </MDBCol>
+              <MDBCol md="2">
+                <h5 className="title">Babson CODE</h5>
+                <ul>
+                  <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
+                      Link 1
+                    </a>
+                  </li>
+                  <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
+                      Link 2
+                    </a>
+                  </li>
+                  <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
+                      Link 3
+                    </a>
+                  </li>
+                  <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
+                      Link 4
+                    </a>
+                  </li>
+                </ul>
+              </MDBCol> */}
             </MDBRow>
           </MDBContainer>
         </Container>
@@ -82,7 +104,7 @@ class Footer extends React.Component {
           <Container>
             <MDBContainer fluid>
               &copy; {new Date().getFullYear()} Copyright:{" "}
-              <a href="https://www.BabsonCODE.com"> BabsonCODE.com </a>
+              <a href="https://www.BabsonCODE.com"> BabsonCODE.dev </a>
             </MDBContainer>
           </Container>
         </div>
