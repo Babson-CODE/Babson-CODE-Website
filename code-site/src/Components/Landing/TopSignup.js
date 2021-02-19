@@ -38,14 +38,14 @@ class TopSignup extends Component {
                   marginRight: "42%",
                 }}
               >
-                <h1 style={{ fontSize: "1.75em", lineHeight: "1.5em" }}>
+                <h1 >
                   Welcome to the Heart of Technoloogy at Babson
                 </h1>
-                <p style={{ fontWeight: "normal" }}>
+                <h5 style={{ fontWeight: "normal", fontSize: "1.25em", lineHeight: "1.45em" }}>
                   <span style={{ fontWeight: "bold" }}>Babson CODE</span>{" "}
                   (Community Of Developers and Entrepreneurs) is the heart of
                   technology and entrepreneurship at Babson.
-                </p>
+                </h5>
                 <MailchimpSignup headline="Sign-Up for Our Newsletter" />
               </div>
             </div>
@@ -74,14 +74,14 @@ class TopSignup extends Component {
                   // marginRight: "42%",
                 }}
               >
-                <h1 style={{ fontSize: "1.75em", lineHeight: "1.5em" }}>
+                <h1>
                   Welcome to the Heart of Technoloogy at Babson
                 </h1>
-                <p style={{ fontWeight: "normal" }}>
+                <h5 style={{ fontWeight: "normal", fontSize: "1.25em", lineHeight: "1.45em" }}>
                   <span style={{ fontWeight: "bold" }}>Babson CODE</span>{" "}
                   (Community Of Developers and Entrepreneurs) is the heart of
                   technology and entrepreneurship at Babson.
-                </p>
+                </h5>
                 <MailchimpSignup headline="Sign-Up for Our Newsletter" />
               </div>
             </div>

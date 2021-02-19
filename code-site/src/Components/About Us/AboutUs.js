@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import { withStyle } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import MapboxComp from "../Landing/map2";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
@@ -17,10 +15,11 @@ import MailchimpReact from "./../Mailchimp/MailChimpUI";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
 import TopSignup from "../Landing/TopSignup";
+import AboutUsStats from "../Landing/AboutUsStats";
 
 export default function AboutUsPage() {
   return (
-    <React.Fragment>
+    <div>
       {/* <CODE_Stats_Jumbo /> */}
       <TopSignup />
       {/* <Container>
@@ -89,6 +88,9 @@ export default function AboutUsPage() {
           </div>
         </div>
       </Container>
+      <div style={{ margin: "30px" }}>
+        <AboutUsStats />
+      </div>
       <Jumbotron>
         <Container>
           <CODEStartups />
@@ -110,13 +112,13 @@ export default function AboutUsPage() {
           </Grid>
         </Container>
       </Box>
-      <div style={{ backgroundColor: "rgb(174 240 193)" }}>
+      {/* <div style={{ backgroundColor: "rgb(174 240 193)" }}>
         <Container>
           <h1 style={{ marginTop: "40px" }}>Notable CODE Alumni</h1>
           <h1>Eagle Wu - Vinci VR</h1>
           <h1>Abe Storey - Kargo </h1>
         </Container>
-      </div>
-    </React.Fragment>
+      </div> */}
+    </div>
   );
 }

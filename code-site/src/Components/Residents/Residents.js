@@ -125,8 +125,8 @@ function MemberCarousel() {
                 }}
               >
                 CEO & Founder,{" "}
-                <a href="http://xhighlight.com" style={{ color: "black" }}>
-                  XHighlight
+                <a href="https://www.linkedin.com/company/oneye-technologies/" style={{ color: "black" }}>
+                  Oneye Technologies LLC
                 </a>
               </h2>
               <h3
@@ -138,7 +138,7 @@ function MemberCarousel() {
               >
                 CODE Chief Technical Consultant
               </h3>
-              <p style={{ padding: "25px 30px 10px 0px" }}>JULIAN FILL IN</p>
+              <p style={{ padding: "25px 30px 10px 0px", textAlign: "center"}}>- Coming Soon - </p>
               <a href="https://www.linkedin.com/in/julian-wiley-8377b5175/">
                 <Button
                   style={{
@@ -198,7 +198,7 @@ function MemberCarousel() {
                   fontSize: "16px",
                 }}
               >
-                Member of the Newsletter Team & President of the Babson
+                Member of the CODE Newsletter Team & President of the Babson
                 Blockchain Club
               </h3>
               <p style={{ padding: "25px 30px 10px 0px" }}>

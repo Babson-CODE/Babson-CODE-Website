@@ -17,10 +17,11 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/about-us" component={AboutUs} />
+    <Route exact path="/contact-us" component={ComingSoon} />
     <Route exact path="/newsletter" component={Newsletter} />
     <Route exact path="/residents" component={Residents} />
     <Route exact path="/resources" component={ComingSoon} />
-    <Route exact path="/partners" component={Partners} />
+    <Route exact path="/partners" component={ComingSoon} />
     <Route exact path="/StartupsCourasel" component={StartupsCourasel} />
     <Route exact path="/Donate" component={Donate} />
     {/* <Route
