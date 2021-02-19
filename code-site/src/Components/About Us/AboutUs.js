@@ -16,12 +16,13 @@ import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
 import TopSignup from "../Landing/TopSignup";
 import AboutUsStats from "../Landing/AboutUsStats";
+import HBSIterate from "../../Assets/img/CODE @ events/CODE @ Iteration Panel.jpg";
 
 export default function AboutUsPage() {
   return (
     <div>
       {/* <CODE_Stats_Jumbo /> */}
-      <TopSignup />
+      <TopSignup image={HBSIterate} caption={"Babson CODE members Theo, Yumel, and Mike attending a panel at the 2020 Harvard Iteration Conference."} />
       {/* <Container>
         <CODEStartupsCourasel />
       </Container> */}

@@ -37,7 +37,7 @@ function MemberCarousel() {
               backgroundColor: "white",
             }}
           >
-            <div style={{ marginTop: "210px" }}>
+            <div style={{ marginTop: "210px", padding: "25px 30px 10px 0px" }}>
               <h1
                 style={{
                   textAlign: "center",
@@ -68,7 +68,7 @@ function MemberCarousel() {
               >
                 President of Babson CODE
               </h3>
-              <p style={{ padding: "25px 30px 10px 0px" }}>
+              <p>
                 Alvie is an aspiring entrepreneur who is very interested in
                 technology and programming. He is working on a startup,
                 XHighlight, the fastest and easiest way to create sports and
@@ -107,7 +107,7 @@ function MemberCarousel() {
               backgroundColor: "white",
             }}
           >
-            <div style={{ marginTop: "210px" }}>
+            <div style={{ marginTop: "210px", padding: "25px 30px 10px 0px" }}>
               <h1
                 style={{
                   textAlign: "center",
@@ -138,7 +138,7 @@ function MemberCarousel() {
               >
                 CODE Chief Technical Consultant
               </h3>
-              <p style={{ padding: "25px 30px 10px 0px", textAlign: "center"}}>- Coming Soon - </p>
+              <p style={{ textAlign: "center"}}>- Coming Soon - </p>
               <a href="https://www.linkedin.com/in/julian-wiley-8377b5175/">
                 <Button
                   style={{
@@ -167,7 +167,7 @@ function MemberCarousel() {
               backgroundColor: "white",
             }}
           >
-            <div style={{ marginTop: "210px" }}>
+            <div style={{ marginTop: "210px", padding: "25px 30px 10px 0px" }}>
               <h1
                 style={{
                   textAlign: "center",
@@ -201,7 +201,7 @@ function MemberCarousel() {
                 Member of the CODE Newsletter Team & President of the Babson
                 Blockchain Club
               </h3>
-              <p style={{ padding: "25px 30px 10px 0px" }}>
+              <p>
                 Ashley recently became the president of Babson's Blockchain Club
                 and is wanting to learn more about the technical components of
                 blockchain, in addition to learning a new programming language

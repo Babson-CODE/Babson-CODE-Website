@@ -12,7 +12,7 @@ import Housing from "./../Housing/Housing"
 import Button from 'react-bootstrap/Button';
 import TopSignup from "./TopSignup"
 import AboutUsStats from "./AboutUsStats"
-
+import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -62,7 +62,7 @@ export default function LandingPage(props) {
   return (
     <React.Fragment>
       <div>
-        <TopSignup />
+        <TopSignup image={HackathonImage} caption={"Babson CODE winning the Money Hack 20/20, Hackathon 2016."} />
         <AboutUsStats/>
         <Housing/>
 

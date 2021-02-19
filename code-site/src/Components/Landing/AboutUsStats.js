@@ -38,7 +38,7 @@ class AboutUsStats extends Component {
                 variant="h5"
                 color="textPrimary"
               >
-                2015
+                2016
               </Typography>
               <Typography
                 style={{ textAlign: "center" }}
