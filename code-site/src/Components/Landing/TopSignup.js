@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
-import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
 
 class TopSignup extends Component {
   render() {
@@ -26,7 +25,11 @@ class TopSignup extends Component {
                 }}
               ></img>
               <figcaption
-                style={{ textAlign: "center", margin: "0px 50px 60px 60px", float: "right" }}
+                style={{
+                  textAlign: "center",
+                  margin: "0px 50px 60px 60px",
+                  float: "right",
+                }}
               >
                 {this.props.caption}
               </figcaption>
