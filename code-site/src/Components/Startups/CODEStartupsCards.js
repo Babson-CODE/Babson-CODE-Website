@@ -10,8 +10,13 @@ export default class CODEStartups extends Component {
         <h4 style={{ textAlign: "center" }}>
           Since CODE was founded in 2015, CODE members have founded many
           ventures of their own. Valuations have exceeded $50 Million.
-          Additionally, CODE members have assisted hundres of other startups as
-          well. Learn more about some specific CODE Startups.{" "}
+          Additionally, CODE members have assisted hundreds of other startups
+          through 
+          <a href="https://www.eventbrite.com/e/tech-office-hours-with-code-spring-2021-tickets-140291097449">
+            {" "}
+            Blank Center Office Hours, 
+          </a>{" "}
+         helping friends, late night ideation in our common room. Learn more about some specific CODE Startups below.
         </h4>
         <hr
           style={{

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class EachResident extends Component {
+  // https://react-bootstrap.github.io/components/modal/
   render() {
     const name = this.props.name;
     const photo = this.props.key;
