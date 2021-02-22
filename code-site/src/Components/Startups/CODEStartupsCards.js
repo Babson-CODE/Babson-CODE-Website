@@ -6,14 +6,20 @@ export default class CODEStartups extends Component {
     //   TODO: images are NOT centered for some reason.
     return (
       <div>
-        <h1>CODE Startups</h1>
-        <h4>
+        <h1 style={{ textAlign: "center" }}>CODE Startups</h1>
+        <h4 style={{ textAlign: "center" }}>
           Since CODE was founded in 2015, CODE members have founded many
           ventures of their own. Valuations have exceeded $50 Million.
           Additionally, CODE members have assisted hundres of other startups as
           well. Learn more about some specific CODE Startups.{" "}
         </h4>
-        <div className="row" style={{ margin: "40px" }}>
+        <hr
+          style={{
+            borderTop: "2.5px solid",
+            margin: "20px 200px 0px 200px",
+          }}
+        />
+        <div className="row" style={{ margin: "0px 40px 40px 40px" }}>
           <div className="col-lg-6" style={{ marginTop: "40px" }}>
             <SingleStartup
               company_name="Vini VR"

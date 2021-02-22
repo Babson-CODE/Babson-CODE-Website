@@ -38,19 +38,33 @@ export default function LandingPage(props) {
           <Container>
             <h1
               style={{
-                fontSize: "2.5em",
-                lineHeight: "1.5em",
+                // fontSize: "2.5em",
+                // lineHeight: "1.5em",
                 textAlign: "center",
-                padding: "30px",
+                paddingTop: "30px",
+                paddingBottom: "10px",
               }}
             >
               Meet the Residents
             </h1>
+            <h4 style={{ textAlign: "center" }}>
+              21 Residents live together every semester in Van Winkle Hall
+            </h4>
             <div style={{ paddingBottom: "30px" }}>
               <MemberCarousel />
               <div style={{ textAlign: "right" }}>
                 <a href="/residents">
-                  <Button  style={{ backgroundColor: "white", border: "transparent", color: "black", padding: "20px", borderRadius: "20px" }}>Meet more Residents →</Button>
+                  <Button
+                    style={{
+                      backgroundColor: "white",
+                      border: "transparent",
+                      color: "black",
+                      padding: "20px",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    View All 21 Residents →
+                  </Button>
                 </a>
               </div>
             </div>

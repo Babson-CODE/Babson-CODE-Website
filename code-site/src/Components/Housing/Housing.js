@@ -17,6 +17,10 @@ class Housing extends Component {
           >
             CODE Housing Application
           </h1>
+          <h4 style={{ textAlign: "center" }}>
+            Apply to live with the 20 other best technologically minded students
+            at Babson for Fall 2021
+          </h4>
           <hr
             style={{
               borderTop: "2.5px dashed",

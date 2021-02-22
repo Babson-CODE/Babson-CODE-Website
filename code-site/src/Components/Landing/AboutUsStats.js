@@ -17,6 +17,9 @@ class AboutUsStats extends Component {
         >
           About Us
         </h1>
+        <h4 style={{textAlign: "center", }}>
+              Since 2016, CODE has been at the center of tech & technological innovation at Babson
+            </h4>
         <hr
           style={{
             borderTop: "2.5px solid",

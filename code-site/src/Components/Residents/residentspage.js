@@ -1,13 +1,12 @@
 import React from "react";
 import memberGrid from "./memberalbum";
 import Members from "./Members";
-import Hero from "./hero";
+import Headline from "./Headline";
 import { makeStyle, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 import { Container } from "react-bootstrap";
-
 
 const theme = createMuiTheme();
 
@@ -48,8 +47,20 @@ const styles = {
 export default function residentspage() {
   return (
     <Container>
-        <Hero></Hero>
-        <Members></Members>
+      <Headline
+        type="residents"
+        subheadline="Come take a look at what our current and former residents are up to.
+            CODE hosts 21 students in residence, all of whom have are busy
+            helping change the world through technology-based entrepreneurship."
+      />
+      <Members />
+<hr/>
+      <Headline
+        type="alumni"
+        subheadline="CODE Graduates are working in a mix of industries, from some of the 
+        largest companies in the world to changing the world through their startups to 
+        social ventures."
+      />
     </Container>
   );
 }

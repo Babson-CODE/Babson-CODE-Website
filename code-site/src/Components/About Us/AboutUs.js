@@ -10,6 +10,7 @@ import { Row, Col } from "react-bootstrap";
 import CODEStartups from "../Startups/CODEStartupsCards";
 import CODEStartupsCourasel from "../Startups/CODEStartupsCarousel";
 import Mission from "./Mission";
+import MissionExtended from "./MissionExtended";
 import CODE_Stats_Jumbo from "./CODE_Stats_Jumbo";
 import MailchimpReact from "./../Mailchimp/MailChimpUI";
 import logo from "./../../Assets/img/CODE Logos/CODE Logo Black.png";
@@ -22,7 +23,12 @@ export default function AboutUsPage() {
   return (
     <div>
       {/* <CODE_Stats_Jumbo /> */}
-      <TopSignup image={HBSIterate} caption={"Babson CODE members Theo, Yumel, and Mike attending a panel at the 2020 Harvard Iteration Conference."} />
+      <TopSignup
+        image={HBSIterate}
+        caption={
+          "Babson CODE members Theo, Yumel, and Mike attending a panel at the 2020 Harvard Iteration Conference."
+        }
+      />
       {/* <Container>
         <CODEStartupsCourasel />
       </Container> */}
@@ -41,16 +47,10 @@ export default function AboutUsPage() {
               <div className="justify-content-center align-self-center">
                 <h4>
                   We view technology as a tool to form disruptive companies that
-                  change the world. CODE is a platform to find co-founders,
-                  collaborate on ideas and learn more about technology &
-                  entrepreneurship as a whole. CODE does weekly technology
-                  consulting with startups through the{" "}
-                  <a href="https://www.babson.edu/academics/centers-and-institutes/the-arthur-m-blank-center-for-entrepreneurship/">
-                    Blank Center of Entrepreneurship
-                  </a>{" "}
-                  at Babson. We are proud to say most of our residents are
-                  working on solving tough problems around the world they are
-                  passionate about through a startup.
+                  change the world. To do that, tools must be accessible to all.
+                  With that, CODE focuses on not only technical workshpos but
+                  also Low/No Code Applications to build to build sophisticated
+                  applications even by without porgramming knowledge.
                 </h4>
               </div>
             </div>
@@ -67,10 +67,12 @@ export default function AboutUsPage() {
               <div className="justify-content-center align-self-center">
                 {" "}
                 <h4>
-                  CODE hosts a variety of workshops with partner companies and
-                  communities. It allows students to learn on-demand skills with
-                  real world projects under their belt. It allows them to launch
-                  their startup or find a job without a problem.{" "}
+                  CODE places a premium on itteration, whether it is an MVP,
+                  finding a team member or more, we are always encouraging
+                  learning and itteration. We teach a variety of Workshops that
+                  allow students to get and learn the latest and greatest
+                  programming languages, skills and concepts, or Low/No Code
+                  applications.
                 </h4>
               </div>
             </div>
@@ -92,16 +94,49 @@ export default function AboutUsPage() {
                   Aside from competing in Hackathons ourselves, CODE also hosts
                   learning hackathons where students compete to learn a new
                   language or skill and build a notable project for in a
-                  specific amount of time.
+                  specific amount of time. You can find the latest hackathons
+                  CODE is hosting or attending in our Newsletter.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row" style={{ marginBottom: "30px" }}>
+          <div className="col-lg-4">
+            <Paper elevation={6} style={{ padding: "30px", margin: "15px" }}>
+              <h1>Solving Some of the Worlds Toughest Challanges.</h1>
+            </Paper>
+          </div>
+          <div className="col-lg-8">
+            <div
+              className="container d-flex h-100"
+              style={{ padding: "30px", marginBottom: "30px" }}
+            >
+              <div className="justify-content-center align-self-center">
+                <h4>
+                  We are proud to say most of our residents are working on
+                  solving tough problems around the world they are passionate
+                  about through their startup. CODE Residents and alumni are
+                  working on solving problems from Climate change to PTSD to
+                  enabling genuine social connections across the world.
                 </h4>
               </div>
             </div>
           </div>
         </div>
       </Container>
-      <div style={{ margin: "30px" }}>
+      <div
+        style={{
+          backgroundColor: "rgb(107 219 158)",
+          padding: "30px",
+        }}
+      >
         <AboutUsStats />
+        <Container>
+          <MissionExtended style={{ padding: "30px" }} />
+        </Container>
       </div>
+
       <Jumbotron>
         <Container>
           <CODEStartups />
