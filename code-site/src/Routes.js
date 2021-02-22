@@ -10,8 +10,9 @@ import StartupsCourasel from "./Components/Startups/CODEStartupsCarousel";
 // import Resources from "./Components/Resources/Resources";
 // import "../styles/Style.css"
 import NoMatch from "./Components/Other/NoMatch";
-import Donate from "./Components/Other/Donate"
-import ComingSoon from "./Components/Other/ComingSoon"
+import Donate from "./Components/Other/Donate";
+import ComingSoon from "./Components/Other/ComingSoon";
+import Apply from "./Components/Other/Apply";
 
 const Routes = () => (
   <Switch>
@@ -24,13 +25,13 @@ const Routes = () => (
     <Route exact path="/partners" component={ComingSoon} />
     <Route exact path="/StartupsCourasel" component={StartupsCourasel} />
     <Route exact path="/Donate" component={Donate} />
-    {/* <Route
-      path="/donate"
-      component={() => {
-        // window.location.href = "https://babson.edu/donate";
-        return null;
-      }} */}
-    <Route path="/404" component={NoMatch}/>
+    {/* <Route exact path="/apply" component={Apply} /> */}
+    <Route
+      exact
+      path="/abc"
+      render={() => (window.location = "https://apply.babsoncode.dev")}
+    />
+    <Route path="/404" component={NoMatch} />
     <Redirect to="/404" />
   </Switch>
 );

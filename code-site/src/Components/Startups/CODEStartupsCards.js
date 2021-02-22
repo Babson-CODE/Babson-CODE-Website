@@ -11,12 +11,13 @@ export default class CODEStartups extends Component {
           Since CODE was founded in 2015, CODE members have founded many
           ventures of their own. Valuations have exceeded $50 Million.
           Additionally, CODE members have assisted hundreds of other startups
-          through 
+          through
           <a href="https://www.eventbrite.com/e/tech-office-hours-with-code-spring-2021-tickets-140291097449">
             {" "}
-            Blank Center Office Hours, 
+            Blank Center Office Hours,
           </a>{" "}
-         helping friends, late night ideation in our common room. Learn more about some specific CODE Startups below.
+          helping friends, late night ideation in our common room. Learn more
+          about some specific CODE Startups below.
         </h4>
         <hr
           style={{

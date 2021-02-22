@@ -124,8 +124,11 @@ function MemberCarousel() {
                   fontSize: "20px",
                 }}
               >
-                CEO & Founder,{" "}
-                <a href="https://www.linkedin.com/company/oneye-technologies/" style={{ color: "black" }}>
+                CTO & Founder,{" "}
+                <a
+                  href="https://www.linkedin.com/company/oneye-technologies/"
+                  style={{ color: "black" }}
+                >
                   Oneye Technologies LLC
                 </a>
               </h2>
@@ -138,7 +141,19 @@ function MemberCarousel() {
               >
                 CODE Chief Technical Consultant
               </h3>
-              <p style={{ textAlign: "center"}}>- Coming Soon - </p>
+              <p style={{ textAlign: "center" }}>
+                Julian is a young entrepreneur who is passionate about
+                technology and its impact on the world. He is currently the CTO
+                of Oneye Technologies, a startup focused on providing a
+                cloud-based IoT solution to simplify insurance claims and bring
+                the power of AI to all cars. As tech lead of CODE, he helps
+                other students with their projects and serves on the eboard as
+                one of its leaders. He is a Google Certified Cloud Architect who
+                is currently working towards AWS solutions architect and GCP
+                data engineer certifications. For academics, he is a junior who
+                is concentrating in Technology, Entrepreneurship, and Design and
+                Information Technology Management.
+              </p>
               <a href="https://www.linkedin.com/in/julian-wiley-8377b5175/">
                 <Button
                   style={{
