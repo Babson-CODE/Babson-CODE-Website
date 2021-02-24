@@ -20,7 +20,7 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root} style={{ marginTop: "20px" }}>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>Workshops</h1>
             <p style={{ textAlign: "left" }}>
@@ -31,7 +31,7 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>CODE Office Hours</h1>
             <p style={{ textAlign: "left" }}>
@@ -44,7 +44,7 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>CODE Consulting</h1>
             <p style={{ textAlign: "left" }}>
@@ -68,7 +68,7 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>Speaker Events</h1>
             <p style={{ textAlign: "left" }}>
@@ -78,7 +78,7 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>Hackathons</h1>
             <p style={{ textAlign: "left" }}>
@@ -92,7 +92,7 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6}>
           <Paper className={classes.paper} elevation={5}>
             <h1>And More</h1>
             <p style={{ textAlign: "left" }}>

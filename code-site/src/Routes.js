@@ -12,7 +12,6 @@ import StartupsCourasel from "./Components/Startups/CODEStartupsCarousel";
 import NoMatch from "./Components/Other/NoMatch";
 import Donate from "./Components/Other/Donate";
 import ComingSoon from "./Components/Other/ComingSoon";
-import Apply from "./Components/Other/Apply";
 
 const Routes = () => (
   <Switch>
@@ -28,7 +27,7 @@ const Routes = () => (
     {/* <Route exact path="/apply" component={Apply} /> */}
     <Route
       exact
-      path="/abc"
+      path="/apply"
       render={() => (window.location = "https://apply.babsoncode.dev")}
     />
     <Route path="/404" component={NoMatch} />
