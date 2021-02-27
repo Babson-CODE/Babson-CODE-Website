@@ -50,6 +50,12 @@ export default function LandingPage(props) {
             <h4 style={{ textAlign: "center" }}>
               21 Residents live together every semester in Van Winkle Hall
             </h4>
+            <hr
+              style={{
+                borderTop: "2.5px solid",
+                margin: "20px 200px 50px 200px",
+              }}
+            />
             <div style={{ paddingBottom: "30px" }}>
               <MemberCarousel />
               <div style={{ textAlign: "right" }}>

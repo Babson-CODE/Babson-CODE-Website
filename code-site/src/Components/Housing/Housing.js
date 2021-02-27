@@ -33,10 +33,16 @@ class Housing extends Component {
             Apply to live with the 20 other best technologically minded students
             at Babson for Fall 2021
           </h4>
-          <hr
+          {/* <hr
             style={{
               borderTop: "2.5px dashed",
               margin: "20px 200px 12px 200px",
+            }}
+          /> */}
+          <hr
+            style={{
+              borderTop: "2.5px solid",
+              margin: "20px 200px 50px 200px",
             }}
           />
           <div className="row">
@@ -74,7 +80,9 @@ class Housing extends Component {
                   <img src={Explore} width={"75%"}></img>
                   <h1>Explore our Community</h1>
                   <h4>Our residents are amazing! </h4>
-                  <h6 style={{marginBottom:"39px"}}>Check out what they've been up to.</h6>
+                  <h6 style={{ marginBottom: "39px" }}>
+                    Check out what they've been up to.
+                  </h6>
 
                   <a href="/about-us">
                     <Button className="default" style={{ marginTop: "20px" }}>
