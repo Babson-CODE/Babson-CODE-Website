@@ -68,7 +68,7 @@ function membercard(props) {
       {/* {console.log(props.first_name)} */}
       <img
         src={require("../../../Assets/img/Members Photos" + props.image)} 
-        style={{ float: "right", height: "150px" }}
+        style={{ float: "right", height: "150px", margin: "10px" }}
       ></img>
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">

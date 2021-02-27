@@ -141,7 +141,7 @@ function MemberCarousel() {
               >
                 CODE Chief Technical Consultant
               </h3>
-              <p style={{ textAlign: "center" }}>
+              <p>
                 Julian is a young entrepreneur who is passionate about
                 technology and its impact on the world. He is currently the CTO
                 of Oneye Technologies, a startup focused on providing a

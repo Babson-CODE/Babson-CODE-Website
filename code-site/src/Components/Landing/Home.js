@@ -31,7 +31,7 @@ export default function LandingPage(props) {
           style={{
             backgroundColor: "rgb(107 219 158)",
             overflow: "hidden",
-            marginTop: "90px",
+            // marginTop: "90px",
             marginBottom: "50px",
           }}
         >
@@ -41,7 +41,7 @@ export default function LandingPage(props) {
                 // fontSize: "2.5em",
                 // lineHeight: "1.5em",
                 textAlign: "center",
-                paddingTop: "30px",
+                paddingTop: "50px",
                 paddingBottom: "10px",
               }}
             >

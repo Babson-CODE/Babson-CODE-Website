@@ -1,0 +1,15 @@
+.default {
+    background-color: rgb(238, 249, 246);
+    color: rgb(91, 198, 168);
+    border: none;
+    padding: 13px;
+    border-radius: 15px
+}
+
+.default:hover {
+    transform: scale(1.4);
+    background-color: rgb(91, 198, 168);
+    color: rgb(238, 249, 246);
+    border: none;
+    padding: 13px;
+}
