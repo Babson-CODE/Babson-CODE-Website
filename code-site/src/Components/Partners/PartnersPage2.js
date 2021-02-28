@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Container from "@material-ui/core/Container";
 import Partner from "./Partners";
 import CatalystLogo from "../../Assets/img/Partner Logos/catalyst_logo.png";
@@ -9,14 +9,13 @@ import GVC from "../../Assets/img/Partner Logos/GVC.jpg";
 import Omnylaunch from "../../Assets/img/Partner Logos/Omnylaunch.jpeg";
 import WeStart from "../../Assets/img/Partner Logos/WeStart.png";
 import Mathworks from "../../Assets/img/Partner Logos/Mathworks.png";
-import WayFair from "../../Assets/img/Partner Logos/Mathworks.png";
-// import WayFair from "../../Assets/img/Partner Logos/Wayfair.webp";
+import WayFair from "../../Assets/img/Partner Logos/Wayfair.webp";
 import CVSHealth from "../../Assets/img/Partner Logos/cvs-health-logo-stacked.png";
 
-export default class Partners extends Component {
-  render() {
-    return (
-      <div>
+class PartnersPage2 extends Component {
+    render() {
+        return (
+            <div>
         <Container>
           <h1
             style={{
@@ -34,7 +33,7 @@ export default class Partners extends Component {
             and more each semester.
           </h4>
         </Container>
-        {/* <Container>
+        <Container>
           <h1 style={{ paddingTop: "40px" }}>Educational Partners</h1>
           <Partner
             logo={CatalystLogo}
@@ -78,9 +77,9 @@ export default class Partners extends Component {
             website="https://westartwellesley.herokuapp.com"
             description="WeStart aims to inspire female entrepreneurs to change the world. They aim to make a case that entrepreneurship augments the liberal arts experience."
           ></Partner>
-        </Container> */}
-{/* 
-        <div style={{ backgroundColor: "rgb(174 240 193)" }}>
+        </Container>
+
+        {/* <div style={{ backgroundColor: "rgb(174 240 193)" }}>
           <Container>
             <h1 style={{ paddingTop: "40px" }}>Current Corporate Partners</h1>
             <Partner
@@ -92,7 +91,7 @@ export default class Partners extends Component {
           </Container>
         </div> */}
 
-        {/* <Container>
+        <Container>
           <h1 style={{ paddingTop: "40px" }}>Previous Corporate Partners</h1>
           <Partner
             logo={WayFair}
@@ -109,8 +108,10 @@ export default class Partners extends Component {
             name="MathWorks"
             website="http://mathworks.com"
           />
-        </Container> */}
+        </Container>
       </div>
-    );
-  }
+        );
+    }
 }
+
+export default PartnersPage2;
