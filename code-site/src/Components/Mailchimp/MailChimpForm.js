@@ -70,9 +70,9 @@ export default ({
       }
     });
   };
-  console.log(action);
-  console.log(tagline);
-  console.log(tag);
+  // console.log(action);
+  // console.log(tagline);
+  // console.log(tag);
   return (
     <Container>
       {/* <h3 style={{ marginBottom: "10px" }}>{test}</h3> */}
