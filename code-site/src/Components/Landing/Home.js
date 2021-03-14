@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import { MemberCarousel } from "../Residents/Residents";
+import MemberRectangle from "../Residents/MemberRectangle";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
 import StartupsCarousel2 from "../Startups/StartupsCarousel2";
 import Housing from "./../Housing/Housing";
@@ -57,10 +58,46 @@ export default function LandingPage(props) {
               }}
             />
             <div style={{ paddingBottom: "30px" }}>
+              {/* <StartupsCarousel2 /> */}
               <MemberCarousel />
+            </div>
+          </Container>
+        </div>
+
+        <div
+          style={{
+            backgroundColor: "rgb(107 219 158)",
+            overflow: "hidden",
+            // marginTop: "90px",
+            marginBottom: "50px",
+          }}
+        >
+          <Container>
+            <h1
+              style={{
+                // fontSize: "2.5em",
+                // lineHeight: "1.5em",
+                textAlign: "center",
+                paddingTop: "50px",
+                paddingBottom: "10px",
+              }}
+            >
+              Meet the Residents
+            </h1>
+            <h4 style={{ textAlign: "center" }}>
+              21 Residents live together every semester in Van Winkle Hall
+            </h4>
+            <hr
+              style={{
+                borderTop: "2.5px solid",
+                margin: "20px 200px 50px 200px",
+              }}
+            />
+            <div style={{ paddingBottom: "30px" }}>
+              <MemberRectangle />
               <div style={{ textAlign: "right" }}>
                 <a href="/residents">
-                  <Button
+                  <button
                     style={{
                       backgroundColor: "white",
                       border: "transparent",
@@ -68,16 +105,16 @@ export default function LandingPage(props) {
                       padding: "20px",
                       borderRadius: "20px",
                     }}
+                    type="button"
+                    class="btn btn-primary"
                   >
                     View All 21 Residents →
-                  </Button>
+                  </button>
                 </a>
               </div>
             </div>
           </Container>
         </div>
-
-        {/* <StartupsCarousel2 /> */}
 
         <Box>
           <Container>
