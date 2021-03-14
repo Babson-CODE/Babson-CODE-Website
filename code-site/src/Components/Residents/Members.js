@@ -28,7 +28,6 @@ export default class Members extends Component {
               </Grid>
             </div>
           ))}
-          ;
         </Grid>
       </div>
     );

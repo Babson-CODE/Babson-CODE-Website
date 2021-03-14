@@ -74,7 +74,7 @@ export default ({
   // console.log(tagline);
   // console.log(tag);
   return (
-    <Container>
+    <div>
       {/* <h3 style={{ marginBottom: "10px" }}>{test}</h3> */}
       <form onSubmit={handleSubmit} className={className}>
         <Grid container spacing={2}>
@@ -155,6 +155,6 @@ export default ({
           )}
         </div> */}
       </form>
-    </Container>
+    </div>
   );
 };

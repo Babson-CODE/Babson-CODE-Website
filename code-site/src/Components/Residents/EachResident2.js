@@ -61,6 +61,7 @@ class EachResident extends Component {
                 textAlign: "center",
                 fontWeight: "900",
                 fontSize: "16px",
+                lineHeight:"18px",
               }}
             >
               {this.props.CODEPosition}
@@ -73,6 +74,7 @@ class EachResident extends Component {
                     backgroundColor: "Green",
                     padding: "10px 30px",
                     borderRadius: "15px",
+                    border: "0px"
                   }}
                 >
                   Connect on LinkedIn

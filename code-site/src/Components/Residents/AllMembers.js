@@ -50,7 +50,7 @@ export const memberData = [
     Linkedin: "https://www.linkedin.com/in/gibson-munene-51a47312b/",
     OtherContact: "http://www.gibsonmunene.com/",
     CompanyPosition: "",
-    CODEPosition: "Cheif Technical Consultant",
+    CODEPosition: "CODE Cheif Technical Consultant",
     photo_name: "Gibson.jpg",
   },
   {
@@ -78,7 +78,7 @@ export const memberData = [
       "Pratik is a current first-year student at Babson, graduating in May 2024. He's passionate about entrepreneurship, having started multiple startups in numerous industries. Some of his personal favorite ventures include a clothing brand (Fukapi LLC), a clay-based retail company (Clater), and a non-profit organization (COBALT). His long-term goal is to develop a scalable social media platform that facilitates authentic interactions. He is always open to discuss startups, talk about the next big technology, or literally anything. Feel free to reach out!",
     Linkedin: "www.linkedin.com/in/pratik-anand1",
     CompanyPosition: "",
-    CODEPosition: "Head of Events",
+    CODEPosition: "CODE Head of Events",
     photo_name: "Pratik.jpg",
   },
   {
@@ -102,9 +102,10 @@ export const memberData = [
     Graduation: "2023",
     Home: "Dallas, TX",
     Concentrations: "Entrepreneurship & Information Technology Management",
-    Projects:
-      "Angel sells sneakers and trades stocks on the side while he devotes most of his time to his startup. He is currently building a community based and social impact streetwear/techwear brand.",
+    
     AboutYou:
+      "Angel sells sneakers and trades stocks on the side while he devotes most of his time to his startup. He is currently building a community based and social impact streetwear/techwear brand.",
+      Projects:
       "I am an entrepreneur and investor, and I am very interested in tech startups. I am currently is the learning phase, but my goal is to have my own tech startup by the end of college.",
     Linkedin: "www.linkedin.com/in/angel-mv-hill",
     OtherContact: "",
@@ -188,7 +189,7 @@ export const memberData = [
     Company: "LGBT50.com",
     CompanyPosition: "CEO & Founder",
     CODEPosition: "CODE Marketing and Social Media Team",
-    CompanyWebsite: "https://LGBT50.com",
+    CompanyWebsite: "https://LGBT50.shop",
 
     photo_name: "Jose.jpg",
   },

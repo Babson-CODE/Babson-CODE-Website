@@ -28,6 +28,12 @@ export default function AboutUsPage() {
         caption={
           "Babson CODE members Theo, Yumel, and Mike attending a panel at the 2020 Harvard Iteration Conference."
         }
+        headline={"CODE is the Heart of Technoloogy at Babson"}
+        subheadline={
+          "is the best way to learn about technology or start a technology startup at Babson."
+        }
+        newsletterHeadline={"Sign-Up for Our Newsletter"}
+
       />
       {/* <Container>
         <CODEStartupsCourasel />

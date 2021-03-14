@@ -24,6 +24,11 @@ export default function LandingPage(props) {
         <TopSignup
           image={HackathonImage}
           caption={"Babson CODE winning the Money Hack 20/20, Hackathon 2016."}
+          headline={"Welcome to the Heart of Technoloogy at Babson"}
+          subheadline={
+            "(Community Of Developers and Entrepreneurs) is the heart of technology and entrepreneurship at Babson."
+          }
+          newsletterHeadline={"Sign-Up for Our Newsletter"}
         />
         <AboutUsStats />
         <Housing />
@@ -59,9 +64,9 @@ export default function LandingPage(props) {
             />
             <div style={{ paddingBottom: "30px" }}>
               {/* <StartupsCarousel2 /> */}
-              {/* <MemberCarousel /> */}
-            {/* </div> */}
-          {/* </Container> */}
+        {/* <MemberCarousel /> */}
+        {/* </div> */}
+        {/* </Container> */}
         {/* </div> */}
 
         <div

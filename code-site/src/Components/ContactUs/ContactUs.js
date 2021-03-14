@@ -14,6 +14,11 @@ class ContactUs extends Component {
           caption={
             "Babson CODE Hosts ML/AI Thougth Leader and MarketCentrix CEO & Founder Barack Berkowitz in Winter 2018."
           }
+          headline={"Join the CODE Newsletter"}
+          subheadline={
+            "'s Newsletter is the best way to connect with CODE. In our newsletter, you can schedule office hours, attend our events, and learn about on-campus and off-campus events to expand your technology knowledge"
+          }
+          newsletterHeadline={""}
         />
         <Container>
           <h1
