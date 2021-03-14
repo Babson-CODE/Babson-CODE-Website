@@ -57,7 +57,7 @@ class TopSignup extends Component {
                   (Community Of Developers and Entrepreneurs) is the heart of
                   technology and entrepreneurship at Babson.
                 </h5>
-                <MailchimpSignup headline="Sign-Up for Our Newsletter" />
+                <MailchimpSignup headline="Join Our Newsletter:" />
               </div>
             </div>
             <div className="d-lg-none">

@@ -27,6 +27,7 @@ class EachResident extends Component {
                   textAlign: "center",
                   fontWeight: "900",
                   fontSize: "30px",
+                  color: "black",
                 }}
               >
                 Alvie Stoddard
