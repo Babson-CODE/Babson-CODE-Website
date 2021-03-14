@@ -28,7 +28,7 @@ export default function LandingPage(props) {
         <AboutUsStats />
         <Housing />
 
-        <div
+        {/* <div
           style={{
             backgroundColor: "rgb(107 219 158)",
             overflow: "hidden",
@@ -59,10 +59,10 @@ export default function LandingPage(props) {
             />
             <div style={{ paddingBottom: "30px" }}>
               {/* <StartupsCarousel2 /> */}
-              <MemberCarousel />
-            </div>
-          </Container>
-        </div>
+              {/* <MemberCarousel /> */}
+            {/* </div> */}
+          {/* </Container> */}
+        {/* </div> */}
 
         <div
           style={{
