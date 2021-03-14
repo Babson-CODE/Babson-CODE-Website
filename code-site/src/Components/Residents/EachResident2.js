@@ -6,6 +6,8 @@ class EachResident extends Component {
   render() {
     const Name = this.props.Name;
     const photo = this.props.photo;
+    const backgroundColor = this.props.backgroundColor;
+    console.log(backgroundColor);
     const res_image = require("../../Assets/img/Members Photos/" + photo);
     return (
       // <div className="row">
@@ -22,7 +24,7 @@ class EachResident extends Component {
             padding: "30px 0px 30px 30px",
             marginRight: "30px",
             marginTop: "-210px",
-            backgroundColor: "white",
+            backgroundColor: this.props.backgroundColor,
           }}
         >
           <div style={{ marginTop: "210px", padding: "25px 30px 10px 0px" }}>
@@ -35,18 +37,25 @@ class EachResident extends Component {
             >
               {this.props.name}
             </h1>
-            <h2
-              style={{
-                textAlign: "center",
-                fontWeight: "900",
-                fontSize: "20px",
-              }}
-            >
-              {this.props.CompanyPosition},{" "}
-              <a href={this.props.CompanyWebsite} style={{ color: "black" }}>
-                {this.props.Company}
-              </a>
-            </h2>
+            {this.props.CompanyPosition && (
+              <div>
+                <h2
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "900",
+                    fontSize: "20px",
+                  }}
+                >
+                  {this.props.CompanyPosition},{" "}
+                  <a
+                    href={this.props.CompanyWebsite}
+                    style={{ color: "black" }}
+                  >
+                    {this.props.Company}
+                  </a>
+                </h2>
+              </div>
+            )}
             <h3
               style={{
                 textAlign: "center",
@@ -57,7 +66,6 @@ class EachResident extends Component {
               {this.props.CODEPosition}
             </h3>
             <p>{this.props.AboutYou}</p>
-
             {this.props.linkedin && (
               <a href={this.props.linkedin}>
                 <Button

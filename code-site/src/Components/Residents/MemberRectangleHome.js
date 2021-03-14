@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import { memberData } from "./AllMembers";
+import MemberCard from "./Member/membercard";
+import PerResident from "./PerResident";
+import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
+import { memberData } from "./HomePageMembers";
+import { withStyles } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
 import EachResident from "./EachResident2";
 
 export default class Members extends Component {
@@ -24,6 +31,7 @@ export default class Members extends Component {
               //   image={data.media.photo}
             />
           ))}
+          ;
         </Grid>
       </div>
     );
