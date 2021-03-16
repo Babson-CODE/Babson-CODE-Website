@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import MailchimpSignup from "./../Mailchimp/MailChimpUI";
 import "./../../App.css";
 
@@ -19,7 +19,7 @@ class Footer extends React.Component {
               <MDBCol md="6" style={{ paddingBottom: "30px" }}>
                 <MailchimpSignup headline="Sign-Up for the CODE Newsletter" />
               </MDBCol>
-              {/* <MDBCol md="2">
+              <MDBCol md="2">
                 <h5 className="title">Babson CODE</h5>
                 <ul>
                   <li className="list-unstyled">
@@ -93,7 +93,7 @@ class Footer extends React.Component {
                     </a>
                   </li>
                 </ul>
-              </MDBCol> */}
+              </MDBCol>
             </MDBRow>
           </MDBContainer>
         </Container>

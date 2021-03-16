@@ -16,6 +16,7 @@ class Partners extends Component {
             <img
               src={this.props.logo}
               className="img-responsive"
+              alt={""}
               style={{ width: "100%" }}
             ></img>
           </div>

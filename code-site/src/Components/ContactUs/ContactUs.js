@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import TopSignup from "../Landing/TopSignup";
 import AI_ML_Event from "../../Assets/img/CODEs Events/BarackBerkowitz.JPG";
-import Paper from "@material-ui/core/Paper";
-import Button from "react-bootstrap/Button";
 
 class ContactUs extends Component {
   render() {

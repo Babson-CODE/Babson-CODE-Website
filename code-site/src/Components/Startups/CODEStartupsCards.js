@@ -94,6 +94,7 @@ export class SingleStartup extends Component {
           <a
             href={this.props.website}
             target="_blank"
+            rel="noopener noreferrer"
             style={{ color: "black" }}
           >
             <h1 style={{ textAlign: "center" }}>{this.props.company_name}</h1>
@@ -102,6 +103,7 @@ export class SingleStartup extends Component {
               <img
                 src={require("../../Assets/img/CODE Startups/" +
                   this.props.logo)}
+                  alt={""}
                 width={"100%"}
               ></img>
             </p>

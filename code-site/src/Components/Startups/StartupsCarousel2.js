@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "primereact/carousel";
 import { Button } from "primereact/button";
-import ProductService from "./ProductService";
 import "./CarouselDemo.css";
 
 const CarouselDemo = () => {
@@ -24,13 +23,6 @@ const CarouselDemo = () => {
     },
   ];
 
-  const productService = new ProductService();
-
-  useEffect(() => {
-    productService
-      .getProductsSmall()
-      .then((data) => setProducts(data.slice(0, 9)));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const productTemplate = (product) => {
     return (

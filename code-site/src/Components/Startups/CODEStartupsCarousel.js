@@ -6,7 +6,6 @@ import "primeflex/primeflex.css";
 import React, { useState, useEffect } from "react";
 import { Carousel } from "primereact/carousel";
 import { Button } from "primereact/button";
-import ProductService from "./ProductService";
 
 import "./CarouselDemo.css";
 

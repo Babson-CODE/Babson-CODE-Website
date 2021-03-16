@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
-import IconButton from "@material-ui/core/IconButton";
 import { Button } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
@@ -68,6 +65,7 @@ function membercard(props) {
       {/* {console.log(props.first_name)} */}
       <img
         src={require("../../../Assets/img/Members Photos" + props.image)} 
+        alt={""}
         style={{ float: "right", height: "150px", margin: "10px" }}
       ></img>
       <CardContent>

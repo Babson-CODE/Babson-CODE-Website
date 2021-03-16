@@ -51,7 +51,11 @@ export default function CenteredGrid() {
               In addition to Office Hours, CODE Consulting is another way for
               students and alumni to get feedback on their businesses. CODE
               Consulting hours can booked by emailing{" "}
-              <a href="mailto:code@babson.edu" target="_blank">
+              <a
+                href="mailto:code@babson.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 code@babson.edu
               </a>
               . A session will typically last between one and two hours. While

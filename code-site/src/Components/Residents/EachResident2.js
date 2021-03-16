@@ -4,10 +4,7 @@ import Button from "react-bootstrap/Button";
 class EachResident extends Component {
   // https://react-bootstrap.github.io/components/modal/
   render() {
-    const Name = this.props.Name;
-    const photo = this.props.photo;
-    const backgroundColor = this.props.backgroundColor;
-    const res_image = require("../../Assets/img/Members Photos/" + photo);
+    const res_image = require("../../Assets/img/Members Photos/" + this.props.photo);
     return (
       // <div className="row">
       <div className="col-xl-4" style={{ padding: "30px" }}>
@@ -15,6 +12,8 @@ class EachResident extends Component {
           // src={require("../../Assets/img/Members Photos/" + {photo})}
           src={res_image}
           height="250px"
+          alt={""}
+
           // width="250px"
           // style={{ marginLeft: "120px", objectFit: "cover" }} // Could be 50px also
           style={{ marginLeft: "120px" }} // Could be 50px also

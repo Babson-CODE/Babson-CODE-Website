@@ -17,6 +17,7 @@ class TopSignup extends Component {
             <div className="d-none d-lg-block">
               <img
                 src={this.props.image}
+                alt={""}
                 style={{
                   borderRadius: "40px",
                   width: "60%",
@@ -62,6 +63,7 @@ class TopSignup extends Component {
             <div className="d-lg-none">
               <img
                 src={this.props.image}
+                alt={""}
                 style={{
                   borderRadius: "40px",
                   margin: "30px 0px 5px 0px",

@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
-// import Jumbotron from "react-bootstrap/Jumbotron";
-// import CODE_Stats_Jumbo from "./CODE_Stats_Jumbo";
 import MailchimpReact from "../Landing/MailchimpSignup";
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 class NewsletterPage extends Component {

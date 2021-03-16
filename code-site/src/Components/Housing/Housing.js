@@ -6,8 +6,6 @@ import Apply from "./../../Assets/img/Other/Housing - Apply.jpg";
 import Explore from "./../../Assets/img/Other/Housing - Explore.jpg";
 import "./styles.css";
 
-// x
-
 class Housing extends Component {
   render() {
     return (
@@ -55,12 +53,12 @@ class Housing extends Component {
                     textAlign: "center",
                   }}
                 >
-                  <img src={Apply} width={"75%"}></img>
+                  <img src={Apply} width={"75%"} alt={""}></img>
                   <h1>Apply for Housing</h1>
                   <h4>Our Housing Applications are Now Open</h4>
                   <h6>Priority Applications are due: February 27th</h6>
                   <h6>General Applications are due: March 4th</h6>
-                  <a href="https://forms.gle/tuigKCmJUNg5gzZr5" target="_blank">
+                  <a href="https://forms.gle/tuigKCmJUNg5gzZr5" target="_blank" rel="noopener noreferrer">
                     <Button className="default" style={{ marginTop: "20px" }}>
                       Apply Now
                     </Button>
@@ -77,7 +75,7 @@ class Housing extends Component {
                     textAlign: "center",
                   }}
                 >
-                  <img src={Explore} width={"75%"}></img>
+                  <img src={Explore} width={"75%"} alt={""}></img>
                   <h1>Explore our Community</h1>
                   <h4>Our residents are amazing! </h4>
                   <h6 style={{ marginBottom: "39px" }}>

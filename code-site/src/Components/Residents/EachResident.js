@@ -3,14 +3,13 @@ import React, { Component } from "react";
 class EachResident extends Component {
   // https://react-bootstrap.github.io/components/modal/
   render() {
-    const name = this.props.name;
-    const photo = this.props.key;
     return (
       // <div className="row">
         <div className="col-xl-4" style={{ padding: "30px" }}>
           <img
             src={require("../../Assets/img/Members Photos" + "/Alvie.jpg")}
             height="250px"
+            alt="Alvie"
             style={{ marginLeft: "120px" }} // Could be 50px also
           ></img>
           <div

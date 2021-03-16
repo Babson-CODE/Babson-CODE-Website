@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import jsonp from "jsonp";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
 export default ({
   // Source: https://github.com/hamdiceylan/mailchimp-react
   styles = {
@@ -48,6 +47,7 @@ export default ({
       "/post?",
       "/post-json?"
     );
+    // eslint-disable-next-line
     const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
     !regex.test(email) ? setStatus("empty") : sendData(url);
   };
