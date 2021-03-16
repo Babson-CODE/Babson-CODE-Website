@@ -33,42 +33,6 @@ export default function LandingPage(props) {
         <AboutUsStats />
         <Housing />
 
-        {/* <div
-          style={{
-            backgroundColor: "rgb(107 219 158)",
-            overflow: "hidden",
-            // marginTop: "90px",
-            marginBottom: "50px",
-          }}
-        >
-          <Container>
-            <h1
-              style={{
-                // fontSize: "2.5em",
-                // lineHeight: "1.5em",
-                textAlign: "center",
-                paddingTop: "50px",
-                paddingBottom: "10px",
-              }}
-            >
-              Meet the Residents
-            </h1>
-            <h4 style={{ textAlign: "center" }}>
-              21 Residents live together every semester in Van Winkle Hall
-            </h4>
-            <hr
-              style={{
-                borderTop: "2.5px solid",
-                margin: "20px 200px 50px 200px",
-              }}
-            />
-            <div style={{ paddingBottom: "30px" }}>
-              {/* <StartupsCarousel2 /> */}
-        {/* <MemberCarousel /> */}
-        {/* </div> */}
-        {/* </Container> */}
-        {/* </div> */}
-
         <div
           style={{
             backgroundColor: "rgb(107 219 158)",
@@ -111,7 +75,7 @@ export default function LandingPage(props) {
                       borderRadius: "20px",
                     }}
                     type="button"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                   >
                     View All 21 Residents →
                   </button>

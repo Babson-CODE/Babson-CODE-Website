@@ -10,6 +10,7 @@ export default class Members extends Component {
         <Grid container spacing={4}>
           {memberData.map((data, card) => (
             <EachResident
+              key={data.Name}
               backgroundColor={this.props.color}
               name={data.Name}
               CompanyPosition={data.CompanyPosition}

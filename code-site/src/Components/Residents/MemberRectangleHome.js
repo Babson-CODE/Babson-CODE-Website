@@ -3,7 +3,6 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import MemberCard from "./Member/membercard";
-import PerResident from "./PerResident";
 import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import { memberData } from "./HomePageMembers";
 import { withStyles } from "@material-ui/core/styles";
@@ -15,23 +14,20 @@ export default class Members extends Component {
     return (
       <div className="row">
         <Grid container spacing={4}>
-          {memberData.map((data, card) => (
-            <EachResident
-              backgroundColor={this.props.color}
-              name={data.Name}
-              CompanyPosition={data.CompanyPosition}
-              Company={data.Company}
-              CODEPosition={data.CODEPosition}
-              AboutYou={data.AboutYou}
-              linkedin={data.Linkedin}
-              CompanyWebsite={data.CompanyWebsite}
-              photo={data.photo_name}
-              //   first_name={data.first_name}
-              //   last_name={data.last_name}
-              //   image={data.media.photo}
-            />
+          {memberData.map((data) => (
+              <EachResident
+                key={data.Name}
+                backgroundColor={this.props.color}
+                name={data.Name}
+                CompanyPosition={data.CompanyPosition}
+                Company={data.Company}
+                CODEPosition={data.CODEPosition}
+                AboutYou={data.AboutYou}
+                linkedin={data.Linkedin}
+                CompanyWebsite={data.CompanyWebsite}
+                photo={data.photo_name}
+              />
           ))}
-          ;
         </Grid>
       </div>
     );

@@ -7,12 +7,10 @@ class EachResident extends Component {
     const Name = this.props.Name;
     const photo = this.props.photo;
     const backgroundColor = this.props.backgroundColor;
-    console.log(backgroundColor);
     const res_image = require("../../Assets/img/Members Photos/" + photo);
     return (
       // <div className="row">
       <div className="col-xl-4" style={{ padding: "30px" }}>
-        {console.log(photo)}
         <img
           // src={require("../../Assets/img/Members Photos/" + {photo})}
           src={res_image}
