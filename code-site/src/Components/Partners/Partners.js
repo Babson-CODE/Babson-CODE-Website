@@ -25,7 +25,7 @@ class Partners extends Component {
                 <a href={this.props.website} style={{ color: "black" }}>
                   <h3>{this.props.name}</h3>
                 </a>
-                <h6>{this.props.description}</h6>
+                  <h6>{this.props.description}</h6>
               </div>
             </div>
           </div>

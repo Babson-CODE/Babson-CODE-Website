@@ -17,6 +17,8 @@ class EachResident extends Component {
           // src={require("../../Assets/img/Members Photos/" + {photo})}
           src={res_image}
           height="250px"
+          // width="250px"
+          // style={{ marginLeft: "120px", objectFit: "cover" }} // Could be 50px also
           style={{ marginLeft: "120px" }} // Could be 50px also
         ></img>
         <div

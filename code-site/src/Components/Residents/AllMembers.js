@@ -84,7 +84,7 @@ export const memberData = [
   {
     Timestamp: "11/16/2020 17:46:09",
     Name: "Anh Thu Le",
-    Graduation: "2020 and class of 2024",
+    Graduation: "Class of 2024",
     Home: "Baltimore, Maryland ",
     Concentrations: "Technology, Entrepreneurship, and Design",
     Projects:
@@ -102,10 +102,10 @@ export const memberData = [
     Graduation: "2023",
     Home: "Dallas, TX",
     Concentrations: "Entrepreneurship & Information Technology Management",
-    
+
     AboutYou:
       "Angel sells sneakers and trades stocks on the side while he devotes most of his time to his startup. He is currently building a community based and social impact streetwear/techwear brand.",
-      Projects:
+    Projects:
       "I am an entrepreneur and investor, and I am very interested in tech startups. I am currently is the learning phase, but my goal is to have my own tech startup by the end of college.",
     Linkedin: "www.linkedin.com/in/angel-mv-hill",
     OtherContact: "",
@@ -140,7 +140,7 @@ export const memberData = [
       "Tommy is a budding entrepreneur from Chicago, passionate about innovation and the environment. He wants to have a heavy hand in creating a better tomorrow, and have a great time along the way. He is also an avid runner, audiophile, tinkerer, and adore the outdoors.",
     Linkedin: "www.linkedin.com/in/tom-croissant",
     CompanyPosition: "CEO & Founder",
-    CODEPosition: "CODE Head of Alumni Communication",
+    CODEPosition: "CODE Head of Alumni & Partnerships",
     Company: "TECC",
     photo_name: "Tommy.jpg",
   },
@@ -172,7 +172,6 @@ export const memberData = [
     CompanyPosition: "CEO & Founder",
     CODEPosition: "CODE Community Manager",
     CompanyWebsite: "https://Onecase.app",
-
     photo_name: "Jason.PNG",
   },
   {
@@ -186,11 +185,10 @@ export const memberData = [
     AboutYou:
       'Jose is part of the class of 2023, was born in Venezuela, and is passionate about the digital marketing space. He loves taking about innovative ideas and is always down to brainstorm ("Hit me up 🙌" - Jose). He founded LGBT50, an Influencer Management Company.',
     Linkedin: "https://www.linkedin.com/in/jose-rodriguez-odon/",
-    Company: "LGBT50.com",
+    Company: "LGBT50.shop",
     CompanyPosition: "CEO & Founder",
     CODEPosition: "CODE Marketing and Social Media Team",
     CompanyWebsite: "https://LGBT50.shop",
-
     photo_name: "Jose.jpg",
   },
   {
@@ -210,7 +208,6 @@ export const memberData = [
     CompanyWebsite: "https://greenline.vc/",
     photo_name: "Sumer.png",
     Company: "Green Line Ventures",
-
   },
   {
     Timestamp: "",
