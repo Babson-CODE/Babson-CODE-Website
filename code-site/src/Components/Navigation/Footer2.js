@@ -19,11 +19,36 @@ class Footer extends React.Component {
               <MDBCol md="6" style={{ paddingBottom: "30px" }}>
                 <MailchimpSignup headline="Sign-Up for the CODE Newsletter" />
               </MDBCol>
-              <MDBCol md="2">
+              <MDBCol md="3">
                 <h5 className="title">Babson CODE</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="/404" style={blackLink}>
+                    <a href="/" style={blackLink}>
+                      Home
+                    </a>
+                  </li>
+                  <li className="list-unstyled">
+                    <a href="about-us" style={blackLink}>
+                      About Us
+                    </a>
+                  </li>
+                  <li className="list-unstyled">
+                    <a href="Residents" style={blackLink}>
+                      Residents
+                    </a>
+                  </li>
+                  {/* <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
+                      Link 4
+                    </a>
+                  </li> */}
+                </ul>
+              </MDBCol>
+              {/* <MDBCol md="2">
+                <h5 className="title">Babson CODE</h5>
+                <ul>
+                  <li className="list-unstyled">
+                    <a href="#!" style={blackLink}>
                       Link 1
                     </a>
                   </li>
@@ -43,21 +68,27 @@ class Footer extends React.Component {
                     </a>
                   </li>
                 </ul>
-              </MDBCol>
-              <MDBCol md="2">
-                <h5 className="title">Babson CODE</h5>
+              </MDBCol> */}
+              <MDBCol md="3">
+                <h5 className="title">CODE Around the Web</h5>
                 <ul>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 1
+                    <a
+                      href="https://www.instagram.com/babsoncode/"
+                      style={blackLink}
+                    >
+                      Instagram
                     </a>
                   </li>
                   <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 2
+                    <a
+                      href="https://b-m.facebook.com/BabsonCODE/"
+                      style={blackLink}
+                    >
+                      Facebook
                     </a>
                   </li>
-                  <li className="list-unstyled">
+                  {/* <li className="list-unstyled">
                     <a href="#!" style={blackLink}>
                       Link 3
                     </a>
@@ -66,32 +97,7 @@ class Footer extends React.Component {
                     <a href="#!" style={blackLink}>
                       Link 4
                     </a>
-                  </li>
-                </ul>
-              </MDBCol>
-              <MDBCol md="2">
-                <h5 className="title">Babson CODE</h5>
-                <ul>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 1
-                    </a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 2
-                    </a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 3
-                    </a>
-                  </li>
-                  <li className="list-unstyled">
-                    <a href="#!" style={blackLink}>
-                      Link 4
-                    </a>
-                  </li>
+                  </li> */}
                 </ul>
               </MDBCol>
             </MDBRow>
