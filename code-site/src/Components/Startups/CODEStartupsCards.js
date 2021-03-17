@@ -3,7 +3,6 @@ import Paper from "@material-ui/core/Paper";
 
 export default class CODEStartups extends Component {
   render() {
-    //   TODO: images are NOT centered for some reason.
     return (
       <div>
         <h1 style={{ textAlign: "center" }}>CODE Startups</h1>

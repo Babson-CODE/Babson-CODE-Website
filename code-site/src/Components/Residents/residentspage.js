@@ -6,10 +6,6 @@ import MemberRectangle from "./MemberRectangle";
 export default function residentspage() {
   return (
     <div>
-      {/* <TopSignup
-        image={HackathonImage}
-        caption={"Babson CODE Residents Spring 2021."}
-      /> */}
       <Container>
         <Headline
           type="residents"

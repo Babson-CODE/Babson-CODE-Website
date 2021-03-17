@@ -16,7 +16,7 @@ import ComingSoon from "./Components/Other/ComingSoon";
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/about-us" component={AboutUs} />
+     <Route exact path="/about-us" component={AboutUs} />
     <Route exact path="/contact-us" component={ContactUs} />
     <Route exact path="/newsletter" component={Newsletter} />
     <Route exact path="/residents" component={Residents} />
@@ -24,7 +24,9 @@ const Routes = () => (
     <Route exact path="/partners" component={Partners} />
     <Route exact path="/abc" component={Partners} />
     <Route exact path="/StartupsCourasel" component={StartupsCourasel} />
-    <Route exact path="/Donate" component={Donate} />
+    {/* <Route exact path="/Donate" component={Donate} /> */}
+
+
     {/* <Route exact path="/Test" component={Test} /> */}
     {/* <Route exact path="/apply" component={Apply} /> */}
     <Route

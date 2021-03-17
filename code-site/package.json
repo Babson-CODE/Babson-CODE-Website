@@ -1,6 +1,8 @@
 {
   "name": "code-site",
-  "version": "0.1.2",
+  "version": "1.1.2",
+  "main": "index.js",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
@@ -10,7 +12,6 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "browser": "^0.2.6",
     "dotenv": "^8.2.0",
@@ -23,7 +24,7 @@
     "node-sass": "^4.14.1",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
-    "primereact": "^6.1.0",
+    "primereact": "^6.2.0",
     "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
@@ -33,11 +34,10 @@
     "react-mailchimp-form": "^1.0.2",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-mapbox-gl": "^4.8.6",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "react-swipeable-views": "^0.13.9",
-    "webpack-cli": "^3.3.12",
-    "websocket": "^1.0.33"
+    "react-swipeable-views": "^0.13.9"
   },
   "scripts": {
     "start": "react-scripts start",

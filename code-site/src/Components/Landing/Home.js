@@ -11,8 +11,6 @@ import AboutUsStats from "./AboutUsStats";
 import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
 
 export default function LandingPage(props) {
-  // const { classes, post } = props;
-
   return (
     <React.Fragment>
       <div>

@@ -21,8 +21,8 @@ class Partners extends Component {
             ></img>
           </div>
           <div className="col-lg-8" style={{ paddingLeft: "30px" }}>
-            <div class="container d-flex h-100">
-              <div class="row justify-content-center align-self-center">
+            <div className="container d-flex h-100">
+              <div className="row justify-content-center align-self-center">
                 <a href={this.props.website} style={{ color: "black" }}>
                   <h3>{this.props.name}</h3>
                 </a>

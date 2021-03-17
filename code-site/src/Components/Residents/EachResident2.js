@@ -6,7 +6,6 @@ class EachResident extends Component {
   render() {
     const res_image = require("../../Assets/img/Members Photos/" + this.props.photo);
     return (
-      // <div className="row">
       <div className="col-xl-4" style={{ padding: "30px" }}>
         <img
           // src={require("../../Assets/img/Members Photos/" + {photo})}
