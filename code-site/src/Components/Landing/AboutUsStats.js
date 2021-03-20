@@ -8,12 +8,14 @@ class AboutUsStats extends Component {
   render() {
     return (
       <div>
-        <Headline
-          headline={"About Us"}
-          subheadline={
-            "Since 2016, CODE has been at the center of tech & technological innovation at Babson"
-          }
-        />
+        <Container>
+          <Headline
+            headline={"About Us"}
+            subheadline={
+              "Since 2016, CODE has been at the center of tech & technological innovation at Babson"
+            }
+          />
+        </Container>
         <Container
           height="100vh"
           width="100vw"
