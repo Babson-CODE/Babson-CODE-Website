@@ -6,11 +6,11 @@ import Newsletter from "./Components/Newsletter/NewsletterPage";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Partners from "./Components/Partners/PartnersPage2";
 import Residents from "./Components/Residents/ResidentsPage";
-import StartupsCourasel from "./Components/Startups/CODEStartupsCarousel";
+import Carousel2 from "./Components/Startups/Carousel";
 // import Resources from "./Components/Resources/Resources";
 // import "../styles/Style.css"
 import NoMatch from "./Components/Other/NoMatch";
-import Donate from "./Components/Other/Donate";
+// import Donate from "./Components/Other/Donate";
 import ComingSoon from "./Components/Other/ComingSoon";
 
 const Routes = () => (
@@ -22,8 +22,8 @@ const Routes = () => (
     <Route exact path="/residents" component={Residents} />
     <Route exact path="/resources" component={ComingSoon} />
     <Route exact path="/partners" component={Partners} />
-    <Route exact path="/abc" component={Partners} />
-    <Route exact path="/StartupsCourasel" component={StartupsCourasel} />
+    {/* <Route exact path="/abc" component={Partners} /> */}
+    <Route exact path="/Carousel2" component={Carousel2} />
     {/* <Route exact path="/Donate" component={Donate} /> */}
 
 

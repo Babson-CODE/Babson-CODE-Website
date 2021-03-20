@@ -2,29 +2,17 @@ import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-
+import Headline from "./../Universal Components/Headline";
 
 class AboutUsStats extends Component {
   render() {
     return (
-      <Container>
-        <h1
-          style={{
-            fontSize: "2.5em",
-            lineHeight: "1.5em",
-            textAlign: "center",
-          }}
-        >
-          About Us
-        </h1>
-        <h4 style={{textAlign: "center", }}>
-              Since 2016, CODE has been at the center of tech & technological innovation at Babson
-            </h4>
-        <hr
-          style={{
-            borderTop: "2.5px solid",
-            margin: "20px 200px 50px 200px",
-          }}
+      <div>
+        <Headline
+          headline={"About Us"}
+          subheadline={
+            "Since 2016, CODE has been at the center of tech & technological innovation at Babson"
+          }
         />
         <Container
           height="100vh"
@@ -108,7 +96,7 @@ class AboutUsStats extends Component {
             </Grid>
           </Grid>
         </Container>
-      </Container>
+      </div>
     );
   }
 }

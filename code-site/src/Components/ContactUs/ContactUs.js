@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
 import TopSignup from "../Landing/TopSignup";
 import AI_ML_Event from "../../Assets/img/CODEs Events/BarackBerkowitz.JPG";
+import Headline from "./../Universal Components/Headline";
 
 class ContactUs extends Component {
   render() {
@@ -19,23 +20,13 @@ class ContactUs extends Component {
           newsletterHeadline={""}
         />
         <Container>
-          <h1
-            style={{
-              textAlign: "center",
-              paddingBottom: "10px",
-            }}
-          >
-            Contact CODE
-          </h1>
-          <h4 style={{ textAlign: "center" }}>
-            Looking to Partner, Speak, or Learn more about Tech at Babson
-          </h4>
-          <hr
-            style={{
-              borderTop: "2.5px solid",
-              margin: "20px 200px 50px 200px",
-            }}
+          <Headline
+            headline={"Contact CODE"}
+            subheadline={
+              "Looking to Partner, Speak, or Learn more about Tech at Babson"
+            }
           />
+
           <h1>Contacting CODE</h1>
           <h2 style={{ padding: "20px" }}>
             The best way to Contact CODE is to email us at{" "}

@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
+import Headline from "./../Universal Components/Headline";
 
 export default class CODEStartups extends Component {
   render() {
     return (
       <div>
-        <h1 style={{ textAlign: "center" }}>CODE Startups</h1>
+        <h1
+          style={{
+            textAlign: "center",
+            paddingTop: "40px",
+            paddingBottom: "10px",
+          }}
+        >
+          CODE Startups
+        </h1>
         <h4 style={{ textAlign: "center" }}>
           Since CODE was founded in 2015, CODE members have founded many
           ventures of their own. Valuations have exceeded $50 Million.
@@ -102,7 +111,7 @@ export class SingleStartup extends Component {
               <img
                 src={require("../../Assets/img/CODE Startups/" +
                   this.props.logo)}
-                  alt={""}
+                alt={""}
                 width={"100%"}
               ></img>
             </p>

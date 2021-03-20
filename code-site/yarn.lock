@@ -10286,10 +10286,10 @@ primeicons@^4.1.0:
   resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-4.1.0.tgz#19eaef8ef5594b0006358ae64e738d03e167c9bb"
   integrity sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S/pscIQYS5YDLxsQZ7D9jn5c76+Tx5wX/2J1nK6sA==
 
-primereact@^6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/primereact/-/primereact-6.2.0.tgz#47fdf6e332b8d2b4e340e9aa820998bb1f8bb315"
-  integrity sha512-1F+miTIr8lnna860jtB5Oraez1fi+QEhLG31tjxue0iawYTN3wGntrIFm0u1M++p90JBzvmjFDee2drpYQchLg==
+primereact@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-6.2.1.tgz#b83f561a936527d1a2750f3b8b6b47b5b2b67f9d"
+  integrity sha512-FLCj+jJGSCD/V+jkkQIW7h/vEll31FfOOe1yrWKqa6PGxqkWMm2Q8f1XZTqR2ISQAz5RCUKcyhqTyPSF1X3yrA==
 
 private@^0.1.8:
   version "0.1.8"
@@ -10525,6 +10525,13 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-alice-carousel@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-alice-carousel/-/react-alice-carousel-2.4.0.tgz#57f68045996d139c7814452ff598ce8c05f22761"
+  integrity sha512-ea4q7hyvSJr1s97LYQ3gyK1i8KxOQ+IPdt1QYbVqFpm8ZzswDLf0f14Wrh3YQh6FJk4FBd8wPhGKlAG35gKltw==
+  dependencies:
+    vanilla-swipe "^2.2.0"
 
 react-app-polyfill@^1.0.6:
   version "1.0.6"
@@ -12941,6 +12948,11 @@ value-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
+
+vanilla-swipe@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vanilla-swipe/-/vanilla-swipe-2.3.0.tgz#a2cd466aabed00c1e8abd7b69a86940bf9319516"
+  integrity sha512-4m8vZ/kckRG7RQUYNg+0lGILMHT08KEgwePlRLzediDSu7aQFBLB0V2n36vUmYqq5CVWASOzZ8zpnQFZXIbHbA==
 
 vary@~1.1.2:
   version "1.1.2"

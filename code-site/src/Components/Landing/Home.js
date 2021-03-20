@@ -1,16 +1,17 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
+import Headline from "./../Universal Components/Headline";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import MemberRectangleHome from "../Residents/MemberRectangleHome";
+import StartupsCarousel from "../Startups/CarouselImages";
 import MailchimpSignup from "../Mailchimp/MailChimpUI";
 import Housing from "./../Housing/Housing";
 import TopSignup from "./TopSignup";
 import AboutUsStats from "./AboutUsStats";
 import HackathonImage from "../../Assets/img/CODE @ events/MoneyHackathon.png";
-
-export default function LandingPage(props) {
+export default function LandingPage() {
   return (
     <React.Fragment>
       <div>
@@ -35,25 +36,11 @@ export default function LandingPage(props) {
           }}
         >
           <Container>
-            <h1
-              style={{
-                // fontSize: "2.5em",
-                // lineHeight: "1.5em",
-                textAlign: "center",
-                paddingTop: "50px",
-                paddingBottom: "10px",
-              }}
-            >
-              Meet the Residents
-            </h1>
-            <h4 style={{ textAlign: "center" }}>
-              21 Residents live together every semester in Van Winkle Hall
-            </h4>
-            <hr
-              style={{
-                borderTop: "2.5px solid",
-                margin: "20px 200px 50px 200px",
-              }}
+            <Headline
+              headline={"Meet the Residents"}
+              subheadline={
+                "21 Residents live together every semester in Van Winkle Hall"
+              }
             />
             <div style={{ paddingBottom: "30px" }}>
               <MemberRectangleHome color="white" />
@@ -77,6 +64,18 @@ export default function LandingPage(props) {
             </div>
           </Container>
         </div>
+
+        <Container>
+          <Headline
+            headline={"CODE Startups"}
+            subheadline={
+              "Since CODE was founded in 2016, CODE Startups have cumulative valuations over $50 Million"
+            }
+          />
+          <div style={{ paddingBottom: "30px" }}>
+            <StartupsCarousel />
+          </div>
+        </Container>
 
         <Box>
           <Container>

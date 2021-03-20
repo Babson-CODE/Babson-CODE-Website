@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Apply from "./../../Assets/img/Other/Housing - Apply.jpg";
 import Explore from "./../../Assets/img/Other/Housing - Explore.jpg";
 import "./styles.css";
+import Headline from "./../Universal Components/Headline";
 
 class Housing extends Component {
   render() {
@@ -17,31 +18,11 @@ class Housing extends Component {
         }}
       >
         <Container>
-          <h1
-            style={{
-              fontSize: "2.5em",
-              lineHeight: "1.5em",
-              textAlign: "center",
-              paddingTop: "50px",
-            }}
-          >
-            CODE Housing Application
-          </h1>
-          <h4 style={{ textAlign: "center" }}>
-            Apply to live with the 20 other best technologically minded students
-            at Babson for Fall 2021
-          </h4>
-          {/* <hr
-            style={{
-              borderTop: "2.5px dashed",
-              margin: "20px 200px 12px 200px",
-            }}
-          /> */}
-          <hr
-            style={{
-              borderTop: "2.5px solid",
-              margin: "20px 200px 50px 200px",
-            }}
+          <Headline
+            headline={"CODE Housing Application"}
+            subheadline={
+              "Apply to live with the 20 other best technologically minded students at Babson for Fall 2021"
+            }
           />
           <div className="row">
             <div className="col-md-6">
@@ -58,7 +39,11 @@ class Housing extends Component {
                   <h4>Our Housing Applications are Now Open</h4>
                   <h6>Priority Applications are due: February 27th</h6>
                   <h6>General Applications are due: March 4th</h6>
-                  <a href="https://forms.gle/tuigKCmJUNg5gzZr5" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://forms.gle/tuigKCmJUNg5gzZr5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="default" style={{ marginTop: "20px" }}>
                       Apply Now
                     </Button>
