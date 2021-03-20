@@ -106,7 +106,6 @@ export class SingleStartup extends Component {
             style={{ color: "black" }}
           >
             <h1 style={{ textAlign: "center" }}>{this.props.company_name}</h1>
-            {/* <div style={{ display: "block", margin: "0 auto" }}> */}
             <p style={{ textAlign: "center" }}>
               <img
                 src={require("../../Assets/img/CODE Startups/" +
@@ -115,7 +114,6 @@ export class SingleStartup extends Component {
                 width={"100%"}
               ></img>
             </p>
-            {/* </div> */}
           </a>
           <br></br>
           <h5>{this.props.about}</h5>

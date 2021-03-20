@@ -16,9 +16,9 @@ const startups = [
       <a href="http://xhighlight.com">
         <img
           src={XHighlight}
-          className="img-responsive"
+          // className="img-responsive"
           alt="XHighlight Logo"
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "100%" }}
         ></img>
       </a>
     </div>
@@ -33,7 +33,7 @@ const startups = [
           src={Vinci}
           className="img-responsive"
           alt="Vinci VR Logo"
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "100%" }}
         ></img>
       </a>
     </div>
@@ -47,7 +47,7 @@ const startups = [
         src={Esto}
         className="img-responsive"
         alt="Esto Logo"
-        style={{ width: "100%" }}
+        style={{ width: "100%", height: "100%" }}
       ></img>
     </div>
   </div>,
@@ -61,7 +61,7 @@ const startups = [
           src={Bytes}
           className="img-responsive"
           alt="Bytes Coding Logo"
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "100%" }}
         ></img>
       </a>
     </div>
@@ -75,7 +75,7 @@ const startups = [
         src={BaboBikes}
         className="img-responsive"
         alt="Babo Bikes Logo"
-        style={{ width: "100%" }}
+        style={{ width: "100%", height: "100%" }}
       ></img>
     </div>
   </div>,
@@ -88,7 +88,7 @@ const startups = [
         src={Jinn}
         className="img-responsive"
         alt="Jinn LLC Logo"
-        style={{ width: "100%" }}
+        style={{ width: "100%", height: "100%" }}
       ></img>
     </div>
   </div>,
