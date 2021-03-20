@@ -16,7 +16,7 @@ class Headline extends Component {
           <h4>
             {this.props.subheadline}
           </h4>
-          <h5>Click on each {this.props.type} to learn more about them.</h5>
+          {/* <h5>Click on each {this.props.type} to learn more about them.</h5> */}
         </Container>
       </div>
     );

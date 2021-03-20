@@ -45,7 +45,7 @@ class PartnersPage2 extends Component {
           <Partner
             logo={eTower}
             name="Babson eTower"
-            website="https//etower.org"
+            website="https://etower.org"
             description="eTower is a passionate group of 21 residents (and 180+ alumni) that contribute to a community centered on entrepreneurship. Being a student-entrepreneur is never easy, but when you are united with individuals who share similar goals and aspirations, incredible things happen, alongside coming away with incredible friendships, memories, and future opportunities."
           />
           <Partner

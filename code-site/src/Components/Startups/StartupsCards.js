@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
-import Headline from "./../Universal Components/Headline";
 
 export default class CODEStartups extends Component {
   render() {
