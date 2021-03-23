@@ -23,15 +23,6 @@ class TopSignup extends Component {
                 margin: "80px 50px 20px 60px",
               }}
             ></img>
-            <figcaption
-              style={{
-                textAlign: "center",
-                margin: "0px 50px 60px 60px",
-                float: "right",
-              }}
-            >
-              {this.props.caption}
-            </figcaption>
             <div
               style={{
                 backgroundColor: "white",
@@ -57,6 +48,15 @@ class TopSignup extends Component {
               </h2>
               <MailchimpSignup headline={this.props.newsletterHeadline} />
             </div>
+            <figcaption
+              style={{
+                textAlign: "center",
+                margin: "0px 50px 60px 60px",
+                float: "right",
+              }}
+            >
+              {this.props.caption}
+            </figcaption>
           </div>
           <div className="d-lg-none">
             <img
