@@ -4,10 +4,11 @@ import { NavLink } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "./CODE 2018 Logo.png";
 
+
 const NavBar = () => (
   <div>
     <Navbar
-      className="background-color nav-custom static-top sticky nav-bar-size"
+      className="background-color nav-custom sticky nav-bar-size"
       expand="lg"
     >
       <Container>
