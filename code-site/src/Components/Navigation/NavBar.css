@@ -9,16 +9,12 @@ body {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 .nav-color {
   color: black;
 }
-
-
-
-
 
 .headings {
   font-size: 40px;
@@ -29,9 +25,7 @@ body {
   font-size: 32px;
 }
 
-
-
-.sticky+.content {
+.sticky + .content {
   padding-top: 61px;
 }
 
@@ -50,7 +44,7 @@ body {
 }
 
 .grey-gradiant {
-  background-image: linear-gradient(#b7b7b7, white)
+  background-image: linear-gradient(#b7b7b7, white);
 }
 
 .nav-custom {
