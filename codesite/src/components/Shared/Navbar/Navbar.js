@@ -19,7 +19,10 @@ import {
   Sidebar,
   Visibility,
   Dropdown,
+  Modal
 } from "semantic-ui-react"
+
+import LoginSignUpForm from '../Login-SignUpForm'
 
 const FixedNavMenu = () => (
   <Menu fixed="top" inverted>
@@ -54,7 +57,7 @@ const FixedNavMenu = () => (
   </Menu>
 )
 
-function ModalExampleModal() {
+function LoginModal({fixed}) {
     const [open, setOpen] = React.useState(false)
   
     return (
@@ -62,9 +65,10 @@ function ModalExampleModal() {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         open={open}
-        trigger={<Button>Show Modal</Button>}
+        trigger={<Button inverted={!fixed}>Log in</Button>}
       >
-        <Modal.Header>Select a Photo</Modal.Header>
+          <LoginSignUpForm />
+{/*         <Modal.Header>Select a Photo</Modal.Header>
         <Modal.Content image>
           <Image size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' wrapped />
           <Modal.Description>
@@ -76,6 +80,8 @@ function ModalExampleModal() {
             <p>Is it okay to use this photo?</p>
           </Modal.Description>
         </Modal.Content>
+ */}
+
         <Modal.Actions>
           <Button color='black' onClick={() => setOpen(false)}>
             Nope
@@ -124,9 +130,10 @@ const ResponsiveNavbar = ({ fixed }) => (
       </Dropdown>
       <Menu.Item as="a">Resources</Menu.Item>
       <Menu.Item position="right">
-        <Button as="a" inverted={!fixed}>
+        {/* <Button as="a" inverted={!fixed}>
           Log in
-        </Button>
+        </Button> */}
+        <LoginModal fixed={fixed}/>
         <Button
           as="a"
           inverted={!fixed}

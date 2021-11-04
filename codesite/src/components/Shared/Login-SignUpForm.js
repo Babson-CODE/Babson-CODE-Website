@@ -7,18 +7,18 @@ class LoginFormValueHandler extends Component {
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
   handleSubmit = () => {
-    const { Username, email } = this.state
+    const { password, email } = this.state
 
-    this.setState({ submittedName: name, submittedEmail: email })
+    this.setState({ submittedPassword: password, submittedEmail: email })
   }
 
   render() {
-    const { email, password, submittedName, submittedEmail } = this.state
+    const { email, password, submittedPassword, submittedEmail } = this.state
 
     return (
       <div>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Group>
+         
             <Form.Input
             icon="user"
             iconPosition="left"
@@ -35,26 +35,26 @@ class LoginFormValueHandler extends Component {
               onChange={this.handleChange}
             />
 
-            <Form.Button content='Submit' />
-          </Form.Group>
+            <Form.Button content='Login' />
+     
         </Form>
+        {/* 
         <strong>onChange:</strong>
-        <pre>{JSON.stringify({ name, email }, null, 2)}</pre>
+        <pre>{JSON.stringify({ password, email }, null, 2)}</pre>
         <strong>onSubmit:</strong>
-        <pre>{JSON.stringify({ submittedName, submittedEmail }, null, 2)}</pre>
+        <pre>{JSON.stringify({ submittedPassword, submittedEmail }, null, 2)}</pre>
+       */}
       </div>
     )
   }
 }
-
-export default FormExampleCaptureValues
 
 
 const LoginSignUpForm = () => (
   <Segment placeholder>
     <Grid columns={2} relaxed='very' stackable>
       <Grid.Column>
-        <LoginFormValueHandler/>
+        <LoginFormValueHandler></LoginFormValueHandler>
 
 {/*         <Form>
           <Form.Input

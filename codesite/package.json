@@ -32,8 +32,8 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider; gatsby build",
-    "develop": "set NODE_OPTIONS=--openssl-legacy-provider; gatsby develop",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
+    "develop": "set NODE_OPTIONS=--openssl-legacy-provider && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

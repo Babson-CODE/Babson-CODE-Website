@@ -4,7 +4,7 @@ import { Layout } from '../components/layout'
 export default function HomePage(){
     return(
         <Layout>
-            <div className={main}>
+            <div >
                 {/* */}
             </div>
         </Layout>
