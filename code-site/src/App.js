@@ -7,10 +7,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      {/* <div style={{ marginTop: "90px" }}> */}
       <Routes />
-      {/* <p>aboutTextContainers</p> */}
-      {/* </div> */}
       <Footer />
     </div>
   );
