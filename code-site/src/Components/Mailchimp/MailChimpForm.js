@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import jsonp from "jsonp";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+
 export default ({
   // Source: https://github.com/hamdiceylan/mailchimp-react
   styles = {
@@ -70,9 +71,6 @@ export default ({
       }
     });
   };
-  // console.log(action);
-  // console.log(tagline);
-  // console.log(tag);
   return (
     <div>
       {/* <h3 style={{ marginBottom: "10px" }}>{test}</h3> */}
