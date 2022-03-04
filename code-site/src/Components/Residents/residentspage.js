@@ -2,23 +2,12 @@ import React from "react";
 import Headline from "./Headline";
 import { Container } from "react-bootstrap";
 import MemberRectangle from "./MemberRectangle";
-import TopSignup from "./../Landing/TopSignup";
+import TopSignup from "../Landing/TopSignup";
 import PackedEvent from "./../../Assets/img/CODEs Events/Packed Event.jpeg";
 
 export default function residentspage() {
   return (
     <div>
-      {/* <TopSignup
-        image={PackedEvent}
-        caption={
-          ""
-        }
-        headline={"21 Residents Live in Van Winkle Hall"}
-        subheadline={
-          " residents explore the intersection of tech and business each semester through events, hackathons, and more."
-        }
-        newsletterHeadline={"Find our Housing Application in  our Newsletter"}
-      /> */}
       <TopSignup
         image={PackedEvent}
         caption={"One of CODE's first events held in CODEPlex in 2016."}

@@ -1,68 +1,51 @@
 {
-  "name": "code-site",
-  "version": "1.1.2",
-  "main": "index.js",
-  "homepage": ".",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@svgr/cli": "^5.4.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.5.3",
-    "browser": "^0.2.6",
-    "dotenv": "^8.2.0",
-    "extend-shallow": "^3.0.2",
-    "formik": "^2.2.6",
-    "formik-material-ui": "^3.0.0",
-    "glob-parent": "^5.1.1",
-    "mapbox-gl": "^1.12.0",
-    "mdbreact": "^5.0.1",
-    "node-sass": "^4.14.1",
-    "primeflex": "^2.0.0",
-    "primeicons": "^4.1.0",
-    "primereact": "^6.2.1",
-    "pure-react-carousel": "^1.27.6",
-    "react": "^16.13.1",
-    "react-alice-carousel": "^2.4.0",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-items-carousel": "^2.8.0",
-    "react-mailchimp-form": "^1.0.2",
-    "react-mailchimp-subscribe": "^2.1.0",
-    "react-mapbox-gl": "^4.8.6",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "react-swipeable-views": "^0.13.9"
-  },
-  "scripts": {
-    "start": "PORT=3006 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0"
-  }
+	"name": "code-site",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^4.12.3",
+		"@material-ui/icons": "^4.11.2",
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react": "^11.1.0",
+		"@testing-library/user-event": "^12.1.10",
+		"bootstrap": "^5.1.0",
+		"firebase": "^8.9.1",
+		"fuse.js": "^6.5.3",
+		"mdbreact": "^5.2.0",
+		"react": "^17.0.2",
+		"react-alice-carousel": "^2.5.1",
+		"react-bootstrap": "^1.6.1",
+		"react-dom": "^17.0.2",
+		"react-dropzone": "^11.3.4",
+		"react-loading": "^2.0.3",
+		"react-player": "^2.9.0",
+		"react-router-dom": "^5.2.1",
+		"react-scripts": "4.0.3",
+		"styled-components": "^5.3.1",
+		"web-vitals": "^1.0.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
