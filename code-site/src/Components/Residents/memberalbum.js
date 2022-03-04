@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import membercard from "./Member/membercard";
-import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 import { memberData } from "./Member/memberdata";
 import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
@@ -45,11 +43,8 @@ const styles = {
 };
 
 function memberGrid(props) {
-  const { classes } = props;
   return (
     <div>
-      <p>test</p>
-      {/* <Container className={classes.cardGrid} maxWidth="md"> */}
       <Container>
         <Grid container spacing={4}>
           {memberData.map((data, card) => (

@@ -33,7 +33,7 @@ export const memberData = [
     phone: "",
     website: "alvie.org",
     concentration:
-      "Technology, Entrepreneurship, and Design, & Information Technology Management",
+      "Technology, Entrepreneurship, & Design, and Information Technology Management",
     working_on:
       "XHighlight - The fastest and easiest way to create your sports highlight videos.",
     introduction:
@@ -48,6 +48,7 @@ export const memberData = [
       photo: "/Alvie.jpg",
     },
     about: "A paragraph about Alvie",
+    catch_all: {},
   },
   {
     id: 3,

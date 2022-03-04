@@ -1,24 +1,3 @@
-// import React, { Component } from "react";
-// import Grid from "@material-ui/core/Grid";
-// import Paper from "@material-ui/core/Paper";
-
-// export default class Mission extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <Grid container spacing={3}>
-//           <Paper elevation={2} style={{ padding: "30px", margin: "20px" }}>
-//             <h1>Test</h1>
-//           </Paper>
-
-//           <Paper elevation={2}>abc</Paper>
-//           <Paper elevation={2}>abc</Paper>
-//         </Grid>
-//       </div>
-//     );
-//   }
-// }
-
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -31,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-    color: theme.palette.text.secondary,
+    // color: theme.palette.text.secondary,
   },
 }));
 
@@ -41,8 +20,8 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root} style={{ marginTop: "20px" }}>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>Workshops</h1>
             <p style={{ textAlign: "left" }}>
               CODE holds numerous workshops on different technologies. Workshops
@@ -52,8 +31,8 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>CODE Office Hours</h1>
             <p style={{ textAlign: "left" }}>
               CODE Office Hours are two unique services provided by CODE. CODE
@@ -65,14 +44,18 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>CODE Consulting</h1>
             <p style={{ textAlign: "left" }}>
               In addition to Office Hours, CODE Consulting is another way for
               students and alumni to get feedback on their businesses. CODE
               Consulting hours can booked by emailing{" "}
-              <a href="mailto:code@babson.edu" target="_blank">
+              <a
+                href="mailto:code@babson.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 code@babson.edu
               </a>
               . A session will typically last between one and two hours. While
@@ -89,8 +72,8 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>Speaker Events</h1>
             <p style={{ textAlign: "left" }}>
               CODE brings in several speakers per semester. These speakers are
@@ -99,8 +82,8 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>Hackathons</h1>
             <p style={{ textAlign: "left" }}>
               Hackathons are some of our favorite events to put on. Encouraging
@@ -113,8 +96,8 @@ export default function CenteredGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper} elevation={3}>
+        <Grid item md={6}>
+          <Paper className={classes.paper} elevation={5}>
             <h1>And More</h1>
             <p style={{ textAlign: "left" }}>
               We host numerous other types of events. These have ranged from fun
